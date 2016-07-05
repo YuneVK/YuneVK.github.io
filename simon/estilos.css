@@ -1,0 +1,259 @@
+@font-face{
+   font-family:"ecranmonochrome";
+   src:url(fonts/ecranmonochrome.ttf);
+}
+
+@font-face{
+   font-family:"vrcOscMono";
+   src:url(fonts/vrcOscMono.ttf);
+}
+
+@font-face{
+   font-family:"TobagoPoster";
+   src:url(fonts/TobagoPoster.ttf);
+}
+
+@font-face{
+   font-family:"zil";
+   src:url(fonts/zil.ttf);
+}
+
+@font-face{
+   font-family:"open-sanslight";
+   src:url(fonts/open-sanslight.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+body {
+	background-color: #FFF9F6;
+}
+
+#contenedor {
+	width: 90vmin;
+	height: 90vmin;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 100%;
+	box-shadow: -3px -3px 10px rgba(36,36,36, 0.3);
+}
+
+.verde, .rojo, .azul, .amarillo {
+	position: relative;
+	float: left;
+	width: 39vmin;
+	height: 39vmin;
+	border: 2vmin solid #3E3E3E;
+}
+
+.verde {
+    background-color: #00AC00;
+    border-top-left-radius: 100%;
+	border-left: 4vmin solid #3E3E3E;
+	border-top: 4vmin solid #3E3E3E;
+}
+
+.rojo {
+    background-color: #D60000;
+	border-top-right-radius: 100%;
+	border-right: 4vmin solid #3E3E3E;
+	border-top: 4vmin solid #3E3E3E;
+}
+
+.azul {
+    background-color: #027798;
+    border-bottom-right-radius: 100%;
+	border-bottom: 4vmin solid #3E3E3E;
+	border-right: 4vmin solid #3E3E3E;
+}
+
+.amarillo {
+    background-color: #D6C800;
+    border-bottom-left-radius: 100%;
+	border-bottom: 4vmin solid #3E3E3E;
+	border-left: 4vmin solid #3E3E3E;
+}
+
+#centro {
+	width: 36vmin;
+	height: 36vmin;
+	background-color: #E7E7E7;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 100%;
+	border: 3vmin solid #3E3E3E;
+}
+
+#logo {
+	position: relative;
+	text-align: center;
+	font-size: 9vmin;
+	top: 3.5vmin;
+	left: 3vmin;
+	width: 30vmin;
+	font-family: "TobagoPoster";
+	font-weight: 100;
+	color: #1F1F1F;
+}
+
+#pantalla {
+	position: relative;
+	width: 26vmin;
+	height: 4.3vmin;
+	left: 4.5vmin;
+	border-radius: 3px;
+	border: 0.5vmin solid #2A2929;
+	background-color: #7AB37C;
+	top: 3vmin;
+}
+
+#pantalla p {
+	position: relative;
+	top: 0.4vmin;
+	font-size: 2.5vmin;
+	font-weight: 900;
+	text-align: center;
+	color: #002100;
+	text-shadow: 0 0 0.1vmin rgba(15,50,15, 0.5);
+}
+
+#contador {
+	position:relative;
+	float: left;
+	left: 6vmin;
+	top: 5vmin;
+	background-color: #4B1B19;
+	border: 0.7vmin solid #2A2929;
+	border-radius: 1vmin;
+	width: 7vmin;
+	height: 6vmin;
+}
+
+#contador h2 {
+	position: relative;
+	left: 0.1vmin;
+	text-align: center;
+	font-size: 4.2vmin;
+	font-weight: 100;
+	color: #EC000F;
+	text-shadow: 0 0 0.5vmin #EC000F;
+}
+
+#play p, #contador p, #nivel p {
+	position: relative;
+	font-size: 2vmin;
+	width: 6vmin;
+	font-family: "vrcOscMono";
+	font-weight: 100;
+	color: #131313;
+}
+
+#contador p {
+	top: 1.2vmin;
+}
+
+#play {
+	position: relative;
+	top: 5vmin;
+	left: 16vmin;
+	width: 8vmin;
+	height: 10vmin;
+}
+
+#play div {
+	position: relative;
+	top: 1vmin;
+	height: 5vmin;
+	width: 5vmin;
+	border-radius: 100%;
+	background-color: #DB2E3E;
+	border: 0.7vmin solid #3E3E3E;
+	box-shadow: 0.5vmin 0.5vmin 0.5vmin rgba(143,143,143, 0.8);
+}
+
+#play p {
+	position: absolute;
+	top: 7.7vmin;
+}
+
+#nivel {
+	position: relative;
+	float: right;
+	width: 8vmin;
+	height: 10vmin;
+	top: -4vmin;
+	left: -4vmin;
+}
+
+#nivel p {
+	top: 0.45vmin;
+	left: 0.2vmin;
+}
+
+#botonNivel {
+	position: relative;
+	height: 5vmin;
+	width: 5vmin;
+	border-radius: 100%;
+	background-color: #3C4CCF;
+	border: 0.7vmin solid #3E3E3E;
+	box-shadow: 0.5vmin 0.5vmin 0.5vmin rgba(143,143,143, 0.8);
+}
+
+#botonNivel p {
+	font-size: 4.5vmin;
+	top: -0.1vmin;
+	left: -0.1vmin;
+	width: 6vmin;
+	height: 6vmin;
+	text-align: center;
+	margin-left: -0.5vmin;
+	font-family: "zil";
+	font-weight: 100;
+	color: #E7E7E7;
+}
+
+#pantallaP, #puntuacion {
+	font-family: "ecranmonochrome";
+} 
+
+#controles {
+	position: absolute;
+	bottom: 3vmin;
+	left: 3vmin;
+	background-color: #FFD6C2;
+	padding: 0.8vmin;
+	border-radius: 1vmin;
+}
+
+#controles p {
+	font-size: 2vmin;
+	font-family: "open-sanslight";
+	color: #32221A;
+	font-weight: 900;
+}
+
+div:focus {outline:none;}
