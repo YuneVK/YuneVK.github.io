@@ -1,0 +1,146 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:300';
+@import 'https://fonts.googleapis.com/css?family=Exo:100';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Para que no se vean los bordes blancos al difuminar la imagen, 
+	ponemos el mismo fondo debajo, que no se difuminará */
+body {
+	background-image: url(../img/fondo.jpeg);
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#contenedor {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	background-image: url(../img/fondo.jpeg);
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: hidden;
+}
+
+/* Efecto gradiente sobre la imagen */
+#contenedor section {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -9;
+	overflow: hidden;
+	background: -webkit-linear-gradient(rgba(57,67,56, 0.3), rgba(47,55,36, 0.5)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(57,67,56, 0.3), rgba(47,55,36, 0.5)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(57,67,56, 0.3), rgba(47,55,36, 0.5)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(57,67,56, 0.3), rgba(47,55,36, 0.5)); /* Standard syntax */
+}
+
+/* Contenido principal de la página */
+#contenido {
+	width: 100%;
+	min-height: 20vh;
+	overflow: hidden;
+}
+
+/* Logo de la página */
+#logo {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -6vh;
+	text-align: center;
+}
+
+#logo h1 {
+	margin-bottom: 1vmin;
+	font-size: 22vmin;
+	color: white;
+	font-family: 'Exo', sans-serif;
+	letter-spacing: -0.02em;
+	line-height: 75%;
+	text-shadow: 0px 2px 3px #555;
+}
+
+/* Elemento que contiene el mensaje 'Scroll down' y el icono */
+#mensaje {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	top: 0;
+	cursor: default;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: 'Raleway', sans-serif;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mensaje 'Scroll down' */
+#scroll {
+	text-align: center;
+	font-size: 4vmin;
+	margin-bottom: -0.3em;
+}
+
+/* Icono que acompaña a 'Scroll down' */
+#scrollIcon {
+	-webkit-transform: rotate(270deg);
+	text-align: center;
+	font-size: 1.3em;
+	margin-bottom: 5vh;
+	-webkit-animation: mymove 2s infinite; /* Chrome, Safari, Opera */
+	animation: scroll 2s infinite;
+}
+
+@-webkit-keyframes scroll {
+	0% {
+		margin-bottom: 5vh;
+	}
+	50% {
+		margin-bottom: 3vh;
+	}
+	100% {
+		margin-bottom: 5vh;
+	}
+}
+
+@keyframes scroll {
+	0% {
+		margin-bottom: 5vh;
+	}
+	50% {
+		margin-bottom: 3vh;
+	}
+	100% {
+		margin-bottom: 5vh;
+	}
+}
+
+/* Sección principal de la página */
+#seccion {
+	width: 100%;
+	height: 400px;
+	margin-top: 20px;
+	background-color: white;
+}
