@@ -1,19 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:300';
 @import 'https://fonts.googleapis.com/css?family=Exo:100';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400';
+
 
 * {
 	margin: 0;
 	padding: 0;
-}
-
-/* Para que no se vean los bordes blancos al difuminar la imagen, 
-	ponemos el mismo fondo debajo, que no se difuminará */
-body {
-	background-image: url(../img/fondo.jpeg);
-	background-position: center 0;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
 }
 
 #contenedor {
@@ -51,12 +43,13 @@ body {
 	width: 100%;
 	min-height: 20vh;
 	overflow: hidden;
+	margin-top: 100vh;
 }
 
 /* Logo de la página */
 #logo {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	overflow: hidden;
 	position: absolute;
 	display: flex;
@@ -79,7 +72,7 @@ body {
 /* Elemento que contiene el mensaje 'Scroll down' y el icono */
 #mensaje {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	overflow: hidden;
 	position: absolute;
 	display: flex;
@@ -139,8 +132,40 @@ body {
 
 /* Sección principal de la página */
 #seccion {
-	width: 100%;
-	height: 400px;
-	margin-top: 20px;
 	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	z-index: 20;
+	text-align: center;
+	padding: 2em 5em;
+	color: #0E1104;
+}
+
+#seccion h1 {
+	padding-bottom: 0.5em;
+	font-size: 3.5em;
+	font-weight: 300;
+	text-shadow: 0px 1px 2px #555;
+}
+
+#seccion p {
+	padding: 0.5em;
+	font-size: 1.2em;
+	line-height: 150%;
+	text-shadow: 1px 1px 1px rgba(198,198,198, 0.5);
+}
+
+#seccion a {
+	color: #1B5D1F;
+	padding: 2px;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
+#seccion a:hover {
+	background-color: #1B5D1F;
+	color: white;
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
 }
