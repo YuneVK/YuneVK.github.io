@@ -14,8 +14,13 @@
 	box-sizing: border-box;
 }
 
+body, html {
+	height: 100%;
+}
+
 body {
 	overflow-x: hidden;
+	color: #181818;
 }
 
 header {
@@ -40,8 +45,6 @@ header h1, header h3, header h4 {
 	color: white;
 	font-family: 'Raleway', sans-serif;
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-
-	
 }
 
 header h1 {
@@ -105,7 +108,6 @@ header h4 {
 .seccion {
 	text-align: center;
 	font-size: 3em;
-	width: 50vw;
 	margin: auto;
 	margin-bottom: 0.4em;
 	color: #8F000A;
@@ -118,9 +120,14 @@ header h4 {
 	line-height: 1.5em;
 }
 
-#about b {
+b {
 	font-weight: 600;
 	color: #8F000A;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+i {
+	color: #303030;
 }
 
 #cita {
@@ -130,7 +137,7 @@ header h4 {
 }
 
 #contenedorTimeline {
-	background-color: blue;
+	background-color: #F2F2F2;
 	width: 100%;
 	position: relative;
 }
@@ -143,7 +150,7 @@ header h4 {
 	bottom: 100%;
 	width: 0;
 	height: 0;
-	border-bottom: 33px solid blue;
+	border-bottom: 33px solid #F2F2F2;
 	border-right: 50vw solid transparent;
 	border-top: 0 solid transparent;
 	border-left: 50vw solid transparent;
@@ -161,7 +168,7 @@ header h4 {
  * --  Timeline --
  * Basado en: http://codepen.io/itbruno/pen/KwarLp
  */
-#timeline .timelineItem:after, #timeline .timelineItem:before {
+.timelineItem:after, .timelineItem:before {
 	content: '';
 	display: block;
 	width: 100%;
@@ -179,7 +186,7 @@ header h4 {
 	content: '';
 	width: 3px;
 	height: 100%;
-	background: red;
+	background: #8F000A;
 	left: 50%;
 	top: 0;
 	position: absolute;
@@ -192,13 +199,13 @@ header h4 {
 	width: 100%;
 }
 
-#timeline .timelineItem {
+.timelineItem {
 	margin-bottom: 50px;
 	position: relative;
 }
 
-#timeline .timelineItem .timelineIcon {
-	background: orange;
+.timelineIcon {
+	background: #8F000A;
 	width: 50px;
 	height: 50px;
 	position: absolute;
@@ -212,27 +219,41 @@ header h4 {
 	justify-content: center;
 }
 
-#timeline .timelineItem .timelineIcon i {
-	font-size: 30px;
+.timelineIcon i {
+	font-size: 25px;
+	color: white;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
-#timeline .timelineItem .timelineContent {
+.timelineContent {
 	width: 45%;
-	background: grey;
+	background: #FFFFFF;
 	padding: 20px;
 	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
 }
 
-#timeline .timelineItem .timelineContent h2 {
+.timelineContent h2 {
 	padding: 15px;
-	background: pink;
-	color: red;
+	background: #8F000A;
+	color: #FFF;
 	margin: -20px -20px 0 -20px;
 	border-radius: 3px 3px 0 0;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
-#timeline .timelineItem .timelineContent:before {
+.timelineContent h3 {
+	font-weight: 300;
+	color: #434343;
+	padding: 8px 0;
+	font-size: 1em;
+}
+
+.timelineContent p {
+	line-height: 1.45em;
+}
+
+.timelineContent:before {
 	content: '';
 	position: absolute;
 	left: 45%;
@@ -241,43 +262,43 @@ header h4 {
 	height: 0;
 	border-top: 7px solid transparent;
 	border-bottom: 7px solid transparent;
-	border-left: 7px solid green;
+	border-left: 7px solid #8F000A;
 }
 
-#timeline .timelineItem .timelineContent.right {
+.timelineContent.right {
 	float: right;
 }
 
-#timeline .timelineItem .timelineContent.right:before {
+.timelineContent.right:before {
 	content: '';
 	right: 45%;
 	left: inherit;
 	border-left: 0;
-	border-right: 7px solid green;
+	border-right: 7px solid #8F000A;
 }
 
-@media screen and (max-width: 768px) {
-  #timeline {
-    margin: 30px;
-    padding: 0px;
-    width: 90%;
-  }
-  #timeline:before {
-    left: 0;
-  }
-  #timeline .timelineItem .timelineContent {
-    width: 90%;
-    float: right;
-  }
-  #timeline .timelineItem .timelineContent:before, #timeline .timelineItem .timelineContent.right:before {
-    left: 10%;
-    margin-left: -6px;
-    border-left: 0;
-    border-right: 7px solid #ee4d4d;
-  }
-  #timeline .timelineItem .timelineIcon {
-    left: 0;
-  }
+@media (max-width: 768px) {
+	#timeline {
+		margin: 30px;
+		padding: 0;
+		width: 90%;
+	}
+	#timeline:before {
+		left: 0;
+	}
+	.timelineContent {
+		width: 90%;
+		float: right;
+	}
+	.timelineContent:before, .timelineContent.right:before {
+		left: 10%;
+		margin-left: -6px;
+		border-left: 0;
+		border-right: 7px solid #8F000A;
+	}
+	.timelineIcon {
+		left: 0;
+	}
 }
 
 
