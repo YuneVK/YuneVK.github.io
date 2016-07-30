@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:300,400';
 
 
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,300';
 
 * {
 	margin: 0;
@@ -131,9 +131,31 @@ i {
 }
 
 #cita {
-	padding: 40px 0;
-	background-color: red;
+	padding: 60px 0;
+	background-color: #8F000A;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #F2F2F2;
+}
+
+#cita i {
+	color: #F2F2F2;
+	font-size: 3em;
+	padding-right: 10px;
+}
+
+#cita p {
+	font-size: 1.3em;
+	padding-left: 10px;
+	border-left: 2px solid #F2F2F2;
+	font-weight: 300;
+}
+
+#contenidoCita {
+	max-width: 60vw;
+
 }
 
 #contenedorTimeline {
@@ -301,20 +323,45 @@ i {
 	}
 }
 
-
-
-
-
-
-
-
-
-
+#borde {
+	display: block;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	border-top: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 50vw solid transparent;
+	z-index: 3;
+}
 
 #miiverse {
-	background-color: pink;
+	background-color: #8F000A;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin-top: -33px;
+	padding-top: 50px;
+	padding-bottom: 33px;
+	color: #F2F2F2;
 }
+
+#miiverse p {
+	font-size: 1.3em;
+	padding-left: 10px;
+	border-left: 2px solid #F2F2F2;
+	font-weight: 300;
+}
+
+#contenidoMiiverse {
+	padding-right: 10px; 
+}
+
+
+
 
 
 
