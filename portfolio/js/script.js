@@ -1,14 +1,18 @@
 $(function() {
 	var height = $(window).height();
 
-	if($(window).width() > 768) {
+	var device = navigator.userAgent
+
+	if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)) {
+		console.log("Movil");
+	} else {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 		particlesJS.load('particles-js', 'assets/particles.json', function() {
 			console.log('callback - particles.js config loaded');
 		});
 
-		$("#fondo1").css({"background": "url('../img/fondouno.png') no-repeat fixed"});
-		$("#fondo2").css({"background": "url('../img/fondodos.png') no-repeat fixed"});
+		$("#fondo1").css({"background-attachment": "fixed"});
+		$("#fondo2").css({"background-attachment": "fixed"});
 
 		// Cada vez que se haga scroll
 		$(document).scroll(function() {
@@ -24,7 +28,7 @@ $(function() {
 				$("#fondo1").css({"background-position": "center bottom +" + (scrollTop/1.3) + "px"});
 				$("#fondo2").css({"background-position": "center bottom +" + (scrollTop/1.1) + "px"});
 			}
-		});
+		});		
 	}
 
 

@@ -87,3 +87,28 @@ header {
 	50% {opacity: 0.3;}
 	100% {opacity: 0.2}
 }
+
+#nube1 {
+	position: absolute;
+	width: 22vmax;
+	top: 22vh;
+	animation: nubes 60s infinite linear;
+	margin-left: 50%;
+}
+
+#nube2 {
+	position: absolute;
+	width: 10vmax;
+	top: 40vh;
+	animation: nubes 70s infinite linear;
+	margin-left: 90%;
+}
+
+@keyframes nubes {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 120%;
+	}
+}
