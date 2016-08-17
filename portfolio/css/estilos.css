@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+	overflow-x: hidden;
+}
+
+header {
+	height: 100vh;
+	width: 100vw;
+	
+}
+
+#fondo1 {
+	background: url("../img/fondouno.png") no-repeat fixed;
+	background-position: center bottom;
+
+}
+
+#fondo2 {
+	background: url("../img/fondodos.png") no-repeat fixed;
+	background-position: center bottom;
+
+
+}
+
+#fondo3 {
+	background: url("../img/fondotres.png") no-repeat;
+	background-position: center bottom;
+}
+
+#fondo1, #fondo2, #fondo3 {
+	position: absolute;
+	background-size: cover;
+	
+	height: 100vh;
+	width: 100vw;
+}
+
+#contenido {
+	background-color: #0A0618;
+	color: white;
+	padding: 20px;
+}
+
+#particles-js {
+	position: absolute;
+	background: radial-gradient(#2F527A, #0B223C);
+	height: 100vh;
+	width: 100vw;
+}
+
+.st0{opacity:0.79;fill:#FFFFFF;}
+.st1{opacity:0.15;fill:#DDB481;}
+.st2{opacity:0.22;fill:#DDB481;}
+.st3{fill:#DDB481;}
+.st4{fill:#E0C5A4;}
+.st5{fill:#FFFFFF;}
+.st6{fill:#C79665;}
+
+#luna_1_ {
+	position: absolute;
+	bottom: 12vh;
+	left: calc(50vw - 25vh);
+	width: 50vh;
+}
+
+#Luz1 {
+	animation: lucesLuna1 3s ease infinite;
+}
+
+#Luz2 {
+	animation: lucesLuna2 3s ease infinite;
+}
+
+@keyframes lucesLuna1 {
+	0% {opacity: 0.4;}
+	50% {opacity: 0.5;}
+	100% {opacity: 0.4}
+}
+
+@keyframes lucesLuna2 {
+	0% {opacity: 0.2;}
+	50% {opacity: 0.3;}
+	100% {opacity: 0.2}
+}
