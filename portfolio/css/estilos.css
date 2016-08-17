@@ -15,13 +15,13 @@ header {
 }
 
 #fondo1 {
-	background: url("../img/fondouno.png") no-repeat fixed;
+	background: url("../img/fondouno.png") no-repeat;
 	background-position: center bottom;
 
 }
 
 #fondo2 {
-	background: url("../img/fondodos.png") no-repeat fixed;
+	background: url("../img/fondodos.png") no-repeat;
 	background-position: center bottom;
 
 
