@@ -1,10 +1,19 @@
 $(function() {
 	var height = $(window).height();
 
-	var device = navigator.userAgent
+	var device = navigator.userAgent;
+
+/*
+	var widthOrnament = $('#contenidoHeader h1').width();
+	$("#ornament").css({"width": widthOrnament*0.75 + "px"});
+
+	console.log("Ancho: " + widthOrnament);
+*/
 
 	if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)) {
 		console.log("Movil");
+		$("#estrellas").css({"opacity": "1"});
+
 	} else {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 		particlesJS.load('particles-js', 'assets/particles.json', function() {

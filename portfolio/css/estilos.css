@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:100,300';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,25 +19,24 @@ header {
 #fondo1 {
 	background: url("../img/fondouno.png") no-repeat;
 	background-position: center bottom;
-
+	z-index: 5;
 }
 
 #fondo2 {
 	background: url("../img/fondodos.png") no-repeat;
 	background-position: center bottom;
-
-
+	z-index: 10;
 }
 
 #fondo3 {
 	background: url("../img/fondotres.png") no-repeat;
 	background-position: center bottom;
+	z-index: 15;
 }
 
 #fondo1, #fondo2, #fondo3 {
 	position: absolute;
 	background-size: cover;
-	
 	height: 100vh;
 	width: 100vw;
 }
@@ -51,6 +52,7 @@ header {
 	background: radial-gradient(#2F527A, #0B223C);
 	height: 100vh;
 	width: 100vw;
+	z-index: -10;
 }
 
 .st0{opacity:0.79;fill:#FFFFFF;}
@@ -66,6 +68,7 @@ header {
 	bottom: 12vh;
 	left: calc(50vw - 25vh);
 	width: 50vh;
+	z-index: -9;
 }
 
 #Luz1 {
@@ -88,27 +91,118 @@ header {
 	100% {opacity: 0.2}
 }
 
+.nube {
+	fill: #FFF;
+	opacity: 0.7;
+}
+
 #nube1 {
 	position: absolute;
 	width: 22vmax;
-	top: 22vh;
-	animation: nubes 60s infinite linear;
-	margin-left: 50%;
+	top: 35vh;
+	animation: nubes 150s infinite linear;
+	margin-left: 40%;
+	z-index: 3;
 }
 
 #nube2 {
 	position: absolute;
 	width: 10vmax;
 	top: 40vh;
-	animation: nubes 70s infinite linear;
-	margin-left: 90%;
+	animation: nubes 110s infinite linear;
+	margin-left: 20%;
+	z-index: 0;
+}
+
+#nube3 {
+	position: absolute;
+	width: 10vmax;
+	top: 50vh;
+	animation: nubes 100s infinite linear;
+	margin-left: 80%;
+	z-index: 0;
+}
+
+#nube4 {
+	position: absolute;
+	width: 22vmax;
+	top: 60vh;
+	animation: nubes 130s infinite linear;
+	margin-left: 60%;
+	z-index: 8;
+}
+
+#nube5 {
+	position: absolute;
+	width: 6vmax;
+	top: 53vh;
+	animation: nubes 90s infinite linear;
+	margin-left: 40%;
+	z-index: 8;
 }
 
 @keyframes nubes {
 	0% {
-		left: -100%;
+		left: -60%;
 	}
 	100% {
 		left: 120%;
+	}
+}
+
+#estrellas {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background: url("../img/estrellas.png") no-repeat center;
+	background-size: cover;
+	z-index: -9;
+	opacity: 0;
+}
+
+#contenidoHeader {
+	height: 100vh;
+	width: 100vw;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#contenidoHeader * {
+	z-index: 30;
+}
+
+.ornament {
+	fill: rgba(255, 255, 255, 1);
+}
+
+#ornament {
+	width: 15em;
+}
+
+#contenidoHeader h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+	font-size: 5em;
+	color: #FFF;
+	line-height: 0.8em;
+	letter-spacing: -0.06em;
+	padding: 0.2em;
+}
+
+#contenidoHeader b {
+	font-weight: 300;
+}
+
+@media (max-width: 768px) {
+	#contenidoHeader h1 {
+		font-size: 3em;
+	}
+
+	#ornament {
+		width: 10em;
 	}
 }
