@@ -1,6 +1,13 @@
 $(function() {
 	var height = $(window).height();
 
+	if($(window).width() > 768) {
+		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+		particlesJS.load('particles-js', 'assets/particles.json', function() {
+			console.log('callback - particles.js config loaded');
+		});
+	}
+
 	// Cada vez que se haga scroll
 	$(document).scroll(function() {
 		// Obtenemos el valor del scroll
@@ -17,8 +24,5 @@ $(function() {
 		}
 	});
 
-	/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-	particlesJS.load('particles-js', 'assets/particles.json', function() {
-		console.log('callback - particles.js config loaded');
-	});
+
 });
