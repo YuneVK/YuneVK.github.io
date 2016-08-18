@@ -219,9 +219,10 @@ header {
 	align-items: center;
 }
 
-#about h1 {
+.seccion {
 	font-weight: 100;
 	font-size: 2.8em;
+	text-align: center;
 }
 
 .borde {
@@ -245,7 +246,6 @@ header {
 #separadorAbout {
 	width: 100vw;
 	height: 3em;
-	background-color: red;
 	background: url(../img/separador.svg) repeat-x top center;
 	background-size: auto;
 	z-index: 1;
@@ -260,10 +260,23 @@ header {
 }
 
 #skills {
-	background-color: pink;
+	background: url(../img/fondoSkills.svg) no-repeat center center;
+	background-size: 90vmin;
 	margin-top: -3em;
-	padding-top: 5em;
+	
 	z-index: 0;
+}
+
+#skillsFondo {
+	background: radial-gradient(circle, #FFF, #DADBDD);
+	margin-top: -3em;
+	height: 130vh;
+	padding-top: 5em;
+	opacity: 0.9;
+}
+
+#skillsContenido h1 {
+	font-weight: 300;
 }
 
 
