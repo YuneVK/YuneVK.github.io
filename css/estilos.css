@@ -151,9 +151,9 @@ header {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	background: url("../img/estrellas.jpg") no-repeat center;
+	background: url("../img/estrellas.JPG") no-repeat center;
 	background-size: cover;
-	z-index: -10;
+	z-index: -9;
 	opacity: 0;
 }
 
