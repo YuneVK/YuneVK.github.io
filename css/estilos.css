@@ -153,7 +153,7 @@ header {
 	height: 100vh;
 	background: url("../img/estrellas.jpg") no-repeat center;
 	background-size: cover;
-	z-index: -9;
+	z-index: -10;
 	opacity: 0;
 }
 
