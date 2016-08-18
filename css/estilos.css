@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
 
 * {
 	margin: 0;
@@ -150,7 +151,7 @@ header {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	background: url("../img/estrellas.png") no-repeat center;
+	background: url("../img/estrellas.jpg") no-repeat center;
 	background-size: cover;
 	z-index: -9;
 	opacity: 0;
@@ -182,7 +183,6 @@ header {
 }
 
 #contenidoHeader h1 {
-	
 	font-weight: 100;
 	font-size: 5em;
 	color: #FFF;
@@ -213,13 +213,59 @@ header {
 	color: white;
 	padding: 20px;
 	text-align: center;
-	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 #about h1 {
 	font-weight: 100;
 	font-size: 2.8em;
 }
+
+.borde {
+	width: 6em;
+	height: 0.25em;
+	background-color: #E0C5A4;
+	border-radius: 10px;
+	margin-top: 0.6em;
+}
+
+#about p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.1em;
+	padding: 1.8em;
+	max-width: 800px;
+	letter-spacing: 0.08em;
+	line-height: 1.5em;
+}
+
+#separadorAbout {
+	width: 100vw;
+	height: 3em;
+	background-color: red;
+	background: url(../img/separador.svg) repeat-x top center;
+	background-size: auto;
+	z-index: 1;
+	position: relative;
+}
+
+#girl {
+	width: 70vw;
+	max-width: 500px;
+	height: auto;
+	padding: 1.7em 0;
+}
+
+#skills {
+	background-color: pink;
+	margin-top: -3em;
+	padding-top: 5em;
+	z-index: 0;
+}
+
 
 
 
@@ -237,6 +283,6 @@ header {
 	}
 
 	#about h1 {
-		font-size: 2em;
+		font-size: 2.5em;
 	}
 }
