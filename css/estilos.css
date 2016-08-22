@@ -451,22 +451,22 @@ header {
 }
 
 #simon {
-	background: url(../img/simon.png) no-repeat center;
+	background: url(../img/simon.PNG) no-repeat center;
 	background-size: cover;
 }
 
 #iwata {
-	background: url(../img/iwata.png) no-repeat center;
+	background: url(../img/iwata.PNG) no-repeat center;
 	background-size: cover;
 }
 
 #majoras {
-	background: url(../img/majoras.png) no-repeat center;
+	background: url(../img/majoras.PNG) no-repeat center;
 	background-size: cover;
 }
 
 #teorema {
-	background: url(../img/teorema.png) no-repeat center;
+	background: url(../img/teorema.PNG) no-repeat center;
 	background-size: cover;
 }
 
