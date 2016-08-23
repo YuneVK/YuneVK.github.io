@@ -8,14 +8,33 @@ $(function() {
 	$('#contenidoHeader').css({'opacity': '0'});
 	$('#contenidoHeader').addClass('animated fadeIn');
 
-	$('#about *').css({'opacity': '0'});
+	var activo = false;
 	var aboutWP = new Waypoint({
-		element: $('#about'),
+		element: $('#skillsContenido'),
 		handler: function(direction) {
-			$('#about *').addClass('animated zoomIn');
-			$('#about *').css({'opacity': '1'});
+			if (!activo) {
+				// Por cada barra de skill se mostrará la animación
+				$('.skillbar').each(function(){
+					$(this).find('.skillBarra').animate({
+						width:$(this).attr('data-percent')
+					},4000);
+				});
+
+				// También se mostrará una animación en el contador, que irá aumentando su valor
+				$('.contador').each(function () {
+					var $this = $(this);
+					$({ Counter: 0 }).animate({ Counter: $this.text() }, {
+						duration: 4000,
+						easing: 'swing',
+						step: function () {
+							$this.text(Math.ceil(this.Counter));
+						}
+					});
+				});
+				activo = true;
+			}
 		},
-		offset: '80%'
+		offset: '100%'
 	});
 
 
@@ -55,24 +74,7 @@ $(function() {
 		});		
 	}
 
-	// Por cada barra de skill se mostrará la animación
-	$('.skillbar').each(function(){
-		$(this).find('.skillBarra').animate({
-			width:$(this).attr('data-percent')
-		},4000);
-	});
-
-	// También se mostrará una animación en el contador, que irá aumentando su valor
-	$('.contador').each(function () {
-		var $this = $(this);
-		$({ Counter: 0 }).animate({ Counter: $this.text() }, {
-			duration: 4000,
-			easing: 'swing',
-			step: function () {
-				$this.text(Math.ceil(this.Counter));
-			}
-		});
-	});
+	
 
 	/* 
 	 * Smooth scrolling (transiciones al navegar entre las secciones de la página por el menú)
