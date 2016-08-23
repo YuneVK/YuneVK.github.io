@@ -305,6 +305,7 @@ nav a:hover {
 	text-align: center;
 	position: relative;
 	top: -10vh;
+	z-index: 30;
 }
 
 /* Todos los elementos del contenido principal estarán sobre el resto del fondo */

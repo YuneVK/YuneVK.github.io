@@ -5,6 +5,20 @@ $(function() {
 	// se muestre u oculte, en función del ancho de la página
 	var leftMenu;
 
+	$('#contenidoHeader').css({'opacity': '0'});
+	$('#contenidoHeader').addClass('animated fadeIn');
+
+	$('#about *').css({'opacity': '0'});
+	var aboutWP = new Waypoint({
+		element: $('#about'),
+		handler: function(direction) {
+			$('#about *').addClass('animated zoomIn');
+			$('#about *').css({'opacity': '1'});
+		},
+		offset: '80%'
+	});
+
+
 	// Comprobamos si se accede a la página mediante un dispositivo táctil
 	if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)) {
 		console.log("Movil");
@@ -109,4 +123,6 @@ $(function() {
 			$("nav").css({"left": "0"});
 		}
 	}
+
+	
 });
