@@ -7,6 +7,8 @@
 	font-family: 'Raleway', sans-serif;
 	transition: 0.2s ease-out;
 	transition-property: width, height;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 body {
@@ -18,38 +20,127 @@ header {
 	height: 100vh;
 	width: 100vw;
 	overflow-x: hidden !important;
-	
 }
 
+/* Botón basado en: https://codepen.io/designcouch/pen/Atyop */
 #botonMenu {
 	position: fixed;
 	z-index: 50;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+	position: fixed;
+	width: 3em;
+	height: 3.5em;
+	margin: 1em;
+	margin-top: 2em;
 }
 
+#botonMenu span {
+	display: block;
+	position: absolute;
+	height: 0.35em;
+	width: 100%;
+	background: #BEC8D3;
+	border-radius: 9px;
+	opacity: 1;
+	left: 0;
+	transform: rotate(0deg);
+	transition: 0.25s ease-in-out;
+}
+
+#botonMenu span:nth-child(1) {
+	top: 0;
+}
+
+#botonMenu span:nth-child(2),#botonMenu span:nth-child(3) {
+	top: 0.8em;
+}
+
+#botonMenu span:nth-child(4) {
+	top: 1.6em;
+}
+
+#botonMenu.open span:nth-child(1) {
+	top: 0.8em;
+	width: 0%;
+	left: 50%;
+}
+
+#botonMenu.open span:nth-child(2) {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#botonMenu.open span:nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#botonMenu.open span:nth-child(4) {
+	top: 0.8em;
+	width: 0%;
+	left: 50%;
+}
+
+/* Menú de navegación */
 nav {
 	height: 100%;
-	width: 0;
+	width: 15em;
 	position: fixed;
 	z-index: 1;
 	top: 0;
-	left: 0;
-	background-color: #111;
+	left: -15em;
+	background-color: #051A30;
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 60px;
+	padding-top: 5em;
 	z-index: 50;
 	transition: 0.5s;
+	display: flex;
+	flex-direction: column;
 }
 
-
-
-nav * {
-	font-size: 1.3em;
+nav a {
+	font-size: 2em;
+	padding: 0.5em 1em;
+	text-decoration: none;
 	font-weight: 300;
+	letter-spacing: 0.01em;
 	color: #D5D5D8;
-
+	
 }
 
+nav a:hover {
+	background: #122C49;
+	transition: .2s ease-in;
+}
+
+@media (max-width: 768px) {
+	nav {
+		width: 100vw;
+		left: -100vw;
+		justify-content: space-around;
+		padding: 1em 0;
+		align-items: center;
+	}
+	nav a {
+		font-size: 2.5em;
+		padding: 0;
+	}
+
+	nav a:hover {
+		background: transparent;
+		color: #3D5A79;
+		transition: .2s ease-in;
+	}
+}
+
+/* Fondos con montañas del header */
 #fondo1 {
 	background: url("../img/fondouno.png") no-repeat;
 	background-position: center bottom;
@@ -75,8 +166,7 @@ nav * {
 	width: 100vw;
 }
 
-
-
+/* Div que se usará con particles.js */
 #particles-js {
 	position: absolute;
 	background: radial-gradient(#2F527A, #0B223C);
@@ -85,6 +175,7 @@ nav * {
 	z-index: -10;
 }
 
+/* Colores de los elementos SVG (nubes, luna y ornamentos) */
 .st0{opacity:0.79;fill:#FFFFFF;}
 .st1{opacity:0.15;fill:#DDB481;}
 .st2{opacity:0.22;fill:#DDB481;}
@@ -93,6 +184,7 @@ nav * {
 .st5{fill:#FFFFFF;}
 .st6{fill:#C79665;}
 
+/* Luna en SVG */
 #luna_1_ {
 	position: absolute;
 	bottom: 12vh;
@@ -101,14 +193,17 @@ nav * {
 	z-index: -9;
 }
 
+/* Primer foco de luz de la luna */
 #Luz1 {
 	animation: lucesLuna1 3s ease infinite;
 }
 
+/* Segundo foco de luz de la luna */
 #Luz2 {
 	animation: lucesLuna2 3s ease infinite;
 }
 
+/* Animaciones para las luces de la luna */
 @keyframes lucesLuna1 {
 	0% {opacity: 0.4;}
 	50% {opacity: 0.5;}
@@ -121,6 +216,7 @@ nav * {
 	100% {opacity: 0.2}
 }
 
+/* Nubes */
 .nube {
 	fill: #FFF;
 	opacity: 0.7;
@@ -171,6 +267,7 @@ nav * {
 	z-index: 8;
 }
 
+/* Animación para las nubes */
 @keyframes nubes {
 	0% {
 		left: -60%;
@@ -180,6 +277,9 @@ nav * {
 	}
 }
 
+/* Div que se mostrará cuando no se use particles.js, es decir
+ *	cuando se acceda a la página desde un dispositivo móvil
+ */
 #estrellas {
 	position: absolute;
 	width: 100vw;
@@ -190,6 +290,7 @@ nav * {
 	opacity: 0;
 }
 
+/* Contenido principal del hader, con el título */
 #contenidoHeader {
 	height: 100vh;
 	width: 100vw;
@@ -206,18 +307,22 @@ nav * {
 	top: -10vh;
 }
 
+/* Todos los elementos del contenido principal estarán sobre el resto del fondo */
 #contenidoHeader * {
 	z-index: 30;
 }
 
+/* Ornamentos del hader */
 .ornament {
 	fill: rgba(255, 255, 255, 1);
 }
 
+/* Contenido de los ornamentos */
 .ornamentCont {
 	width: 15em;
 }
 
+/* Título de la página en el header */
 #contenidoHeader h1 {
 	font-weight: 100;
 	font-size: 5em;
@@ -228,10 +333,12 @@ nav * {
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
+/* 'Ruiz' en el título */
 #contenidoHeader b {
 	font-weight: 300;
 }
 
+/* Subtítulo del header */
 #contenidoHeader h2 {
 	font-weight: 300;
 	font-size: 1.5rem;
@@ -242,8 +349,7 @@ nav * {
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
-
-
+/* Sección 'Sobre mí' */
 #about {
 	background-color: #0A0618;
 	color: white;
@@ -259,12 +365,14 @@ nav * {
 	    align-items: center;
 }
 
+/* Elemento H1 de cada una de la secciones (su título) */
 .seccion {
 	font-weight: 100;
 	font-size: 2.8em;
 	text-align: center;
 }
 
+/* Línea inferior al título de cada sección */
 .borde {
 	width: 6em;
 	height: 0.25em;
@@ -273,6 +381,7 @@ nav * {
 	margin-top: 0.6em;
 }
 
+/* Texto de la sección 'Sobre mí' */
 #about p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
@@ -283,6 +392,7 @@ nav * {
 	line-height: 1.5em;
 }
 
+/* Div que separa la sección 'Sobre mí' y 'Skills' */
 #separadorAbout {
 	width: 100vw;
 	height: 3em;
@@ -292,6 +402,7 @@ nav * {
 	position: relative;
 }
 
+/* Ilustración de 'Sobre mí' */
 #girl {
 	width: 70vw;
 	max-width: 500px;
@@ -299,6 +410,7 @@ nav * {
 	padding: 1.7em 0;
 }
 
+/* Sección 'Skills' */
 #skills {
 	background: url(../img/fondoSkills.svg) no-repeat center center;
 	background-size: 90vmin;
@@ -306,12 +418,14 @@ nav * {
 	z-index: 0;
 }
 
+/* Degradado que se mostrará en el fondo de 'Skills' */
 #skillsFondo {
 	background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(218, 219, 221,0.9));
 	margin-top: -3em;
 	padding-top: 5em;
 }
 
+/* Contenido de la sección */
 #skillsContenido {
 	display: -ms-flexbox;
 	display: flex;
@@ -323,20 +437,24 @@ nav * {
 	    align-items: center;
 }
 
+/* Título de Skills */
 #skillsContenido h1 {
 	font-weight: 300;
 }
 
+/* Barras de Skills */
 #bars {
 	width: 90vw;
 	max-width: 700px;
 	margin: 3em;
 }
 
+/* Porcentaje que se muestra en cada barra */
 .contador:after{
 	content: "%";
 }
 
+/* Cada una de las barras de skills */
 .skillbar {
 	position: relative;
 	display: block;
@@ -389,6 +507,7 @@ nav * {
 	color: rgba(0, 0, 0, 0.6);
 }
 
+/* Div que separa la sección 'Skills' de 'Portfolio' */
 #separadorPortfolio {
 	width: 100vw;
 	height: 3em;
@@ -399,6 +518,7 @@ nav * {
 	margin-top: -3em;
 }
 
+/* Sección 'Portfolio' */
 #portfolio {
 	width: 100vw;
 	background-color: #2F527A;
@@ -416,11 +536,13 @@ nav * {
 	padding-bottom: 4em;
 }
 
+/* Título de la sección */
 #portfolio h1 {
 	font-weight: 300;
 	color: #D5D5D8;
 }
 
+/* Elementos del portfolio */
 #items {
 	width: 90vw;
 	margin: auto;
@@ -435,6 +557,7 @@ nav * {
 
 }
 
+/* Cada uno de los elementos */
 .item {
 	height: 20em;
 	width: 20em;
@@ -445,6 +568,9 @@ nav * {
 	border-radius: 5px;
 }
 
+/* Información del elemento. Será visible cuando se pase
+ * el ratón por encima
+ */
 .infoItem {
 	position: absolute;
 	height: calc(100% - 2em);
@@ -465,22 +591,26 @@ nav * {
 	border-radius: 5px;
 }
 
+/* Cuando se pase el ratón por el item se hará visible */
 .infoItem:hover {
 	opacity: 1;
 	transition: 0.3s;
 	transition-timing-function: ease-in;
 }
 
+/* Título del item */
 .infoItem h1 {
 	padding-bottom: 0.3em;
 	font-size: 2.2em;
 }
 
+/* Icono de enlace del item */
 .fa-link {
 	font-size: 2em;
 	padding: 0.5em;
 }
 
+/* Cada elemento tendrá como fondo una imagen del proyecto */
 #simon {
 	background: url(../img/simon.PNG) no-repeat center;
 	background-size: cover;
@@ -501,6 +631,7 @@ nav * {
 	background-size: cover;
 }
 
+/* Div que separa la sección 'Portfolio' de 'Contacto' */
 #separadorContacto {
 	width: 100vw;
 	height: 4em;
@@ -512,6 +643,7 @@ nav * {
 	
 }
 
+/* Sección 'Contacto' */
 #contacto {
 	background-color: #031427;
 	padding: 1.5em;
@@ -519,11 +651,13 @@ nav * {
 	color: #D5D5D8;
 }
 
+/* Título de la sección */
 #contacto h1 {
 	font-weight: 300;
 	
 }
 
+/* Iconos de las redes sociales */
 #social {
 	padding: 2em;
 	display: -ms-flexbox;
@@ -534,6 +668,7 @@ nav * {
 	    justify-content: center;
 }
 
+/* Cada uno de los iconos */
 #social * {
 	color: #D5D5D8;
 	font-size: 1.5em;

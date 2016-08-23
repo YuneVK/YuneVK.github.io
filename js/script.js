@@ -1,17 +1,27 @@
 $(function() {
-	var height = $(window).height();
-	var device = navigator.userAgent;
+	var height = $(window).height(); // Alto de la página
+	var device = navigator.userAgent; // Navegador que se está usando
+	// Variable que utilizaremos para saber el margen que deberá tener el menú cuando
+	// se muestre u oculte, en función del ancho de la página
+	var leftMenu;
 
+	// Comprobamos si se accede a la página mediante un dispositivo táctil
 	if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)) {
 		console.log("Movil");
+		// Si es un móvil mostraremos el fondo estático de estrellas
+		// y la información de los elementos del portfolio no tendrán
+		// el efecto hover, si no que se verán directamente
 		$("#estrellas").css({"opacity": "1"});
 		$(".infoItem").css({"opacity": "1"});
-	} else {
-		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+	} else { // Si no es un móvil
+		// Iniciamos el fondo de particles.js
 		particlesJS.load('particles-js', 'assets/particles.json', function() {
 			console.log('callback - particles.js config loaded');
 		});
 
+		// Los dos fondos de montañas (los de la parte posterior) serán fijos
+		// para cambiar la velocidad con la que se mueven al hacer scroll (esto
+		// no se hará en la versión móvil por rendimiento)
 		$("#fondo1").css({"background-attachment": "fixed"});
 		$("#fondo2").css({"background-attachment": "fixed"});
 
@@ -24,20 +34,21 @@ $(function() {
 			// Se establece así para que lo siguiente solo se ejecute cuando la cabecera
 			// esté visible
 			if(scrollTop < height) {
-				// Movemos el fondo del contenedor (la cabecera) a medida
-				// que se va haciendo scroll en la página
+				// Movemos los fondos a una velocidad inferior a la del scroll para consegui el efecto parallax
 				$("#fondo1").css({"background-position": "center bottom +" + (scrollTop/1.3) + "px"});
 				$("#fondo2").css({"background-position": "center bottom +" + (scrollTop/1.1) + "px"});
 			}
 		});		
 	}
 
+	// Por cada barra de skill se mostrará la animación
 	$('.skillbar').each(function(){
 		$(this).find('.skillBarra').animate({
 			width:$(this).attr('data-percent')
 		},4000);
 	});
 
+	// También se mostrará una animación en el contador, que irá aumentando su valor
 	$('.contador').each(function () {
 		var $this = $(this);
 		$({ Counter: 0 }).animate({ Counter: $this.text() }, {
@@ -49,6 +60,10 @@ $(function() {
 		});
 	});
 
+	/* 
+	 * Smooth scrolling (transiciones al navegar entre las secciones de la página por el menú)
+	 * https://css-tricks.com/snippets/jquery/smooth-scrolling/
+	 */
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
@@ -57,28 +72,41 @@ $(function() {
 				$('html, body').animate({
 					scrollTop: target.offset().top
 				}, 1000);
+				ocultarMenu();
 				return false;
 			}
 		}
 	});
 
-	$('.botonAbrir').click(function() {
-		$("nav").css({"width": "250px"});
-		$('.botonAbrir').addClass('botonCerrar');
-		$('.botonAbrir').removeClass('botonAbrir');
-		console.log("abierto");
+	// Cuando se pulse sobre el botón del menú para abrirlo o cerrarlo
+	$('#botonMenu').click(function() {
+		ocultarMenu();
 	});
 
-	$('.botonCerrar').click(function() {
-		console.log('cerrado');
-		$("nav").css({"width": "0"});
-		$('.botonCerrar').addClass('botonAbrir');
-		$('.botonCerrar').removeClass('botonCerrar');
-	});
+	/**
+	 * Función ocultarMenu
+	 * Oculta o muestra el menú de navegación
+	 */
+	function ocultarMenu() {
+		// Para mostrar el menú tendremos que cambiar el margen de este.
+		// Como tenemos dos tipos de menú en función del ancho de la ventana, 
+		// obtenemos este valor para establecer el margen que tendrá
+		if ($(window).width() <= 768) {
+			leftMenu = "-100vw";
+		} else {
+			leftMenu = "-15em";
+		}
 
-	//
-	// http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_full
-	//http://www.w3schools.com/howto/howto_js_topnav.asp
-	//http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push_opacity
-	//http://www.w3schools.com/howto/howto_js_sidenav.asp
+		// Creamos o eliminamos la clase 'open' del botón para que cambie de aspecto
+		$('#botonMenu').toggleClass('open');
+
+		// Si el margen de la barra es 0, se estará mostrando, por lo que cambiamos
+		// su margen al calculado para ocultarla
+		if ($("nav").css("left") == '0px') {
+			$("nav").css({"left": leftMenu});
+		} else { // Si la barra está oculta
+			// Cambiamos su margen a 0 para mostrarla
+			$("nav").css({"left": "0"});
+		}
+	}
 });
