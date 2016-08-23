@@ -1,14 +1,6 @@
 $(function() {
 	var height = $(window).height();
-
 	var device = navigator.userAgent;
-
-/*
-	var widthOrnament = $('#contenidoHeader h1').width();
-	$("#ornament").css({"width": widthOrnament*0.75 + "px"});
-
-	console.log("Ancho: " + widthOrnament);
-*/
 
 	if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)) {
 		console.log("Movil");
@@ -56,4 +48,37 @@ $(function() {
 			}
 		});
 	});
+
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
+
+	$('.botonAbrir').click(function() {
+		$("nav").css({"width": "250px"});
+		$('.botonAbrir').addClass('botonCerrar');
+		$('.botonAbrir').removeClass('botonAbrir');
+		console.log("abierto");
+	});
+
+	$('.botonCerrar').click(function() {
+		console.log('cerrado');
+		$("nav").css({"width": "0"});
+		$('.botonCerrar').addClass('botonAbrir');
+		$('.botonCerrar').removeClass('botonCerrar');
+	});
+
+	//
+	// http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_full
+	//http://www.w3schools.com/howto/howto_js_topnav.asp
+	//http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push_opacity
+	//http://www.w3schools.com/howto/howto_js_sidenav.asp
 });
