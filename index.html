@@ -3,7 +3,29 @@
 <head>
 	<meta charset="UTF8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<title>Portfolio</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="description" content="Web personal y portfolio dedicado al diseño y desarrollo web." />
+	<meta name="keywords" content="diseño, web, desarrollo, programacion, portfolio">
+	<title>Sonia Ruiz Cayuela | Portfolio</title>
+	<meta property="og:title" content="Sonia Ruiz Cayuela | Portfolio">
+	<meta property="og:description" content="Web personal y portfolio dedicado al diseño y desarrollo web.">
+	<meta property="og:image" content="img/apple-icon.png">
 	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
@@ -13,6 +35,11 @@
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
+	<!-- Div que se muestra cuando se está cargando la página -->
+	<div id="loading">
+		<div></div>
+	</div>
+
 	<!-- Menu de navegacion -->
 	<nav>
 		<a href="#about">Sobre mí</a>
@@ -313,7 +340,7 @@
 		<!-- Items del portfolio -->
 		<div id="items">
 			<div class="item" id="simon">
-				<a href="#">
+				<a href="/simon/index.html" target="_blank">
 					<div class="infoItem">
 						<h1>Simon game</h1>
 						<p>Juego Simon Says creado con HTML, CSS y JS</p>
@@ -323,7 +350,7 @@
 			</div>
 
 			<div class="item" id="iwata">
-				<a href="#">
+				<a href="/iwata/index.html" target="_blank">
 					<div class="infoItem">
 						<h1>Tributo a Iwata</h1>
 						<p>Web homenaje a Satoru Iwata</p>
@@ -333,7 +360,7 @@
 			</div>
 
 			<div class="item" id="majoras">
-				<a href="#">
+				<a href="/majora/index.html" target="_blank">
 					<div class="infoItem">
 						<h1>Majora's Mask</h1>
 						<p>Pixel art creado en CSS</p>
@@ -343,7 +370,7 @@
 			</div>
 
 			<div class="item" id="teorema">
-				<a href="#">
+				<a href="/teorema/index.html" target="_blank">
 					<div class="infoItem">
 						<h1>Teorema de pitágoras</h1>
 						<p>Demostración del teorema de pitágoras mediante una animación en CSS</p>

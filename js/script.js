@@ -5,14 +5,18 @@ $(function() {
 	// se muestre u oculte, en función del ancho de la página
 	var leftMenu;
 
+	$('#loading').addClass('animated fadeOut');
+	$('#loading').css({'z-index': '-300'});
+
 	$('#contenidoHeader').css({'opacity': '0'});
 	$('#contenidoHeader').addClass('animated fadeIn');
 
-	var activo = false;
+	var activo = false; // Si ya se ha realizado la animación de las barras de skills
+	// Establecemos un waypoint para animar las barras de skills cuando sean visibles
 	var aboutWP = new Waypoint({
 		element: $('#skillsContenido'),
 		handler: function(direction) {
-			if (!activo) {
+			if (!activo) { // Si no se ha animado
 				// Por cada barra de skill se mostrará la animación
 				$('.skillbar').each(function(){
 					$(this).find('.skillBarra').animate({

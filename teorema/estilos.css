@@ -1,0 +1,269 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #D2D2FF;
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#contenedor {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	animation: rotate 10s cubic-bezier(0.42, 0, 0.43, 0.86) infinite;
+	/*transform: rotate(30deg);*/
+}
+
+#triangulo {
+	position: absolute;
+	margin: auto;
+	top: 3vmin; left: 0; bottom: 0; right: 0;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 13vmin 16vmin 23vmin;
+	border-color: transparent transparent #F7F7F7 transparent;
+}
+
+#cuadradoM {
+	position: absolute;
+	margin: auto;
+	top: 0; left: -29vmin; bottom: 20vmin; right: 0;
+	border: 1.7vmin solid #F7F7F7;
+	width: 25vmin;
+	height: 25vmin;
+	background-color: #428CCE;
+	transform: rotate(55.2deg);
+	background-size: 100% 200%;
+	background-image: linear-gradient(0deg, #D2D2FF 50%, #428CCE 50%);
+	animation: fillM 10s ease-out infinite;
+}
+
+#cuadradoS {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 38.7vmin; bottom: 10vmin; right: 0;
+	border: 1.7vmin solid #F7F7F7;
+	width: 17.4vmin;
+	height: 17.4vmin;
+	background-color: #428CCE;
+	transform: rotate(50.8deg);
+	background-size: 100% 200%;
+	background-image: linear-gradient(0deg, #D2D2FF 50%, #428CCE 50%);
+	animation: fillS 10s ease-out infinite;
+}
+
+#cuadradoG {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; bottom: -54.8vmin; right: 0;
+	border: 1.7vmin solid #F7F7F7;
+	width: 32.8vmin;
+	height: 32.8vmin;
+	background-color: #428CCE;
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, #D2D2FF 50%, #428CCE 50%);
+	animation: fillG 10s ease-out infinite;
+}
+
+#lineaM {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0.65vmin; bottom: -17vmin; right: 0;
+	width: 31.7vmin;
+	height: 0.5vmin;
+	background-color: #9C9C9C;
+}
+
+#lineaS {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 20.8vmin; bottom: -3vmin; right: 0;
+	width: 18.5vmin;
+	height: 0.5vmin;
+	background-color: #9C9C9C;
+	transform: rotate(50.8deg);
+}
+
+#lineaG {
+	position: absolute;
+	margin: auto;
+	top: 0; left: -11vmin; bottom: -3vmin; right: 0;
+	width: 24.7vmin;
+	height: 0.5vmin;
+	background-color: #9C9C9C;
+	transform: rotate(-34.9deg);
+}
+
+#cuadradoInt {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 8.8vmin; bottom: 6.6vmin; right: 0;
+	width: 3vmin;
+	height: 3vmin;
+	border: 0.4vmin solid #9C9C9C;
+	transform: rotate(-37deg);
+}
+
+#a {
+	position: absolute;
+	margin: auto; 
+	top: 2.8vmin; left: 20.3vmin; bottom: 0; right: 0;
+	
+}
+
+#b {
+	position: absolute;
+	margin: auto;
+	top: 3.5vmin; left: 0; bottom: 0; right: 10.5vmin;
+
+}
+
+#c {
+	position: absolute;
+	margin: auto;
+	top: 16vmin; left: 3vmin; bottom: 0; right: 0;
+}
+
+#a, #b, #c {
+	color: #9C9C9C;
+	background-color: #F7F7F7;
+	height: 4vmin;
+	width: 3.7vmin;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 3vmin;
+	font-weight: 700;
+}
+
+#a2 {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	transform: rotate(-50.8deg);
+}
+
+#b2 {
+	position: absolute;
+	margin: auto;
+	top: 0; left: 0; bottom: 0; right: 0;
+	transform: rotate(-53.5deg);
+}
+
+#c2 {
+	position: absolute;
+	margin: auto;
+	top: -2.8vmin; left: 3vmin; bottom: 0; right: 0;
+}
+
+#a2, #b2, #c2 {
+	font-size: 6vmin;
+	color: #D2D2FF;
+	height: 8vmin;
+	width: 8vmin;
+	font-weight: 600;
+	letter-spacing: 0.5vmin;
+}
+
+p {
+	animation: rotateLetter 10s cubic-bezier(0.42, 0, 0.43, 0.86) infinite;
+}
+
+sup {
+	font-size: 4vmin;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-180deg);
+	}
+	90% {
+		transform: rotate(-180deg)
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes fillG {
+	0% {
+		background-position: 0 0;
+	}
+	35% {
+		background-position: 0 100%;
+	}
+	50% {
+		background-position: 0 100%;
+	}
+	85% {
+		background-position: 0 200%;
+	}
+	100% {
+		background-position: 0 200%;
+	}
+}
+
+@keyframes fillS {
+	0% {
+		background-position: 0 0;
+	}
+	30% {
+		background-position: 0 100%;
+	}
+	50% {
+		background-position: 0 100%;
+	}
+	80% {
+		background-position: 0 200%;
+	}
+	100% {
+		background-position: 0 200%;
+	}
+}
+
+@keyframes fillM {
+	0% {
+		background-position: 0 0;
+	}
+	35% {
+		background-position: 0 100%;
+	}
+	50% {
+		background-position: 0 100%;
+	}
+	85% {
+		background-position: 0 200%;
+	}
+	100% {
+		background-position: 0 200%;
+	}
+}
+
+@keyframes rotateLetter {
+	0% {
+		transform: rotate(0deg);
+	}
+	40% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	90% {
+		transform: rotate(180deg)
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
