@@ -25,7 +25,7 @@ $().ready(function() {
 		$('#new').html('<i class="fa fa-spinner fa-spin fa-fw"></i> New quote');
 		// Obtenemos la llamada mediante ajax
 		$.ajax( {
-			url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+			url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
 			success: function (data) {
 				var post = data.shift(); // The data is an array of posts. Grab the first one.
 				// Si la cita es demasiado larga no la mostraremos, y buscaremos otra, llamando otra vez
