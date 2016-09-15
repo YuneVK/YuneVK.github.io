@@ -490,9 +490,14 @@ nav a:hover {
 .borde {
 	width: 6em;
 	height: 0.25em;
-	background-color: #E0C5A4;
+	background-color: #BBC3C3;
 	border-radius: 10px;
+	margin: auto;
 	margin-top: 0.6em;
+}
+
+.azul {
+	background-color: #7692B0;
 }
 
 /* Texto de la sección 'Sobre mí' */
@@ -768,6 +773,11 @@ nav a:hover {
 	background-size: cover;
 }
 
+#quotes {
+	background: url(../img/quotes.PNG) no-repeat center;
+	background-size: cover;
+}
+
 /* Div que separa la sección 'Portfolio' de 'Contacto' */
 #separadorContacto {
 	width: 100vw;
@@ -814,6 +824,11 @@ nav a:hover {
 	color: #D5D5D8;
 	font-size: 1.5em;
 	padding: 0 0.3em;
+}
+
+#social *:hover {
+	color: #ABABB5;
+	transition: 0.2s ease;
 }
 
 #contacto p {

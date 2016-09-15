@@ -1,0 +1,189 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+@import 'https://fonts.googleapis.com/css?family=Lato:300';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #00897b;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	/* Animation */
+	background: linear-gradient(312deg, #00897b, #43a047, #7cb342, #c0ca33, #ffb300, #fb8c00, #f4511e, #e53935, #d81b60, #8e24aa, #5e35b1, #3949ab, #1e88e5, #039be5, #00acc1);
+	background-size: 3000% 3000%;
+	animation: AnimationName 59s linear infinite;
+}
+
+@keyframes AnimationName { 
+	0%{background-position:0% 9%}
+	50%{background-position:100% 92%}
+	100%{background-position:0% 9%}
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 3.2em;
+	padding: 0.3em;
+	color: rgba(255,255,255,0.8);
+	margin-top: -1.5em;
+}
+
+#container {
+	width: 90vw;
+	max-width: 600px;
+	height: auto;
+	min-height: 40vh;
+	background: rgba(238,238,238,0.9);
+	border-radius: 0.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+}
+
+#quotesBackground {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	padding: 0 1em;
+	margin-top: -1em;
+	/* Para que el padding no aumente del width */
+	box-sizing: border-box;
+}
+
+#quoteStart, #quoteEnd {
+	height: 1em;
+	font-size: 7em;
+	color: #C0C0C0;
+	opacity: 0.1;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	animation: authorColor 59s linear infinite;
+}
+
+#quoteEnd {
+	right: 0.12em;
+}
+
+#quoteContainer {
+	width: 100%;
+	z-index: 3;
+	text-align: center;
+}
+
+#quote {
+	font-size: 1.4em;
+	padding: 1em 2em 0.5em 2em;
+	color: rgba(0,0,0,0.8);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+
+#author {
+	font-size: 1.3em;
+	font-weight: 700;
+	margin-bottom:3em;
+	color: #02A3D6;
+	animation: authorColor 59s linear infinite;
+}
+
+@keyframes authorColor{
+	0% {color: #02A3D6;}
+	6.67% {color: #237DDB;}
+	13.34% {color: #5E35B1;}
+	20.01% {color: #C31D74;}
+	26.68% {color: #ED452A;}
+	33.35% {color: #FC9500;}
+	40.02% {color: #D4C222;}
+	46.67% {color: #5DA944;}
+	53.56% {color: #5DA844;}
+	60.03% {color: #C7C72D;}
+	66.7% {color: #FC9500;}
+	73.37% {color: #EB432B;}
+	80.04% {color: #CC1D6D;}
+	86.71% {color: #6333B0;}
+	93.98% {color: #227EDC;}
+	100% {color: #02A3D6;}
+}
+
+#buttons {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: space-around;
+	z-index: 5;
+}
+
+button {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0.4em 0.8em;
+	margin: 1em 0;
+	border: none;
+	border-radius: 5px;
+	background: #02A3D6;
+	opacity: 1;
+	cursor: pointer;
+	font-size: 1.1em;
+	letter-spacing: 0.03em;
+	color: #D9E0DE;
+	animation: buttonColor 59s linear infinite;
+}
+
+@keyframes buttonColor{
+	0% {background: #02A3D6;}
+	6.67% {background: #237DDB;}
+	13.34% {background: #5E35B1;}
+	20.01% {background: #C31D74;}
+	26.68% {background: #ED452A;}
+	33.35% {background: #FC9500;}
+	40.02% {background: #D4C222;}
+	46.67% {background: #5DA944;}
+	53.56% {background: #5DA844;}
+	60.03% {background: #C7C72D;}
+	66.7% {background: #FC9500;}
+	73.37% {background: #EB432B;}
+	80.04% {background: #CC1D6D;}
+	86.71% {background: #6333B0;}
+	93.98% {background: #227EDC;}
+	100% {background: #02A3D6;}
+}
+
+button:focus {
+	outline: none;
+}
+
+button:hover {
+	opacity: 0.7;
+	transition: 0.2s ease;
+}
+
+/* Pie de página */
+body > p {
+	font-family: 'Lato', sans-serif;
+	font-size: 0.9em;
+	letter-spacing: 0.09em;
+	color: #E8E8E8;
+	padding-top: 0.5em;
+}
+
+body > p a {
+	color: #E8E8E8;
+	text-decoration: none;
+}
+
+body > p a:hover {
+	text-decoration: underline;
+}

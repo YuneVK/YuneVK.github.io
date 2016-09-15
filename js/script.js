@@ -21,14 +21,14 @@ $(function() {
 				$('.skillbar').each(function(){
 					$(this).find('.skillBarra').animate({
 						width:$(this).attr('data-percent')
-					},4000);
+					},3000);
 				});
 
 				// También se mostrará una animación en el contador, que irá aumentando su valor
 				$('.contador').each(function () {
 					var $this = $(this);
 					$({ Counter: 0 }).animate({ Counter: $this.text() }, {
-						duration: 4000,
+						duration: 3000,
 						easing: 'swing',
 						step: function () {
 							$this.text(Math.ceil(this.Counter));
