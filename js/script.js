@@ -21,11 +21,11 @@ $(function() {
 				$('.skillbar').each(function(){
 					$(this).find('.skillBarra').animate({
 						width:$(this).attr('data-percent')
-					},3000);
+					},4000, "linear");
 				});
 
 				// También se mostrará una animación en el contador, que irá aumentando su valor
-				$('.contador').each(function () {
+				/*$('.contador').each(function () {
 					var $this = $(this);
 					$({ Counter: 0 }).animate({ Counter: $this.text() }, {
 						duration: 3000,
@@ -34,11 +34,11 @@ $(function() {
 							$this.text(Math.ceil(this.Counter));
 						}
 					});
-				});
+				});*/
 				activo = true;
 			}
 		},
-		offset: '100%'
+		offset: '130%'
 	});
 
 
