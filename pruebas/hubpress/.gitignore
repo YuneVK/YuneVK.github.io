@@ -1,6 +1,0 @@
-node_modules/
-dist/
-.sass-cache/
-docs/jsdoc/
-bower_components/
-config-*.json

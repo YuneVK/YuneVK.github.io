@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "username": "put your username here",
+    "repositoryName": "put your repository name here",
+    "branch": "gh-pages"
+  },
+  "theme": {
+    "name": "Casper"
+  }
+}
