@@ -1,0 +1,21 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+#triangulos {
+	width: 100vw;
+	height: 100vh;
+	margin-left: 35vw;
+}
+
+#triangulos li {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
+#triangulos img {
+	width: 100vw;
+	height: 100vh;
+}
