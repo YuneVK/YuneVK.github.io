@@ -5,7 +5,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden !important;
+
 }
 
 body {
@@ -20,6 +20,7 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden !important;
 }
 
 #efecto {
