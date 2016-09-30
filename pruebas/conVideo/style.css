@@ -38,9 +38,12 @@ header, section {
 	height: 100vh;
 	width: 100%;
 	text-align: center;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
 	padding: 2em;
 	box-sizing: border-box;
 

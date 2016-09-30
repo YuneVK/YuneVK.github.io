@@ -56,7 +56,26 @@ $(function() {
 
 	});
 
+	function resize(){
+// Load Variables - we do this here so they are reset when the screen changes size.
+var SW = $(window).width();
+var VH = SW * 0.5625; 
+var SH = $(window).height();
+var VW = SH * 1.777;
+// Screen size check based on 16:9 ratio
+if (SW > VW) {
+$("#video iframe").width(SW).height(VH).css("top", -(VH - SH) /2);
+} else { 
+$("#video iframe").height(SH).width(VW).css("left", -(VW - SW) /2);
+}
+// Confirmation
+console.log("Resized")
+} resize();
 
+$(window).resize(function() {
+resize(); 
+
+});
 
 
 });
