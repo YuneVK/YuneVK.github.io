@@ -26,13 +26,80 @@
 	<meta property="og:title" content="Sonia Ruiz Cayuela | Portfolio">
 	<meta property="og:description" content="Web personal y portfolio dedicado al diseño y desarrollo web.">
 	<meta property="og:image" content="img/apple-icon.png">
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/lib/particles.min.js"></script>
-	<script type="text/javascript" src="js/lib/jquery.waypoints.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<style>
+		/* Div que se muestra cuando se está cargando la página */
+		#loading {
+			position: fixed;
+			background: -webkit-radial-gradient(#2F527A, #0B223C);
+			background: radial-gradient(#2F527A, #0B223C);
+			width: 100vw;
+			height: 100vh;
+			z-index: 200;
+			display: -ms-flexbox;
+			display: -webkit-box;
+			display: flex;
+			-ms-flex-direction: column;
+			    -webkit-box-orient: vertical;
+			    -webkit-box-direction: normal;
+			        flex-direction: column;
+			-ms-flex-pack: center;
+			    -webkit-box-pack: center;
+			        justify-content: center;
+			-ms-flex-align: center;
+			    -webkit-box-align: center;
+			        align-items: center;
+		}
+
+		#loading div {
+			-webkit-animation-duration: 0.75s;
+			        animation-duration: 0.75s;
+			-webkit-animation-iteration-count: infinite;
+			        animation-iteration-count: infinite;
+			-webkit-animation-name: rotate-forever;
+			        animation-name: rotate-forever;
+			-webkit-animation-timing-function: linear;
+			        animation-timing-function: linear;
+			height: 3em;
+			width: 3em;
+			border: 0.5em solid #ffffff;
+			border-right-color: transparent;
+			border-radius: 50%;
+			display: inline-block;
+		}
+
+		@-webkit-keyframes rotate-forever {
+			0% {
+				-webkit-transform: rotate(0deg);
+				        transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+				        transform: rotate(360deg);
+			}
+		}
+
+		@keyframes rotate-forever {
+			0% {
+				-webkit-transform: rotate(0deg);
+				        transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+				        transform: rotate(360deg);
+			}
+		}
+	</style>
+	<script>
+		window.onload = function() {
+			var loading = document.getElementById("loading");
+			loading.className += " animated fadeOut";
+			loading.style.zIndex = "-300";
+
+			var contenidoHeader = document.getElementById("contenidoHeader");
+			loading.className += " animated fadeIn";
+			loading.style.opacity = "0";
+		}
+	</script>
 	<!-- Google Analytics -->
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -426,5 +493,12 @@
 		<p>Diseñado y desarrollado con <i class="fa fa-heart" aria-hidden="true"></i> por Sonia Ruiz</p>
 		<p>Todas las ilustraciones utilizadas en esta página se han obtenido de <a href="http://www.freepik.com">Freepik</a></p>
 	</div>
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/particles.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
