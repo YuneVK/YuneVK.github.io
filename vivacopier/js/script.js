@@ -1,9 +1,9 @@
 window.onload = function() {
   var working = false;
 
-  $('#email').required = false;
-  $('#modeloInput').required = false;
-  $('#telefono').required = false;
+  //$('#email').required = false;
+  //$('#modeloInput').required = false;
+  //$('#telefono').required = false;
 
   $('button').on('click', function(e) {
     e.preventDefault();
