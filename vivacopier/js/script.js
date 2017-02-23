@@ -86,7 +86,7 @@ window.onload = function() {
   });
 
 
-  $("input").bind("invalid", function(event) {
+  $("body").bind("invalid", function(event) {
     event.preventDefault();
   });
 
