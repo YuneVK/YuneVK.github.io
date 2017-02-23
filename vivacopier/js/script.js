@@ -40,7 +40,7 @@ window.onload = function() {
 
     // Validación del modelo
     if (modelo == "") {
-      $("#errorModelo").text("Debes introducir un modelo");
+      $("#errorModelo").text("Debes introducir un número de serie");
       $("#errorModelo").show();
       valido = false;
     }
