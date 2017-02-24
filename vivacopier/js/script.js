@@ -10,7 +10,7 @@ window.onload = function() {
     //if (working) return;
     working = true;
     var $this = $('form'),
-      $state = $this.find('button > .state');
+        $state = $this.find('button > .state');
     $this.addClass('loading');
     $state.html('Espere');
 

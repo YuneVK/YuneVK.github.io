@@ -3,11 +3,24 @@
 * {
   margin: 0;
   padding: 0;
+  transition: all .2s ease;
+}
+
+body::after, body::before,
+input::after,
+input::before,
+select::after,
+select::before,
+textarea::after,
+textarea::before,
+body *::after,
+body *::before {
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   background: #e9e9e9;
 }
 
@@ -177,7 +190,7 @@ footer a, footer a:link {
   position: relative;
   background: none;
   width: 100%;
-  height: 40px;
+  height: 2.7em;
   border: 0;
   color: #212121;
   font-size: 20px;
@@ -313,7 +326,7 @@ button:focus {outline:0;}
 
 /* 2mas2 */
 footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   display: flex;
@@ -345,7 +358,6 @@ footer p {
   max-width: 600px;
   background: #ffffff;
   position: relative;
-  padding-bottom: 80px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -389,7 +401,6 @@ nav div:hover {
 
 #imagenSas {
   position: relative;
-  margin-top: -7em;
 }
 
 #imagenSas img {
@@ -429,6 +440,60 @@ nav div:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2em;
+  flex-direction: column;
+  padding: 1.4em;
   color: #4E4D4D;
+}
+
+#contenidoSas h1 {
+  padding-bottom: .7em;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.switchable-wrapper {
+  padding-top: .5em !important;
+  display: flex;
+  
+}
+
+.switchable-wrapper .switchable-label {
+  height: auto;
+}
+
+#servicio {
+  box-shadow: none;
+  padding: 0 !important;
+  max-width: inherit;
+}
+
+#servicio p {
+  padding: .5em;
+}
+
+.mensaje {
+  margin-top: 1.5em;
+}
+
+#enviar {
+  position: relative;
+}
+
+.botonEnviado {
+  position: absolute !important;
+  max-height: 100% !important;
+}
+
+
+.okButton {
+  background-color: #8bc34a !important;
+}
+
+.centro {
+  display: flex;
+}
+
+.okSpinner {
+  opacity: 1 !important;
+  top: 40% !important;
 }
