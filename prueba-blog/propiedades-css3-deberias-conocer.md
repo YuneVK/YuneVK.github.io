@@ -1,6 +1,6 @@
 # 6 propiedades de CSS3 que deberías conocer
 
-###A pesar de ser el estándar desde hace años, hoy en día todavía existen propiedades de CSS3 que no todo el mundo conoce. Vamos a repasar las más importantes.
+### A pesar de ser el estándar desde hace años, hoy en día todavía existen propiedades de CSS3 que no todo el mundo conoce. Vamos a repasar las más importantes.
 
 En 2011, CSS3 comenzó a ser la recomendación oficial de la [W3C](http://www.w3c.es/), incorporando nuevas características y técnicas (sombras, RGBA, degradados, animaciones... ) a través de módulos que han ido estandarizándose con el tiempo. Estas nuevas características han servido para mejorar la experiencia de usuario al navegar en sitios web.
 
