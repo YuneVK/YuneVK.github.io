@@ -89,7 +89,7 @@ Dicho valor debe ser lo suficientemente descriptivo al contenido. Si la imagen n
 ```
 <img src="img/logo.png">
 ```
-**Bien: **
+**Bien:**
 ```
 <img src="img/logo.png" alt="Web App Design Logo">
 ```
