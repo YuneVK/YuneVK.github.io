@@ -1,0 +1,173 @@
+<meta charset="utf-8">
+
+<h1>6 propiedades de CSS3 que deberías conocer</h1>
+
+<h3>A pesar de ser el estándar desde hace años, hoy en día todavía existen propiedades de CSS3 que no todo el mundo conoce. Vamos a repasar las más importantes.</h3>
+
+<p>En 2011, CSS3 comenzó a ser la recomendación oficial de la <a href="http://www.w3c.es/" target="_blank">W3C</a>, incorporando nuevas características y técnicas (sombras, RGBA, degradados, animaciones… ) a través de módulos que han ido estandarizándose con el tiempo. Estas nuevas características han servido para mejorar la experiencia de usuario al navegar en sitios web.</p>
+
+<p>En este artículo vamos a hacer un repaso de las propiedades más importantes utilizadas hoy en día que forman parte de CSS3. </p>
+
+<h2>box-shadow</h2>
+
+<p>Soportada por prácticamente <a href="https://caniuse.com/#search=box-shadow" target="_blank">todos los navegadores</a>, aplica una sombra al elemento sobre el que se establece esta propiedad.</p>
+
+<pre><code>box-shadow: [eje-x] [eje-y] [radio] [color];</code></pre>
+
+<p>Recibe cuatro parámetros que determinan la sombra:</p>
+
+<ul>
+	<li>Posición en el eje X</li>
+	<li>Posición en el eje Y</li>
+	<li>Radio de la sombra</li>
+	<li>Color</li>
+</ul>
+
+<p>Un ejemplo podría ser:</p>
+
+<pre><code>box-shadow: 2px 2px 15px #252525;</code></pre>
+
+<p>Que aplicado a una imagen daría el siguiente resultado:</p>
+
+<img src="https://raw.githubusercontent.com/YuneVK/YuneVK.github.io/master/prueba-blog/css-box-shadow.png" alt="Propiedad box-shadow en una imagen" title="Propiedad box-shadow en una imagen">
+
+<p>Además, podemos establecer varias sombras para un mismo elemento, lo que nos permite crear un gran número de efectos diferentes, por ejemplo:</p>
+
+<pre><code>box-shadow: 14px 14px 16px #67C3E6, -4px -4px 6px #FEF9BF;</code></pre>
+
+<img src="https://raw.githubusercontent.com/YuneVK/YuneVK.github.io/master/prueba-blog/css-multiple-box-shadow.png" alt="Propiedad box-shadow en una imagen" title="Propiedad box-shadow en una imagen">
+
+<h2>text-shadow</h2>
+
+<p>Soportada también por la mayoría de navegadores sin necesidad de usar prefijos, es muy similar a <em>box-shadow</em>, usando la misma sintaxis, pero aplicada a un texto:</p>
+
+<pre><code>text-shadow: [eje-x] [eje-y] [radio] [color];</code></pre>
+
+<p>Y acepta los mismos parámetros:</p>
+
+<ul>
+	<li>Posición en el eje X</li>
+	<li>Posición en el eje Y</li>
+	<li>Radio de la sombra</li>
+	<li>Color</li>
+</ul>
+
+<p>Por ejemplo:</p>
+
+<pre><code>text-shadow: 2px 2px 3px #67C3E6;</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/YuneVK/YuneVK.github.io/master/prueba-blog/css-text-shadow.png" alt="Propiedad de CSS text-shadow" title="Propiedad de CSS text-shadow"></p>
+
+<p>Esta propiedad es muy útil si, por ejemplo, queremos hacer un contorno al texto combinando varias sombras:</p>
+
+<pre><code>text-shadow: 0 1px 0 #67C3E6, 0 -1px 0 #67C3E6, 1px 0 0 #67C3E6, -1px 0 0 #67C3E6;</code></pre>
+
+<img src="https://raw.githubusercontent.com/YuneVK/YuneVK.github.io/master/prueba-blog/css-multiple-text-shadow.png" alt="Propiedad de CSS text-shadow" title="Propiedad de CSS text-shadow">
+
+<h2>transition</h2>
+
+<p>Posiblemente una de las mejores funcionalidades que se añadieron en CSS3. Esta propiedad nos permite, según la <a href="https://www.w3.org/TR/css3-transitions/">especificación de la W3C</a>, cambiar los valores de CSS de manera progresiva durante un tiempo determinado.</p>
+
+<p>Su sintaxis es la siguiente:</p>
+
+<pre><code>transition: [propiedad-css] [tiempo] [curva-tiempo] [retardo];</code></pre>
+
+<p>Donde:</p>
+<ul>
+	<li><strong>Propiedad CSS:</strong> nombre o nombres de propiedades CSS a las que se aplicarán la transición. Podemos utilizar ‘<em>all</em>’ para indicar que se aplique a todas las <a href="https://www.w3.org/TR/css3-transitions/#animatable-properties">propiedades compatibles</a>.</li>
+	<li><strong>Tiempo:</strong> duración de la transición, en segundos.</li>
+	<li><strong>Curva de tiempo:</strong> <a href="https://es.wikipedia.org/wiki/Curva_de_B%C3%A9zier#Curvas_c.C3.BAbicas_de_B.C3.A9zier">curva cúbica bézier</a>, que determina la velocidad de la animación en cada momento. Aunque podemos establecer una curva personalizada, también disponemos de las siguientes, ya establecidas: <em>linear</em>, <em>ease</em>, <em>ease-in</em>, <em>ease-out</em> y <em>ease-in-out</em>.</li>
+</ul>
+
+<p>Un ejemplo podría ser:</p>
+
+<pre><code>transition: all 1s ease-out;</code></pre>
+
+<h2>gradient</h2>
+
+<p>Otra de las características que incorpora CSS3 es la creación gradientes, tanto lineales como circulares, a través de sus funciones <em>linear-gradient</em> y <em>radial-gradient</em>.</p>
+
+<p>La sintaxis de los lineales es:</p>
+
+<pre><code>linear-gradient([dirección], [color-1], [color-2]...);</code></pre>
+
+<p>Donde:</p>
+<ul>
+	<li><strong>Dirección</strong>: orientación del gradiente. Se pueden usar ángulos (360deg, 180deg) o palabras clave (<em>to top</em>, <em>to top left</em>, <em>to bottom</em>…).</li>
+	<li><strong>Colores:</strong> podemos establecer, como mínimo, dos colores al gradiente.</p></li>
+</ul>
+
+<p>Para aplicar un gradiente como fondo a un <em>div</em> podríamos usar:</p>
+
+<pre><code>background: linear-gradient(to top left, #67C3E6, #FEF9BF);</code></pre>
+
+<img src="https://raw.githubusercontent.com/YuneVK/YuneVK.github.io/master/prueba-blog/css-linear-gradient.png" alt="CSS gradiente lineal" title="CSS gradiente lineal">
+
+<p>La sintaxis de los circulares es:</p>
+
+<pre><code>radial-gradient([forma] [tamaño] at [posicion], [color-1], [color-2]...);</code></pre>
+
+<p>Donde:</p>
+<ul>
+	<li><strong>Forma:</strong> círculo (<em>circle</em>) o elipse (<em>ellipse</em>).</li>
+	<li><strong>Tamaño:</strong> podemos indicar un tamaño específico (en píxeles, porcentaje…) o usar algunos ya definidos como, por ejemplo, <em>closest-corner</em>, que cubre hasta la esquina más próxima.</li>
+	<li><strong>Posición:</strong> su valor por defecto es <em>center</em>. Establece la posición del gradiente, de manera similar a <em>background-position</em>.</li>
+	<li><strong>Colores:</strong> colores que formarán el gradiente.</li>
+</ul>
+
+<p>Un ejemplo sería:</p>
+
+<pre><code>background: radial-gradient(#FEF9BF, #67C3E6);</code></pre>
+
+<img src="https://raw.githubusercontent.com/YuneVK/YuneVK.github.io/master/prueba-blog/css-radial-gradient.png" alt="CSS gradiente lineal" title="CSS gradiente lineal">
+
+<h2>@font-face o @import</h2>
+
+<p>Otra de las características más usadas, ya que nos permite definir e importar cualquier tipografía para usarla en nuestro sitio web. </p>
+
+<p>La sintaxis de <strong>@font-face</strong> es:</p>
+
+<pre><code>@font-face {
+    font-family: [nombre];
+    src: url([direccion]);
+}
+</code></pre>
+
+<p>Una vez importada, podremos usarla en cualquier elemento:</p>
+
+<pre><code>h1 {
+    font-family: [nombre];
+}
+</code></pre>
+
+<p>Para importar fuentes con <strong>@import</strong> el procedimiento es similar:</p>
+
+<pre><code>@import url([direccion]);
+</code></pre>
+
+<p>Cabe destacar que las tipografías pueden estar almacenadas en el propio servidor de la página, o en otros externos, como en <a href="https://fonts.google.com/">Google Fonts</a>, que nos ofrece una amplia colección de fuentes compatibles con todos los navegadores.</p>
+
+
+
+<h2>Media Queries</h2>
+
+<p>Con el auge de los dispositivos móviles y tablets en los últimos años, los desarrolladores web se han visto obligados a adaptar sus páginas web a cualquier <strong>resolución</strong> de pantalla. De esa problemática surge una nueva técnica, conocida como <strong>media queries</strong>.</p>
+
+<p>La regla <strong>@media</strong> nos permite especificar cierto tipo de propiedades a elementos en función de diversas características del dispositivo desde el que se accede a la página, como las <strong>dimensiones</strong>, <strong>orientación</strong> o <strong>resolución</strong>.</p>
+
+<p>Por ejemplo, para establecer propiedades que se cumplirán solo cuando la pantalla del dispositivo esté en horizontal y tenga un ancho de menos de 700px.</p>
+
+<pre><code>@media (min-width: 700px) and (orientation: landscape) {
+    img {
+        width: 700px;
+    }
+}
+</code></pre>
+
+
+
+<h2 id="para-finalizar">Para finalizar</h2>
+
+<p>A pesar de ser de las más importantes, existen otras que debemos tener en cuenta como layouts (grid y flexbox), animaciones, transformaciones, bordes… Puedes ver una lista completa en este <a href="http://www.quackit.com/css/css3/properties/">enlace</a>.</p>
+
+<p>Por último, si estás interesado en conocer el estado actuar de desarrollo de CSS3, puedes consultarlo en la web oficial de la <a href="https://www.w3.org/Style/CSS/current-work.en.html">W3C</a>.</p>
