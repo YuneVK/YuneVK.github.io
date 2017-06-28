@@ -1,0 +1,63 @@
+<h1>Qué es la Web Física o cómo interactuar con nuestro entorno a través de un navegador web</h1>
+
+<h2>Hoy en día estamos cada vez más acostumbrados a oír hablar sobre el Internet de las Cosas o tecnologías como NFC, que han cambiado en muchos aspectos nuestro día a día. En este artículo os presentamos otras tecnologías como Web Bluetooth o Web Física que quizás no conocías.</h2>
+
+Podríamos definir <b>Internet of Things</b> como la interconexión digital de objetos con Internet para intercambiar información con otros dispositivos. Tenemos un ejemplo del Internet de las Cosas en los <b>relojes inteligentes</b>, que nos indican nuestras pulsaciones, distancia recorrida, horas de sueño y se conectan a nuestro dispositivo móvil para permitirnos ver estadísticas de nuestra actividad diaria. Es un hecho que este modelo está en constante crecimiento, y compañías como Cisco preveen que <a target="_blank" href="http://www.cisco.com/c/dam/en_us/about/ac79/docs/innov/IoT_IBSG_0411FINAL.pdf">en 2020 tendremos más 50 billones de dispositivos conectados a Internet</a>.
+
+Gracias a la últimas <a target="_blank" href="https://es.wikipedia.org/wiki/Bluetooth#Especificaciones_y_novedades">especificaciones de Bluetooth</a> y la nueva <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API">Web Bluetooth API</a> podemos dar un paso más allá y acercarnos a cumplir lo que nos promete <b>Google</b> a través de la <b>Web Física</b>: <em>“Walk up and use anything”</em> (o <em>“Acércate y usa cualquier cosa”</em> en español). Pero, ¿qué significan estos conceptos? ¿En qué consiste la Web Física y cómo nos puede afectar su implantación en nuestro día a día? Comencemos desde el principio.
+
+<h3 id="qué-es-web-bluetooth">¿Qué es Web Bluetooth?</h3>
+
+<b>Web Bluetooth</b> es una API que nos permite la interacción de dispositivos con la web. El funcionamiento sería tan sencillo como abrir nuestro navegador habitual, conectarse a través de él a un dispositivo cercano con Bluetooth y controlarlo remotamente mediante el navegador.
+
+<b>Bluetooth</b> es un <b>protocolo de comunicaciones</b> desarrollado en el año 1994 con el objetivo de ofrecer una versión alternativa a las comunicaciones con cables. 
+
+Durante estos años se han desarrollado varias versiones de este protocolo, pero vamos a destacar la que ha permitido la creación de la tecnología web que estamos tratando en este artículo. <b>Bluetooth 4.0</b>, más conocido como <b>Bluetooth de baja energía</b> (<em>Bluetooth Low Energy</em>) o <b>Smart Bluetooth</b>, fue lanzado en el año 2010 y es destacado por su bajo consumo de energía, lo que permite su implantación en pequeños dispositivos con baterías que pueden durar años sin necesidad de cargarlas.
+
+// Imagen bluetooth-smart.logo.png
+
+A pesar de llevar ya unos años en desarrollo, la tecnología Web Bluetooth todavía no forma parte del estándar de <b>W3C</b>, y no se recomienda usarla en producción por el bajo <a target="_blank" href="https://caniuse.com/#feat=web-bluetooth">porcentaje de dispositivos compatibles</a>, aproximadamente un 50%, entre los que se encuentran los navegadores de Android, Chrome y Opera. Podemos conocer mejor el funcionamiento de esta API a través de su <a target="_blank" href="https://webbluetoothcg.github.io/web-bluetooth/">documentación oficial</a>.
+
+<h3 id="el-papel-de-google-balizas-y-web-física">El papel de Google: balizas y Web Física</h3>
+
+Han pasado unos años desde que <b>Google</b> presentó una propuesta para que los dispositivos móviles puedan interactuar con el entorno que les rodea: <b>Web Física</b> (<em>Physical Web</em>) y <b>balizas</b> (<em>Beacons</em>).
+
+// Imagen physical-web-logo.png
+
+A través de su <a target="_blank" href="https://google.github.io/physical-web/">página web</a>, describen la Web Física como un <em>“enfoque abierto que permite interacciones rápidas y sin fisuras con objetos físicos y ubicaciones”</em>. Mediante el uso de balizas que son escuchadas por los dispositivos de los usuarios a través de Bluetooth.
+
+Cada elemento que emita una baliza contará con su propia <b>página web</b> (ya sea estática con ciertos datos o una interactiva con la que podamos interactuar) a la que podremos acceder desde nuestro dispositivo acercándonos y a través de la <b>notificación</b> que recibiremos. Cabe destacar que no necesitaremos conexión a internet para interactuar con estos elementos, ya que se realiza en <b>redes locales</b>.
+
+// Imagen physical-web-ejemplo.png
+
+Gracias a esta tecnología podremos interactuar con los elementos que nos rodean: parquímetros, carteles, paradas de autobuses, tiendas, museos… Y todo ello <b>sin instalar ninguna aplicación adicional</b>.
+
+Imaginemos que nos acercamos a una parada de autobús y podemos ver de forma rápida desde nuestro móvil cuándo pasará el autobús que estamos esperando, o estar en un centro comercial y que, cuando realicemos una compra, esta información sea recogida por el parquímetro para aumentar nuestra estancia. Otro ejemplo podría ser encontrarnos un perro cuyo collar implemente esta tecnología y podamos saber al instante si se trata de un perro perdido y, en caso afirmativo, notificar al dueño, como podemos ver en el siguiente vídeo:
+
+<a target="_blank" href="https://www.youtube.com/watch?v=-Y77cUI_z30">Vídeo de YouTube</a>
+
+Pero, ¿cómo funciona exactamente? Gracias a la Web Física podremos ver una <b>lista de enlaces</b> de los objetos que tenemos a nuestros alrededor desde nuestro dispositivo. Estos objetos contarán con una <b>baliza BLE</b> (<em>Bluetooth Low Energy</em>), que es un dispositivo que emitirá las señales de Bluetooth mediante <a target="_blank" href="https://github.com/google/eddystone">Eddystone</a>, un protocolo abierto y multiplataforma introducido por <b>Google</b> en 2015, que permite la comunicación sin instalar ninguna <b>App</b> y, además puede enviar información sobre sensores (temperatura, humedad…).
+
+// Imagen web-fisica-ilustracion.png
+
+Podemos ver una presentación realizada por el equipo de desarrollo a través del siguiente vídeo:
+
+<a target="_blank" href="https://www.youtube.com/watch?v=1yaLPRgtlR0">Vídeo de YouTube</a>
+
+En resumen, podemos concluir que una <b>Web Física</b> está compuesta por una <b>baliza</b> y una <b>URL</b> que nos da acceso a una página o aplicación web.
+
+Como es un proyecto <b>Open Source</b>, también podemos acceder a su <a target="_blank" href="https://github.com/google/physical-web">repositorio oficial de GitHub</a> para leer su código, documentación y tener acceso a demos y recursos.
+
+<h3 id="balizas-otra-vez">Balizas, otra vez</h3>
+
+Hablando de <b>balizas</b> (o <em>beacons</em>, en inglés) seguramente recordemos otra tecnología bastante introducida por <b>Apple</b> en iOS 7, <b>iBeacon</b>. También haciendo uso de <b>Bluetooth Low Energy</b>, una de las propuestas con las que se anunció era que las tiendas detectaran a potenciales compradores, y que al reconocerlos cerca pudieran enviar publicidad a sus dispositivos con, por ejemplo, ofertas especiales que puedan ser de interés para ellos.
+
+// Imagen ibeacon-logo.png
+
+Como vemos, es una tecnología bastante similar a la creada por Google, con la diferencia de que la Web Física (<b>Physical Web</b>) es un proyecto totalmente libre y cuya implementación es bastante más sencilla que la alternativa ofrecida por Apple.
+
+<h3 id="el-futuro-de-esta-tecnología">El futuro de esta tecnología</h3>
+
+Como vemos, es un avance en el mundo de las comunicaciones, y supone una alternativa a otras tecnologías como** NFC**, cuyo rango de alcance máximo es de <b>20cm</b>, frente a los <b>100m</b> de <b>BLE</b>.
+
+Algunos analistas aseguran que el concepto de <b>Physical Web*</b> supone el <b>futuro de Internet</b>, y un gran paso en el desarrollo del <b>Internet de las Cosas</b>, permitiendo que estemos cada vez más interconectados a los elementos que nos rodean. ¿Será un paso más para la desaparición de las aplicaciones móviles? ¿Crees que la tecnología web le está ganando terreno a las aplicaciones móviles? Te recomendamos nuestro artículo sobre <a target="_blank" href="https://webappdesign.es/apps-hibridas-nativas-y-web-responsive/">tipos de aplicaciones</a> en el que comparamos aplicaciones nativas, web e híbridas. También te invitamos a que nos indiques en los comentarios qué opinas sobre estas cuestiones, si conocías ya esta tecnología y qué usos crees que se podría dar además de los ya mencionados.
