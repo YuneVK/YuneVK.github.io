@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba Icono</title>
+	<script src="vivus.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#cohete {
+			height: 100vh;
+			width: auto;
+		}
+	</style>
+</head>
+<body>
+	<object id="cohete" type="image/svg+xml" data="cohete.svg"></object>
+
+	<script>
+ 		 new Vivus('cohete', {
+ 		 	duration: 300, 
+ 		 	type: "oneByOne", 
+ 		 	reverseStack: true
+ 		 }, null);
+	</script>
+</body>
+</html>
