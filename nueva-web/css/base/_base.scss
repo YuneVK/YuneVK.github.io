@@ -1,0 +1,53 @@
+// ----------
+// TYPOGRAPHY
+// ----------
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    background: #EBEBEB;
+
+    color: $blue-gray;
+    text-align: center;
+
+    transition: background .5s ease-in-out;
+}
+
+* {
+    transition: all .2 ease-in;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 1rem .5rem;
+
+    @include open-sans-light;
+    font-size: 1.1rem;
+    letter-spacing: .015rem;
+    line-height: 1.5rem;
+
+    strong {
+        @include open-sans-bold;
+    }
+}
+
+h1 {
+    @include open-sans-light;
+    font-size: 3rem;
+}
+
+h2 {
+    @include f-abril-fatface;
+    font-size: 3rem;
+}
+
+
+
+// ----------
+// 
+// ----------

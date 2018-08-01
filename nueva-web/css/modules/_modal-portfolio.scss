@@ -1,0 +1,222 @@
+.portfolio-modal-container {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    display: flex;
+    align-items: center;
+    display: none;
+    justify-content: center;
+
+    //background: rgba(0,0,0,.6);
+    background: #ECEFF1;
+
+    z-index: 9999;
+
+    .modal {
+        min-height: 100%;
+        height: 100%;
+        width: 100%;
+        //display: flex;
+        display: none;
+        align-items: stretch;
+        justify-content: center;
+        position: absolute;
+
+        background-color: #ECEFF1;
+        //border-radius: 10px;
+
+        animation-duration: .4s !important;
+
+        .close-button {
+            height: 2rem;
+            width: 2rem;
+            margin: 1rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 9999;
+
+            svg polygon {
+                transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+            }
+
+            &:hover {
+                svg polygon {
+                    fill: $red !important;
+                    stroke-width: 1.3rem;
+                    stroke: $red;
+                }
+            }
+        }
+
+        .image-cover {
+            flex: 0 50%;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img.portfolio-image {
+                max-width: 100%;
+                max-height: calc(100vh - 22px);
+                width: auto;
+                object-fit: contain;
+                /*margin: 0 auto;
+                left: 0;
+                right: 0;
+                position: absolute;*/
+            }
+        }
+
+        .main-content {
+            flex: 0 50%;
+            text-align: left;
+            padding: 1rem;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+
+            //background-color: purple;
+
+            .block {
+                margin: auto;
+            }
+
+            .title {
+                //margin-bottom: .5rem;
+
+                p.client {
+                    opacity: .7;
+                    margin: 0;
+                    margin-bottom: .3rem;
+
+                    @include raleway-semi-bold;
+                    color: $t-portfolio;
+                    font-size: 1rem;
+                }
+
+                h3 {
+
+                    @include raleway-medium;
+                    color: $t-portfolio;
+                    font-size: 2.5rem;
+                    line-height: 2.6rem;
+                }
+            }
+
+            .tags {
+                margin: .5rem 0 1.5rem 0;
+                position: relative;
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -.5rem;
+                    left: 0;
+                    height: 1px;
+                    width: 80%;
+                    opacity: .1;
+
+                    background: $black;
+                }
+
+                span {
+                    padding: .4rem .5rem;
+                    margin: .3rem .2em;
+                    border-radius: 20px;
+
+                    background: #E0E0E0;
+                    
+                    @include raleway-medium;
+                    color: $black;
+                    font-size: .9rem;
+
+                    transition: all .15s ease;
+                    cursor: context-menu;
+
+                    &:hover {
+                        box-shadow: 0 4px 6px rgba(50,50,50,.11), 0 1px 3px rgba(0,0,0,.08);
+                        transform: translateY(-1px);
+                    }
+
+                }
+            }
+
+            .description {
+                //margin: 1rem 0;
+
+                p {
+                    margin: .5rem 0;
+                    width: 85%;
+
+                    font-size: 1rem;
+                    line-height: 1.4rem;
+                    letter-spacing: .025rem;
+                    color: $black;
+
+                    strong {
+                        color: $blue-gray;
+
+                    }
+                }
+            }
+
+            .icons {
+                margin: 1rem 0;
+
+                img {
+                    height: 3rem;
+                    width: auto;
+                    margin: 0 .5rem;
+                }
+            }
+        }
+
+        @media (max-width: 900px) { 
+            & {
+                flex-direction: column;
+
+                .image-cover {
+                    //flex: none;
+                    .portfolio-image {
+                        max-height: 100% !important;
+                    }
+                }
+
+                .csslider {
+                    height: 100%;
+
+                    & > ul {
+                        height: 100%;
+
+                    }
+                }
+        
+                .main-content {
+                    //flex: none;
+                    display: initial;
+
+                    text-align: center;
+
+
+                    .tags {
+                        justify-content: center;
+
+                        &:after {
+                            right: 0;
+                            margin: auto;
+                        }
+                    }
+
+                    .description p {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}

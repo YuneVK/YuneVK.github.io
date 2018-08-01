@@ -1,0 +1,1008 @@
+<!--
+    TODO: 
+    - [ ] Optimize images
+    - [ ] IE styles (for example, the background in the section 'Skills' -> height: 50vw; width: auto;)
+    - [ ] Check line height (make it bigger)
+    - [ ] Create loader
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sonia Ruiz Cayuela</title>
+    
+    <link rel="stylesheet" href="css/vendor/animate.css">
+    <link rel="stylesheet" href="css/vendor/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- Display the gradient backgrund when the heder section is in the viewport -->
+    <div class="background"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!--HEADER SECTION -->
+        <header class="section header light" id="header">
+            <div class="illustration-bg"></div>
+            <h1>
+                <span>¡Hola!</span>
+                <span> Mi nombre es </span>
+                <span class="name">Sonia Ruiz</span>
+                <span> y soy </span>
+                <span class="job">Diseñadora y Desarrolladora Web Frontend</span>
+            </h1>
+
+            <div class="scroll">
+                <p class="info-scroll">Haz scroll para conocer más sobre mí</p>
+                <img src="img/down-arrow.svg" alt="Fecha apuntando hacia abajo">
+            </div>
+        </header>
+
+        <!--ABOUT ME SECTION -->
+        <section class="section about-me" id="aboutme">
+            <div class="illustration-bg" data-speed="20" data-parent-section="header"></div>
+            <div class="title">
+                <p class="number">01</p>
+                <p class="subtitule">CONÓCEME</p>
+                <h2>Sobre mí</h2>
+            </div>
+
+            <div class="content">
+                <p>Como habrás podido leer, me llamo <strong>Sonia Ruiz</strong>, tengo 24 años y nací en Motril, una pequeña ciudad en la costa de Granada.</p>
+
+                <p>Soy <strong>diseñadora</strong> y <strong>desarrolladora web frontend</strong> desde 2016, y técnica superior en <strong>Desarrollo de Aplicaciones Web</strong> y <strong>Desarrollo de Aplicaciones Multiplataforma</strong>.</p>
+                
+                <p>Además, soy una <strong>apasionada</strong> de todo lo que tenga relación con la <strong>tecnología</strong> y el <strong>diseño</strong> (¡además de los <strong>videojuegos</strong> y la <strong>fotografía</strong>!), lo que me hace transmitir esta <strong>pasión</strong> y <strong>dedidación</strong> en todos mis trabajos. Desde diseño y desarrollo de páginas web, diseño de logotipos, imagen corporativa, hasta cursos de formación. <strong>Me encanta mi trabajo</strong>, y para mí cada proyecto es un nuevo <strong>reto</strong> que afronto con gran entusiasmo, implicándome al máximo para darte el <strong>mejor servicio</strong> adaptado a lo que <strong>necesitas</strong>.</p>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="section skills light" id="skills">
+            <div class="illustration-bg" data-speed="20" data-parent-section="aboutme"></div>
+            <div class="title">
+                <p class="number">02</p>
+                <p class="subtitule">SKILLS</p>
+                <h2>Con qué trabajo</h2>
+            </div>
+
+            <div class="content">
+                <p>Estoy <strong>especializada</strong> en <strong>diseño y desarrollo web</strong> con HTML5, CSS3 y JavaScript, y poseo conocimientos en PHP, Java, MySQL, XML, Git, SASS, SEO y WordPress. También tengo experiencia en <strong>diseño gráfico</strong> (logotipos, tarjetas de visita, carteles, etc).</p>
+
+                <div class="skills-icons">
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/html5.svg" alt="Logotipo de HTML5 en color" class="color">
+                            <img src="img/skills/html5.svg" alt="Logotipo de HTML5 en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/css3.svg" alt="Logotipo de CSS3 en color" class="color">
+                            <img src="img/skills/css3.svg" alt="Logotipo de CSS3 en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/js.svg" alt="Logotipo de JavaScript en color" class="color">
+                            <img src="img/skills/js.svg" alt="Logotipo de JavaScript en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/git.svg" alt="Logotipo de Git en color" class="color">
+                            <img src="img/skills/git.svg" alt="Logotipo de Git en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/sass.svg" alt="Logotipo de SASS en color" class="color">
+                            <img src="img/skills/sass.svg" alt="Logotipo de SASS en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/wordpress.svg" alt="Logotipo de WordPress en color" class="color">
+                            <img src="img/skills/wordpress.svg" alt="Logotipo de WordPress en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/photoshop.svg" alt="Logotipo de Adobe Photoshop en color" class="color">
+                            <img src="img/skills/photoshop.svg" alt="Logotipo de Adobe Photoshop en color blanco" class="white">
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <img src="img/skills/color/illustrator.svg" alt="Logotipo de Adobe Illustrator en color" class="color">
+                            <img src="img/skills/illustrator.svg" alt="Logotipo de Adobe Illustrator en color blanco" class="white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--TIMELINE SECTION -->
+        <section class="section timeline light" id="timeline">
+            <div class="illustration-bg" data-speed="20" data-parent-section="skills"></div>
+            <div class="title">
+                <p class="number">03</p>
+                <p class="subtitule">TIMELINE</p>
+                <h2>Dónde he estado</h2>
+            </div>
+
+            <div class="content">
+                <div class="timeline-element">
+                    <div class="line"></div>
+                    <div class="elements">
+                        <section class="element">
+                            
+                            <div class="circle"></div>
+                            <div class="job-content">
+                                <h3 class="job-title">Desarrolladora Web Frontend</h3>
+                                <p class="date">MAYO 2017 - ACTUALIDAD</p>
+                                <p class="company">WEB APP DESIGN</p>
+                                <p class="job-description">Diseño y desarrollo web con HTML, CSS, JavaScript, y en ocasiones utilizando WordPress. Diseño gráfico (Photoshop e Illustrator), y redacción de contenidos.</p>
+                            </div>
+                        </section>
+
+                        <section class="element">
+                            
+                            <div class="circle"></div>
+                            <div class="job-content">
+                                <h3 class="job-title">Desarrolladora Web Frontend</h3>
+                                <p class="date">MAYO 2018 - JULIO 2018</p>
+                                <p class="company">MAINFOR</p>
+                                <p class="job-description">Diseño y maquetación web de contenidos de formación mediante HTML, CSS y JavaScript, incluyendo las tecnologías SASS, jQuery y Git. Revisión de accesibilidad para cumplir los criterios de conformidad nivel AA. Diseño de pequeñas ilustraciones e iconos (Photoshop e Illustrator).</p>
+                            </div>
+                        </section>
+
+                        <section class="element">
+                            
+                            <div class="circle"></div>
+                            <div class="job-content">
+                                <h3 class="job-title">Redactora de contenidos de formación</h3>
+                                <p class="date">FEBRERO 2018 - ABRIL 2018</p>
+                                <p class="company">MAINFOR</p>
+                                <p class="job-description">Redacción del contenido (actividades, píldoras formativas, videotutoriales e infografías) para la asignatura 'Diseño Web', en el que traté áreas como uso de Photoshop, fundamentos del diseño, usabilidad web, accesibilidad web, y creación del layout de un sitio web.</p>
+                            </div>
+                        </section>
+
+                        <section class="element">
+                            
+                            <div class="circle"></div>
+                            <div class="job-content">
+                                <h3 class="job-title">Docente de Diseño Gráfico</h3>
+                                <p class="date">NOVIEMBRE 2017 - DICIEMBRE 2017</p>
+                                <p class="company">CENTROS DE ESTUDIO VALVERDE</p>
+                                <p class="job-description">Docente del curso "Diseño gráfico e ilustración digital" dirigido a empresas, en el que impartí aspectos como las herramientas de Photoshop e Illustrator, retoque de fotografías con Photoshop y teoría básica sobre diseño web y gestión de redes sociales corporativas.</p>
+                            </div>
+                        </section>
+
+                        <section class="element">
+                            
+                            <div class="circle"></div>
+                            <div class="job-content">
+                                <h3 class="job-title">Desarrolladora Web</h3>
+                                <p class="date">DICIEMBRE 2016 - ABRIL 2017</p>
+                                <p class="company">2MAS2WEBSITES</p>
+                                <p class="job-description">Diseño y desarrollo web con HTML, CSS, JavaScript, y en ocasiones utilizando WordPress. Diseño gráfico (Photoshop e Illustrator), y gestión de redes sociales.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--PORTFOLIO SECTION -->
+        <section class="section portfolio" id="portfolio">
+            <div class="illustration-bg" data-speed="20" data-parent-section="timeline"></div>
+            <div class="title">
+                <p class="number">04</p>
+                <p class="subtitule">PORTFOLIO</p>
+                <h2>Mis trabajos</h2>
+            </div>
+
+            <div class="content">
+                <div class="portfolio-gallery">
+                    <!-- TODO: Add portfolio gallery -->
+                    <!-- TODO: Add modals -->
+                    <div class="navigation">
+                        <ul>
+                            <li class="todo active" data-filter="all"><a href="javascript:;">TODO</a></li>
+                            <li class="web" data-filter=".category-web"><a href="javascript:;">WEB</a></li>
+                            <li class="diseno" data-filter=".category-design"><a href="javascript:;">DISEÑO</a></li>
+                            <hr class="hover" />
+                            <hr class="line-active"/>
+                        </ul>
+                    </div>
+                    <div class="elements">
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="valmar">
+                            <img src="img/portfolio/valmar.png" alt="Web Valmar">
+                            <div class="label">
+                                <p class="title">Web Corporativa con WordPress</p>
+                                <!--<div class="tags">
+                                    <img src="img/skills/color/wordpress.svg" alt="Icono de WordPress">
+                                    <img src="img/skills/color/css3.svg" alt="Icono de CSS3">
+                                    <img src="img/skills/color/html5.svg" alt="Icono de HTML5">
+                                </div>-->
+                                <!--<p class="cta">PULSA PARA VER MÁS INFORMACIÓN</p>-->
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-design" data-item="valverde">
+                            <img src="img/portfolio/flyer-valverde.png" alt="Flyer Valverde">
+                            <div class="label">
+                                <p class="title">Carteles</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="vicenteortiz">
+                            <img src="img/portfolio/vicente-ortiz.png" alt="Web Vicente Ortiz">
+                            <div class="label">
+                                <p class="title">Web Corporativa con WordPress</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-design" data-item="webappdesign">
+                            <img src="img/portfolio/flyer-web-app-design.png" alt="Flyer Web App Design">
+                            <div class="label">
+                                <p class="title">Flyer Publicitario</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="dungeon">
+                            <img src="img/portfolio/dungeon.png" alt="Flyer Web App Design">
+                            <div class="label">
+                                <p class="title">Videojuego para Android y Web</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="iwata">
+                            <img src="img/portfolio/iwata.png" alt="Web Iwata">
+                            <div class="label">
+                                <p class="title">Web de Tributo a Iwata</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="antiguaweb">
+                            <img src="img/portfolio/nueva-web.png" alt="Antigua Web">
+                            <div class="label">
+                                <p class="title">Mi Antigua Web</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-design" data-item="servimatica">
+                            <img src="img/portfolio/flyer-servimatica.png" alt="Flyer Web App Design">
+                            <div class="label">
+                                <p class="title">Flyer Publicitario</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="designquotes">
+                            <img src="img/portfolio/design-quotes.png" alt="Design Quotes">
+                            <div class="label">
+                                <p class="title">Diseño y Desarrollo Web</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="simonsays">
+                            <img src="img/portfolio/simon-says.png" alt="Juego Simon Says">
+                            <div class="label">
+                                <p class="title">Recreación del Juego Simon Says</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-design" data-item="yunemy-logo">
+                            <img src="img/portfolio/yunemy.png" alt="Logotipo Yunemy">
+                            <div class="label">
+                                <p class="title">Logotipo</p>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="portfolio-item mix category-web" data-item="vivacopier">
+                            <img src="img/portfolio/vivacopier.png" alt="Plataforma VivaCopier">
+                            <div class="label">
+                                <p class="title">Prototipo de Sistema de Gestión de Incidencias</p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- YUNEMY SECTION -->
+        <section class="section yunemy light" id="yunemy">
+            <div class="illustration-bg" data-speed="20" data-parent-section="portfolio"></div>
+            <div class="title">
+                <p class="number">05</p>
+                <p class="subtitule">YUNEMY</p>
+                <h2>Algo más sobre mí</h2>
+            </div>
+
+            <div class="content">
+                <p>Siempre he pensado que la mejor forma para <strong>crecer profesionalmente</strong> es <strong>conocer</strong> a compañeros de tu sector, <strong>enseñar</strong> lo que sabes hacer y <strong>aprender</strong> de otros. Por este motivo, en 2017 fundé <strong>Yunemy</strong>, una <strong>comunidad tecnológica</strong>, en <strong>Málaga</strong>, cuyo principal objetivo esa este: disponer de un medio para que los <strong>desarrolladores</strong> podamos <strong>mejorar</strong> nuestras <strong>competencias profesionales</strong> y hacer <strong>sinergias</strong>.</p>
+                <p>Es un proyecto <strong>muy personal</strong>, al que le he dedicado mucho tiempo y esfuerzo, y, como <strong>resultado</strong>, hasta la fecha somos <strong>más de 500 miembros</strong> y hemos organizado <strong>6 encuentros y talleres</strong>, todos con muy buena acogida, y gracias a los cuales he conocido a grandes profesionales y mejores personas.</p>
+
+                <img src="img/logo-yunemy.svg" alt="Logotipo de Yunemy">
+
+                <a href="javascript:;" class="button">QUIERO MÁS INFORMACIÓN</a>
+            </div>
+        </section>
+
+        <!--BLOG SECTION -->
+        <section class="section blog" id="blog">
+            <div class="illustration-bg" data-speed="20" data-parent-section="yunemy"></div>
+            <div class="title">
+                <p class="number">06</p>
+                <p class="subtitule">BLOG</p>
+                <h2>También escribo</h2>
+            </div>
+
+            <div class="content">
+                <p>Sí, <strong>me gusta escribir</strong>: contar experiencias, enseñar algo, hacer tutoriales, etc. Es una buena forma de <strong>comunicarme</strong> con el resto del mundo y aportar mi granito de arena. Te invito a que <strong>leas</strong> cualquiera de mis <strong>artículos</strong> (o bien los de <strong>Medium</strong> o los del blog de <strong>Web App Design</strong>). ¡Si tienes alguna o sugerencia no dudes en hacérmela saber!</p>
+
+                <a href="javascript:;" class="button">VISITA MI BLOG EN MEDIUM</a>
+
+                <a href="javascript:;" class="button">VISITA MI BLOG EN WEB APP DESIGN</a>
+            </div>
+        </section>
+
+        <!--CONTACT SECTION -->
+        <footer class="section contact light" id="contact">
+            <div class="illustration-bg" data-speed="20" data-parent-section="blog"></div>
+            <div class="title">
+                <p class="number">07</p>
+                <p class="subtitule">CONTACTO</p>
+                <h2>¿Hablamos?</h2>
+            </div>
+
+            <div class="content">
+                <p>¿Quieres ver cómo trabajo? Si estás buscando un frontend, un diseñador, o simplemente quieres conocerme más, dime qué necesitas y estaré <strong>encantada de hablar contido</strong>.</p>
+
+                <div class="social-icons">
+                    <a href="javascript:;" target="_blank" class="icon-contact email"><img class="svg" src="img/rrss/email.svg" alt="Icono de email"></a>
+                    <a href="javascript:;" target="_blank" class="icon-contact linkedin"><img class="svg" src="img/rrss/linkedin.svg" alt="Icono de LinkedIn"></a>
+                    <a href="javascript:;" target="_blank" class="icon-contact codepen"><img class="svg" src="img/rrss/codepen.svg" alt="Icono de codepen"></a>
+                    <a href="javascript:;" target="_blank" class="icon-contact github"><img class="svg" src="img/rrss/github.svg" alt="Icono de GitHub"></a>
+                    <a href="javascript:;" target="_blank" class="icon-contact twitter"><img class="svg" src="img/rrss/twitter.svg" alt="Icono de Twitter"></a>
+                </div>
+
+                <p class="credits">Diseñado y desarrollado con <img src="img/rrss/heart.svg" class="svg"> por Sonia Ruiz</p>
+            </div>
+        </footer>
+    </div>
+    <div class="portfolio-modal-container">
+        <div class="modal" id="valmar">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <!--<img src="img/portfolio/valmar.png" alt="Mockup Web Valmar">-->
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_valmar_1" checked />
+                    <input type="radio" name="slides" id="slides_valmar_2" />
+                    <input type="radio" name="slides" id="slides_valmar_3" />
+                    <input type="radio" name="slides" id="slides_valmar_4" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar-3.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_valmar_1"></label>
+                        <label for="slides_valmar_2"></label>
+                        <label for="slides_valmar_3"></label>
+                        <label for="slides_valmar_4"></label>
+                        <label for="slides_valmar_1" class="goto-first"></label>
+                        <label for="slides_valmar_4" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_valmar_1"></label>
+                            <label for="slides_valmar_2"></label>
+                            <label for="slides_valmar_3"></label>
+                            <label for="slides_valmar_4"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">VALMAR</p>
+                        <h3>Web Corporativa con WordPress</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#wordpress</span>
+                        <span>#css</span>
+                    </div>
+                    <div class="description">
+                        <p>Desde <strong>Valmar</strong>, una empresa de <strong>alquiler de embarcaciones</strong> y <strong>escuela náutica</strong> de la costa de Granada, querían darse a conocer y promocionar su oferta formativa. Para ello, se diseñó y desarrolló una web corporativa a través de WordPress.</p>
+                    </div>
+                </div>
+                
+                <!--<div class="icons">
+                    <img src="img/skills/color/css3.svg" alt="Icono de CSS3">
+                    <img src="img/skills/color/html5.svg" alt="Icono de HTML5">
+                </div>-->
+            </div>
+        </div>
+
+        <div class="modal" id="valverde">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_valverde_1" checked />
+                    <input type="radio" name="slides" id="slides_valverde_2" />
+                    <input type="radio" name="slides" id="slides_valverde_3" />
+                    <input type="radio" name="slides" id="slides_valverde_4" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_valverde_1"></label>
+                        <label for="slides_valverde_2"></label>
+                        <label for="slides_valverde_3"></label>
+                        <label for="slides_valverde_4"></label>
+                        <label for="slides_valverde_1" class="goto-first"></label>
+                        <label for="slides_valverde_4" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_valverde_1"></label>
+                            <label for="slides_valverde_2"></label>
+                            <label for="slides_valverde_3"></label>
+                            <label for="slides_valverde_4"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">CENTROS DE ESTUDIO VALVERDE</p>
+                        <h3>Diseño de Carteles</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#diseño-gráfico</span>
+                        <span>#photoshop</span>
+                    </div>
+                    <div class="description">
+                        <p>Desde <strong>Centros de Estudios Valverde</strong> querían promocionar diversos <strong>cursos</strong> (inglés, clases particulares, socorrismo, etc), mediante diseños que sirvieran como flyers, carteles e imágenes para publicaciones en redes sociales. Debido a su <strong>extensa oferta formativa</strong>, se realizaron varios diseños, cada uno acorde al tipo de formación y público objetivo.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="vicenteortiz">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_vicenteortiz_1" checked />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_2" />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_3" />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_4" />
+                    <input type="radio" name="slides" id="slides_vicenteortiz_5" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-3.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-4.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_vicenteortiz_1"></label>
+                        <label for="slides_vicenteortiz_2"></label>
+                        <label for="slides_vicenteortiz_3"></label>
+                        <label for="slides_vicenteortiz_4"></label>
+                        <label for="slides_vicenteortiz_5"></label>
+                        <label for="slides_vicenteortiz_1" class="goto-first"></label>
+                        <label for="slides_vicenteortiz_5" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_vicenteortiz_1"></label>
+                            <label for="slides_vicenteortiz_2"></label>
+                            <label for="slides_vicenteortiz_3"></label>
+                            <label for="slides_vicenteortiz_4"></label>
+                            <label for="slides_vicenteortiz_5"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">VICENTE ORTIZ ABOGADOS</p>
+                        <h3>Web Corporativa con WordPress</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#wordpress</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                    </div>
+                    <div class="description">
+                        <p>En <strong>Vicente Ortiz Abogados</strong> querían <strong>renovar su sitio web</strong>, y cambiarla por un diseño más actual y alejado del clásico concepto de despacho de abogados. Por eso, hicimos un diseño más <strong>moderno</strong>, respetando su imagen corporativa y asegurando su correcta visualización en <strong>dispositivos móviles</strong>. La <strong>libertad</strong> que tuvimos a la hora de plantear el diseño, y la <strong>buena disposición</strong> y <strong>comunicación</strong> con ellos hizo de este un <strong>gran proyecto</strong>.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="webappdesign">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_webappdesign_1" checked />
+                    <input type="radio" name="slides" id="slides_webappdesign_2" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-web-app-design.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-web-app-design-2.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_webappdesign_1"></label>
+                        <label for="slides_webappdesign_2"></label>
+                        <label for="slides_webappdesign_1" class="goto-first"></label>
+                        <label for="slides_webappdesign_2" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_webappdesign_1"></label>
+                            <label for="slides_webappdesign_2"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">WEB APP DESIGN</p>
+                        <h3>Diseño de Flyer</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#diseño-gráfico</span>
+                        <span>#illustrator</span>
+                    </div>
+                    <div class="description">
+                        <p>En <strong>Web App Design</strong>, queríamos promocionar unos <strong>cursos de iniciación a WordPress</strong>, por lo que diseñamos unos flyers llamativos con toda la información del curso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="dungeon">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_dungeon_1" checked />
+                    <input type="radio" name="slides" id="slides_dungeon_2" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/dungeon.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/dungeon-1.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_dungeon_1"></label>
+                        <label for="slides_dungeon_2"></label>
+                        <label for="slides_dungeon_1" class="goto-first"></label>
+                        <label for="slides_dungeon_2" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_dungeon_1"></label>
+                            <label for="slides_dungeon_2"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">DUNGEON</p>
+                        <h3>Videojuego para Android y Web</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#android</span>
+                        <span>#java</span>
+                        <span>#desarrollo-web</span>
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                        <span>#php</span>
+                        <span>#mysql</span>
+                        <span>#photoshop</span>
+                    </div>
+                    <div class="description">
+                        <p>Fue mi <strong>proyecto de fin de curso</strong> para los ciclos Desarrollo de Aplicaciones Web y Desarrollo de Aplicaciones Multiplataforma: un juego del género <strong>rogelike</strong> (exploración de mazmorras) desarrollado para Android, con una versión web realizada en HTML, CSS y JavaScript. Un proyecto complejo con el que disfruté muchísimo y aprendí bastante sobre mecánicas de videojuegos.</p>
+
+                        <a href="javascript:;" target="_blank" class="link"><img src="img/youtube.svg" alt="Icono de YouTube" class="svg icon"> Mira el vídeo de la presentación</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="servimatica">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_servimatica_1" checked />
+                    <input type="radio" name="slides" id="slides_servimatica_2" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-servimatica.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-servimatica-1.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_servimatica_1"></label>
+                        <label for="slides_servimatica_2"></label>
+                        <label for="slides_servimatica_1" class="goto-first"></label>
+                        <label for="slides_servimatica_2" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_servimatica_1"></label>
+                            <label for="slides_servimatica_2"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">SERVIMÁTICA LOW COST</p>
+                        <h3>Diseño de Flyer</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#diseño-gráfico</span>
+                        <span>#illustrator</span>
+                    </div>
+                    <div class="description">
+                        <p>En <strong>Servimática Low Cost</strong> querían anunciar que habían abierto una nueva tienda, por lo que nos pidieron unos diseños de flyers para darse promoción y destacar sus servicios de reparación, soporte técnico, etc.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="iwata">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_iwata_1" checked />
+                    <input type="radio" name="slides" id="slides_iwata_2" />
+                    <input type="radio" name="slides" id="slides_iwata_3" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/iwata.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/iwata-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/iwata-2.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_iwata_1"></label>
+                        <label for="slides_iwata_2"></label>
+                        <label for="slides_iwata_3"></label>
+                        <label for="slides_iwata_1" class="goto-first"></label>
+                        <label for="slides_iwata_3" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_iwata_1"></label>
+                            <label for="slides_iwata_2"></label>
+                            <label for="slides_iwata_3"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">TRIBUTO A IWATA</p>
+                        <h3>Diseño y Desarrollo Web</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                    </div>
+                    <div class="description">
+                        <p>Proyecto personal, realizado en 2016, para <strong>FreeCodeCamp</strong> (una plataforma de formación). Esta página web es un tributo a <strong>Satoru Iwata</strong>, antiguo presidente de <strong>Nintendo</strong>, que falleción en 2015.</p>
+
+                        <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="antiguaweb">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_oldweb_1" checked />
+                    <input type="radio" name="slides" id="slides_oldweb_2" />
+                    <input type="radio" name="slides" id="slides_oldweb_3" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/nueva-web.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/nueva-web-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/nueva-web-2.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_oldweb_1"></label>
+                        <label for="slides_oldweb_2"></label>
+                        <label for="slides_oldweb_3"></label>
+                        <label for="slides_oldweb_1" class="goto-first"></label>
+                        <label for="slides_oldweb_3" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_oldweb_1"></label>
+                            <label for="slides_oldweb_2"></label>
+                            <label for="slides_oldweb_3"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">MI ANTIGUA WEB</p>
+                        <h3>Diseño y Desarrollo Web</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                    </div>
+                    <div class="description">
+                        <p>En 2016, y gracias a la plataforma de formación <strong>FreeCodeCamp</strong>, me animé a hacer <strong>mi primera página web personal</strong>, que es la versión anterior a la que estás viendo ahora. Me sirvió para <strong>poner en práctica</strong> todo lo que había aprendido hasta la fecha sobre diseño y desarrollo web. Aunque ya han pasado uno años, sigo <strong>apreciando</strong> mucho este proyecto por todo lo que <strong>aprendí</strong> y por ser la primera vez que "salí al mundo" profesionalmente.</p>
+
+                        <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita mi antigua web (¡Todavía está disponible!)</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="designquotes">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_designquotes_1" checked />
+                    <input type="radio" name="slides" id="slides_designquotes_2" />
+                    <input type="radio" name="slides" id="slides_designquotes_3" />
+                    <input type="radio" name="slides" id="slides_designquotes_4" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-3.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_designquotes_1"></label>
+                        <label for="slides_designquotes_2"></label>
+                        <label for="slides_designquotes_3"></label>
+                        <label for="slides_designquotes_4"></label>
+                        <label for="slides_designquotes_1" class="goto-first"></label>
+                        <label for="slides_designquotes_4" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_designquotes_1"></label>
+                            <label for="slides_designquotes_2"></label>
+                            <label for="slides_designquotes_3"></label>
+                            <label for="slides_designquotes_4"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">DESIGN QUOTES</p>
+                        <h3>Diseño y Desarrollo Web</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                    </div>
+                    <div class="description">
+                        <p>Otro <strong>proyecto personal</strong> realizando a través de la plataforma de educación <strong>FreeCodeCamp</strong>, en 2016. Es un pequeño generador de citas relacionadas con el diseño, mediante la <strong>API Quotes On Design</strong>, y con opciones para generar nuevas frases y compartirlas por Twitter.</p>
+
+                        <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="simonsays">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_simonsays_1" checked />
+                    <input type="radio" name="slides" id="slides_simonsays_2" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/simon-says.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/simon-says-1.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_simonsays_1"></label>
+                        <label for="slides_simonsays_2"></label>
+                        <label for="slides_simonsays_1" class="goto-first"></label>
+                        <label for="slides_simonsays_2" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_simonsays_1"></label>
+                            <label for="slides_simonsays_2"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">SIMON SAYS</p>
+                        <h3>Desarrollo de un Juego</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                    </div>
+                    <div class="description">
+                        <p>Esta es una recreación del clásico juego <strong>Simon Says</strong>, en el que tienes que repetir la secuencia de colores que reproduce la máquina en su turno. Lo realicé como trabajo para la asignatura <strong>Desarrollo Web en Entorno Cliente</strong>, cuando estudiaba el <strong>Ciclo Formativo de Desarrollo de Aplicaciones Web</strong>. Fue la primera vez que trabajé más a fondo con <strong>JavaScript</strong>, lo que me sirvió para darme cuenta que realmente sentía pasión por lo que hacía, y quería seguir este camino. Ha sido uno de los proyectos que más he disfrutado.</p>
+
+                        <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web y juega un rato ;)</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="yunemy-logo">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_yunemy_1" checked />
+                    <input type="radio" name="slides" id="slides_yunemy_2" />
+                    <input type="radio" name="slides" id="slides_yunemy_3" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/yunemy.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/yunemy-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/yunemy-2.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_yunemy_1"></label>
+                        <label for="slides_yunemy_2"></label>
+                        <label for="slides_yunemy_3"></label>
+                        <label for="slides_yunemy_1" class="goto-first"></label>
+                        <label for="slides_yunemy_3" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_yunemy_1"></label>
+                            <label for="slides_yunemy_2"></label>
+                            <label for="slides_yunemy_3"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">YUNEMY</p>
+                        <h3>Diseño de Logotipo</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#diseño-gráfico</span>
+                        <span>#illustrator</span>
+                    </div>
+                    <div class="description">
+                        <p><strong>Logotipo</strong> diseñado para un proyecto personal, <strong>Yunemy</strong>. De todos los trabajos de diseño gráfico que he realizado, me atrevería a decir que este es al que le tengo más <strong>cariño</strong>, por la <strong>implicación personal</strong> que suponía y su significado, queriendo unificar conceptos como el mundo de la <strong>programación</strong> y la búsqueda de <strong>cumplir nuestros sueños</strong>.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="modal" id="vivacopier">
+            <div class="close-button">
+                <a href="javascript:;"><img class="svg" src="img/close.svg" alt="Icono de cerrar"></a>
+                
+            </div>
+            <div class="image-cover">
+                <div class="csslider">
+                    <input type="radio" name="slides" id="slides_vivacopier_1" checked />
+                    <input type="radio" name="slides" id="slides_vivacopier_2" />
+                    <input type="radio" name="slides" id="slides_vivacopier_3" />
+                    <ul>
+                        <li><img class="portfolio-image" src="img/portfolio/vivacopier.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-2.png" alt="Mockup Web Valmar"></li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_vivacopier_1"></label>
+                        <label for="slides_vivacopier_2"></label>
+                        <label for="slides_vivacopier_3"></label>
+                        <label for="slides_vivacopier_1" class="goto-first"></label>
+                        <label for="slides_vivacopier_3" class="goto-last"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_vivacopier_1"></label>
+                            <label for="slides_vivacopier_2"></label>
+                            <label for="slides_vivacopier_3"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="block">
+                    <div class="title">
+                        <p class="client">VIVACOPIER</p>
+                        <h3>Prototipo de Sistema de Gestión de Incidencias</h3>
+                    </div>
+                    <div class="tags">
+                        <span>#desarrollo-web</span>
+                        <span>#diseño-web</span>
+                        <span>#html</span>
+                        <span>#css</span>
+                        <span>#javascript</span>
+                    </div>
+                    <div class="description">
+                        <p>Uno de mis <strong>primeros proyectos</strong> cuando comencé a trabajar en una empresa, estando de prácticas. Es un <strong>prototipo</strong> para un <strong>sistema de gestión</strong> realizado a <strong>VivaCopier</strong>, una empresa de alquiler de impresoras. A través de este sistema de gestión, se pretendía dar <strong>soporte</strong> a los <strong>clientes</strong> que disponían de una impresora asociada, permitiéndoles enviar incidencias y solicitar consumibles fácilmente.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/vendor/particles.min.js"></script>
+    <script src="js/vendor/mixitup.min.js"></script>
+</body>
+</html>

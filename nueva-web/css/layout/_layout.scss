@@ -1,0 +1,247 @@
+body.modal-open {
+    overflow: hidden;
+}
+
+.main-content {
+    position: relative;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+    margin-top: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &.light {
+        color: $white;
+    }
+
+    &.portfolio {
+        .title {
+            color: $t-portfolio;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 950px;
+        }
+    }
+    
+
+
+    &.yunemy img {
+        display: block;
+        width: 10rem;
+        margin: 0 auto;
+        margin-top: 3.5rem;
+    }
+
+    &.blog {
+        .title {
+            color: $t-blog;
+        }
+
+        .content {
+            width: 50%;
+            max-width: 500px;
+            align-self: flex-start;
+            margin-left: 20%;
+
+            text-align: left;
+
+            .button {
+                margin-bottom: .5rem;
+                margin-left: 0;
+            }
+
+            @media (max-width: 960px) {
+                width: 100%;
+                margin: 0 auto;
+                padding: 0;
+
+                text-align: center;
+            }
+        }
+
+    }
+
+    &.timeline .content {
+        max-width: 900px;
+    }
+
+    &.contact {
+        .credits {
+            img, svg {
+                height: 1.6rem;
+                width: 1.6rem;
+                margin: 0 .25rem;
+                vertical-align: middle;
+                
+                path {
+                    fill: $white;
+                }
+
+                &:hover {
+                    & {
+                        animation: 1s infinite beat;
+                    }
+                    path {
+                        fill: #D50000;
+                    }
+                }
+            }
+
+            @keyframes beat {
+                0% { transform: scale(1); }
+                25% { transform: scale(1.2); }
+                40% { transform: scale(1); }
+                60% { transform: scale(1.2); }
+                100% { transform: scale(1); }
+            }
+        }
+    }
+
+    .title {
+        p {
+            text-align: left;
+            margin: 0;
+            @include raleway-medium;
+
+            &.subtitule {
+                margin-bottom: .3rem;
+            }
+
+            &.number {
+                opacity: .6;
+            }
+        }
+    }
+
+    .title, .content {
+        z-index: 5;
+    }
+
+    .content {
+        padding: 1.5rem;
+        max-width: 800px;
+    }
+
+    &.header {
+        h1, .scroll {
+            z-index: 5;
+        }
+
+        h1 {
+            margin-bottom: 4rem;
+            max-width: 600px;
+
+            span {
+                display: block;
+                margin: .5rem;
+
+                @include open-sans-light;
+                font-size: 2rem;
+
+                &.name {
+                    margin: 1.3rem .5rem;
+
+                    @include f-abril-fatface;
+                    font-size: 4rem;
+                }
+
+                &.job {
+                    margin-top: 1.3rem;
+
+                    @include open-sans-bold;
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+
+        .scroll {
+            position: absolute;
+            bottom: .5rem;
+
+            img {
+                height: 2rem;
+                width: 2rem;
+
+                animation: bounce 1s cubic-bezier(.5,0.05,1,.5) infinite;
+                animation-direction: alternate;
+            }
+
+            @keyframes bounce {
+                from { transform: translate3d(0, 0, 0);     }
+                to   { transform: translate3d(0, 1rem, 0); }
+            } 
+
+            p {
+                margin: .3rem 1rem 0 .3rem;
+                font-size: .9rem;
+            }
+        }
+    } 
+    &.about-me {
+        margin-top: 50vh;
+
+        p {
+            color: #111111;
+
+            strong {
+                color: $blue-gray;
+            }
+        }
+    }
+}
+
+.background {
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background: linear-gradient(312deg, $gr-1-teal, $gr-2-green, $gr-3-light-green, $gr-4-lime, $gr-5-amber, $gr-6-orange, $gr-7-deep-orange, $gr-8-red, $gr-9-pink, $gr-10-purple, $gr-11-deep-purple, $gr-12-indigo, $gr-13-blue, $gr-14-light-blue, $gr-15-cyan);
+    background-size: 3000% 3000%;
+
+    animation: gradientAnimation 39s linear infinite;
+    animation-fill-mode: forwards;
+
+    @keyframes gradientAnimation {
+        0% { background-position: 0% 9%; }
+        50% { background-position: 100% 92%; }
+        100% { background-position: 0% 9%; }
+    }
+
+    &.is-not-visible { // Fade-out
+        visibility: hidden;
+        opacity: 0;
+
+        transition: visibility 0s ease-in-out 500ms, opacity 500ms;
+    }
+
+    &.is-visible { // Fade-in
+        visibility: visible;
+        opacity: 1;
+
+        transition: visibility 0s ease-in-out 0s, opacity 500ms;
+    }
+}
+
+.particles {
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

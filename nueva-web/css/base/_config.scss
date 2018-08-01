@@ -1,0 +1,112 @@
+// ----------
+// COLORS
+// ----------
+
+// Global
+$white: #FAFAFA;
+$black: #212121;
+
+// Header Gradients
+$gr-1-teal: #00897b;
+$gr-2-green: #43a047;
+$gr-3-light-green: #7cb342;
+$gr-4-lime: #c0ca33;
+$gr-5-amber: #ffb300;
+$gr-6-orange: #fb8c00;
+$gr-7-deep-orange: #f4511e;
+$gr-8-red: #e53935;
+$gr-9-pink: #d81b60;
+$gr-10-purple: #8e24aa;
+$gr-11-deep-purple: #5e35b1;
+$gr-12-indigo: #3949ab;
+$gr-13-blue: #1e88e5;
+$gr-14-light-blue: #039be5;
+$gr-15-cyan: #00acc1;
+
+// Section background color
+$bg-light-blue: #0089E9;
+$bg-white: #EBEBEB;
+$bg-orange: #FC6600;
+$bg-dark-blue: #003D5B;
+$bg-teal: #007A6B;
+$bg-blue-gray: #2B454E;
+
+// Special colors
+$blue-gray: #263238;
+$red: #B00101;
+$green: #005E12;
+$gray: #717171;
+$light-gray: #BEBEBE;
+
+// Colors of the titles
+$t-portfolio: #960707;
+$t-blog: #1b5e20;
+
+
+
+// ----------
+// TYPOGRAPHY
+// ----------
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300;400,700|Raleway:500,600');
+
+@mixin f-abril-fatface {
+    font-family: 'Abril Fatface', cursive;
+}
+
+@mixin open-sans-light {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+@mixin open-sans-normal {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+@mixin open-sans-bold {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+@mixin raleway-medium {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+@mixin raleway-semi-bold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+// NOTE: How to import mixins
+//      @include mixin-name;
+
+
+
+/*
+NOTE: How to organice the styles
+
+    // Element-Base
+    .element {
+        margin: 10px;
+        padding: 10px;
+
+        border: 1px solid red;
+        background: blue;
+
+        color: white;
+        font-size: 16px;
+
+        -webkit-transform: translate3d(0,0,0);
+    }
+
+    1 box
+        margin, padding, display, etc.
+    2 Bordes y Fondos (backgrounds)
+        border, border-radius, background-color, etc.
+    3 Textos
+        color, font-size, text-transform, etc.
+    4 Otras cosas
+        animations, transforms, etc.
+
+*/

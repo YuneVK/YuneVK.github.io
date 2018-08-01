@@ -1,0 +1,61 @@
+a.button {
+    display: inline-block;
+    position: relative;
+    padding: 1rem 1.3rem;
+    margin: 1.5rem;
+
+    border: 2px solid $white;
+
+    @include raleway-semi-bold;
+    font-size: .9rem;
+    color: $white;
+    text-decoration: none;
+
+    transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+
+        background: $white;
+    }
+
+    &:after {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        color: $blue-gray;
+
+        &:after {
+            width: 100%;
+        }
+    }
+
+}
+
+.yunemy .button:hover {
+    color: $bg-teal;
+}
+
+.blog .button {
+    border: 2px solid $t-blog;
+
+    color: $t-blog;
+
+    &:after {
+        background: $t-blog;
+    }
+
+    &:hover {
+        color: $white;
+    }
+
+}

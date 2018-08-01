@@ -1,0 +1,50 @@
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 650px;
+    margin: 3.5rem auto;
+
+    a {
+        margin: .8rem 1.3rem;
+
+        
+
+
+        img, svg {
+            height: 4rem;
+            width: 4rem;
+        }
+    
+        svg {
+            fill: $white;
+            transition: .2s ease;
+        }
+
+        &:hover {
+            &.email svg {
+                fill: #D44638;
+            }
+
+            &.linkedin svg {
+                fill: #0077B5;
+            }
+
+            &.codepen svg {
+                fill: #000000;
+            }
+
+            &.github svg {
+                fill: #333333;
+            }
+
+            &.twitter svg {
+                fill: #1DA1F2;
+            }
+        }
+        
+    }
+    
+    
+}

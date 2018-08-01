@@ -1,0 +1,171 @@
+.section {
+    .illustration-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 95%;
+        height: 110%;
+        opacity: .2;
+        margin: 0 auto;
+        margin-top: -20%;
+    }
+
+    &.header {
+        .illustration-bg {
+            margin: auto;
+            height: 95%;
+
+            background: url(../img/illustrations/moon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+    } 
+
+    &.about-me {
+        .illustration-bg {
+            opacity: .1;
+            margin-top: -25vh;
+    
+            background: url(../img/illustrations/hands.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            
+
+            @media (max-width: 600px) {
+                & {
+                    margin-top: -20vh;
+                    margin-left: -25vh;
+                    width: 150vw;
+                }
+            }
+
+            @media (max-width: 372px) {
+                & {
+                    margin-top: -70vh;
+                }
+            }
+        }
+    }
+
+    &.skills .illustration-bg {
+        opacity: .2;
+
+        background: url(../img/illustrations/egyptian-face.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        @media (max-width: 600px) {
+            & {
+                margin-left: 5vw;
+                width: 150vw;
+            }
+        }
+    }
+
+    &.timeline .illustration-bg {
+        opacity: .2;
+
+        background: url(../img/illustrations/architecture.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+
+        @media (max-width: 600px) {
+            & {
+                margin-left: -50vh;
+                width: 200vw;
+            }
+        }
+    }
+
+    &.portfolio .illustration-bg {
+        opacity: .2;
+        margin-top: -15vh;
+        max-height: 130vh;
+        margin-right: -16vh;
+
+        background: url(../img/illustrations/dragon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        @media (max-width: 700px) {
+            & {
+                margin-left: -50vw;
+                width: 170vw;
+            }
+        }
+
+        @media (max-width: 441px) {
+            & {
+                margin-top: -40vh;
+            }
+        }
+    }
+
+    &.yunemy .illustration-bg {
+        opacity: .2;
+        max-width: 800px;
+        margin-top: -30%;
+
+        background: url(../img/illustrations/moon-phases.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        @media (max-width: 600px) {
+            & {
+                margin-top: -55vh;
+                margin-left: -50vw;
+                width: 170vw;
+            }
+        }
+    }
+
+    &.blog .illustration-bg { 
+        opacity: .2;
+        height: 120%;
+        margin-top: -30vh;
+        margin-right: 5%;
+
+        background: url(../img/illustrations/atlas.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        @media (max-width: 960px) {
+            & {
+                height: 90%;
+                margin-top: -25vh;
+                margin-left: 10vw;
+                opacity: .1;
+            }
+        }
+    }
+
+    &.contact .illustration-bg {
+        opacity: .2;
+        margin-top: 0;
+        max-width: 800px;
+        height: 100%;
+
+        background: url(../img/illustrations/beetle.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center right;
+
+        @media (max-width: 600px) {
+            & {
+                margin-left: -50vw;
+                width: 200vw;
+            }
+        }
+    }
+}

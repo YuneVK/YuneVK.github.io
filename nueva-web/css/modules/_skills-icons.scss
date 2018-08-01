@@ -1,0 +1,60 @@
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+    margin: 4rem auto;
+
+    @media (max-width: 600px) {
+        & {
+            margin: 2rem auto;
+
+            .skill-container {
+                height: 5rem;
+                width: 5rem;
+                flex: 0 1 auto;
+                margin: 1.5rem;
+            }
+        }
+    }
+
+    .skill-container {
+        position: relative;
+        height: 6rem;
+        width: 6rem;
+        flex: 1 0 25%;
+        margin-bottom: 2.5rem;
+
+        .skill {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                margin: auto;
+                
+                transition: .6s ease-out;
+    
+                &.color {
+                    opacity: 0;
+                }
+            }
+    
+            &:hover {
+                .color {
+                    opacity: 1;
+                }
+    
+                .white {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
