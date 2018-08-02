@@ -16,6 +16,8 @@ body.modal-open {
     justify-content: center;
     flex-direction: column;
     position: relative;
+    //overflow-x: hidden;
+    //overflow-y: visible;
 
     &:first-child {
         margin-top: 0;

@@ -476,8 +476,9 @@ body.modal-open {
 @media (max-width: 600px) {
   .section.about-me .illustration-bg {
     margin-top: -20vh;
-    margin-left: -25vh;
-    width: 150vw;
+    margin-left: 0;
+    width: 100vw;
+    background-size: 150vw;
   }
 }
 
@@ -497,8 +498,9 @@ body.modal-open {
 
 @media (max-width: 600px) {
   .section.skills .illustration-bg {
-    margin-left: 5vw;
-    width: 150vw;
+    width: 100vw;
+    background-size: 150vw;
+    background-position: top left;
   }
 }
 
@@ -512,8 +514,7 @@ body.modal-open {
 
 @media (max-width: 600px) {
   .section.timeline .illustration-bg {
-    margin-left: -50vh;
-    width: 200vw;
+    background-size: 200vw;
   }
 }
 
@@ -530,8 +531,10 @@ body.modal-open {
 
 @media (max-width: 700px) {
   .section.portfolio .illustration-bg {
-    margin-left: -50vw;
-    width: 170vw;
+    margin-right: 0;
+    width: 100vw;
+    background-size: 170vw;
+    background-position: top left;
   }
 }
 
@@ -554,8 +557,9 @@ body.modal-open {
 @media (max-width: 600px) {
   .section.yunemy .illustration-bg {
     margin-top: -55vh;
-    margin-left: -50vw;
-    width: 170vw;
+    width: 100vw;
+    background-size: 170vw;
+    background-position: center;
   }
 }
 
@@ -574,8 +578,10 @@ body.modal-open {
   .section.blog .illustration-bg {
     height: 90%;
     margin-top: -25vh;
-    margin-left: 10vw;
+    margin-left: 0;
+    margin-right: 0;
     opacity: .1;
+    background-position: center right;
   }
 }
 
@@ -592,8 +598,9 @@ body.modal-open {
 
 @media (max-width: 600px) {
   .section.contact .illustration-bg {
-    margin-left: -50vw;
-    width: 200vw;
+    width: 100vw;
+    background-size: 200vw;
+    background-position: center;
   }
 }
 

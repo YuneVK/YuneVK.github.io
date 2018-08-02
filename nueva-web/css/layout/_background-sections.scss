@@ -40,8 +40,9 @@
             @media (max-width: 600px) {
                 & {
                     margin-top: -20vh;
-                    margin-left: -25vh;
-                    width: 150vw;
+                    margin-left: 0;
+                    width: 100vw;
+                    background-size: 150vw
                 }
             }
 
@@ -63,8 +64,9 @@
 
         @media (max-width: 600px) {
             & {
-                margin-left: 5vw;
-                width: 150vw;
+                width: 100vw;
+                background-size: 150vw;
+                background-position: top left;
             }
         }
     }
@@ -79,8 +81,7 @@
 
         @media (max-width: 600px) {
             & {
-                margin-left: -50vh;
-                width: 200vw;
+                background-size: 200vw;
             }
         }
     }
@@ -98,8 +99,10 @@
 
         @media (max-width: 700px) {
             & {
-                margin-left: -50vw;
-                width: 170vw;
+                margin-right: 0;
+                width: 100vw;
+                background-size: 170vw;
+                background-position: top left;
             }
         }
 
@@ -123,8 +126,9 @@
         @media (max-width: 600px) {
             & {
                 margin-top: -55vh;
-                margin-left: -50vw;
-                width: 170vw;
+                width: 100vw;
+                background-size: 170vw;
+                background-position: center;
             }
         }
     }
@@ -144,8 +148,10 @@
             & {
                 height: 90%;
                 margin-top: -25vh;
-                margin-left: 10vw;
+                margin-left: 0;
+                margin-right: 0;
                 opacity: .1;
+                background-position: center right;
             }
         }
     }
@@ -163,8 +169,9 @@
 
         @media (max-width: 600px) {
             & {
-                margin-left: -50vw;
-                width: 200vw;
+                width: 100vw;
+                background-size: 200vw;
+                background-position: center;
             }
         }
     }
