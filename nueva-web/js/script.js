@@ -91,6 +91,7 @@ $(function() {
             duration : 700,
             delay    : 800,
             scale    : 1.01,
+            viewFactor: 0.001,
             useDelay: 'once'
         };
 
@@ -368,6 +369,7 @@ $(function() {
             duration : 600,
             container: '.portfolio-modal-container',
             reset    : true,
+            viewFactor: 0.001,
             scale    : 1
         };
 
