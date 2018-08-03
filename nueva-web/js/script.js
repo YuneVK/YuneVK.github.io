@@ -403,6 +403,7 @@ $(function() {
             delay    : 900,
             container: '.portfolio-modal-container',
             reset    : true,
+            viewFactor: 0,
             scale    : 1
         };
 
