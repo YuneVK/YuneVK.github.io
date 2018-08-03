@@ -27,7 +27,7 @@
 
     &.about-me {
         .illustration-bg {
-            opacity: .1;
+            opacity: .07;
             margin-top: -25vh;
     
             background: url(../img/illustrations/hands.png);
@@ -72,6 +72,7 @@
     }
 
     &.timeline .illustration-bg {
+        width: 100%;
         opacity: .2;
 
         background: url(../img/illustrations/architecture.png);
@@ -103,6 +104,7 @@
                 width: 100vw;
                 background-size: 170vw;
                 background-position: top left;
+                opacity: .1;
             }
         }
 

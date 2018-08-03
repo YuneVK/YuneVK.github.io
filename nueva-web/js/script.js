@@ -32,7 +32,203 @@ $(function() {
         checkIllustrationPosition();
     });
 
+    initScrollReveal();
+
     initPortfolio();
+
+    function initScrollReveal() {
+        var hi = {
+            origin   : "top",
+            distance : "24px",
+            duration : 700,
+            delay    : 0,
+            scale    : 1.05,
+        };
+
+        var myName = {
+            origin   : "bottom",
+            distance : "24px",
+            duration : 700,
+            delay    : 600,
+            scale    : 1.05,
+        };
+
+        var name = {
+            origin   : "top",
+            distance : "5px",
+            duration : 1500,
+            delay    : 1000,
+            scale    : 1.2,
+        };
+
+        var and = {
+            origin   : "bottom",
+            distance : "35px",
+            duration : 700,
+            delay    : 1700,
+            scale    : 1.05,
+        };
+
+        var job = {
+            origin   : "top",
+            distance : "35px",
+            duration : 1500,
+            delay    : 2200,
+            scale    : 1.1,
+        };
+
+        var scroll = {
+            origin   : "bottom",
+            distance : "35px",
+            duration : 700,
+            delay    : 2800,
+            scale    : 1.05,
+        };
+
+        var general = {
+            origin   : "bottom",
+            distance : "1px",
+            duration : 700,
+            delay    : 800,
+            scale    : 1.01,
+            useDelay: 'once'
+        };
+
+        var items = {
+            origin   : "bottom",
+            distance : "5px",
+            duration : 800,
+            delay    : 900,
+            scale    : .9,
+        };
+
+        // Titles section
+        var number = {
+            origin   : "left",
+            distance : "30px",
+            duration : 600,
+            scale    : .9,
+        };
+        var subtitule = {
+            origin   : "left",
+            distance : "35px",
+            delay    : 100,
+            duration : 600,
+            scale    : .9,
+        };
+        var title = {
+            origin   : "bottom",
+            distance : "40px",
+            delay    : 500,
+            duration : 800,
+            scale    : 1,
+        };
+
+        // Buttons
+        var yunemyButton = {
+            origin   : "bottom",
+            distance : "40px",
+            delay    : 900,
+            duration : 800,
+            scale    : 1,
+        };
+
+        var blogButton = {
+            origin   : "right",
+            distance : "40px",
+            delay    : 900,
+            duration : 800,
+            scale    : 1,
+        };
+
+        // Timeline
+        var line = {
+            origin   : "top",
+            distance : "1px",
+            delay    : 600,
+            duration : 400,
+            scale    : 1,
+            afterReveal: function (domEl) {
+                sr.reveal('.timeline-element .circle', circle);
+                sr.reveal('.timeline-element .job-title', jobTitle);
+                sr.reveal('.timeline-element .date', date);
+                sr.reveal('.timeline-element .company', company);
+                sr.reveal('.timeline-element .job-description', jobInfo);
+            }
+        };
+
+        var circle = {
+            origin   : "bottom",
+            distance : "5px",
+            delay    : 50,
+            duration : 400,
+            scale    : 1
+        };
+
+        var jobTitle = {
+            origin   : "right",
+            distance : "40px",
+            delay    : 200,
+            duration : 600,
+            scale    : 1
+        };
+
+        var date = {
+            origin   : "left",
+            distance : "35px",
+            delay    : 500,
+            duration : 500,
+            scale    : 1
+        };
+
+        var company = {
+            origin   : "bottom",
+            distance : "5px",
+            delay    : 800,
+            duration : 500,
+            scale    : 1
+        };
+
+        var jobInfo = {
+            origin   : "bottom",
+            distance : "5px",
+            delay    : 1000,
+            duration : 500,
+            scale    : 1
+        };
+
+        
+
+
+
+        window.sr = ScrollReveal();
+
+        sr.reveal('#header .hi', hi);
+        sr.reveal('#header .my-name-is', myName);
+        sr.reveal('#header .name', name);
+        sr.reveal('#header .and', and);
+        sr.reveal('#header .job', job);
+        sr.reveal('#header .scroll', scroll);
+
+        sr.reveal('.section > .content > p, .section > .content > img, .navigation', general); // class="scroll-general"
+        sr.reveal('.portfolio-item', items, 200);
+        sr.reveal('.icon-contact', items, 200); 
+        sr.reveal('.skill-container', items, 150);
+
+        // Titles section
+        sr.reveal('.section .number', number);
+        sr.reveal('.section .subtitule', subtitule);
+        sr.reveal('.section h2', title);
+
+        // Buttons
+        sr.reveal('#yunemy .button', yunemyButton);
+        sr.reveal('#blog .button', blogButton, 100);
+
+        // Timeline
+        sr.reveal('.timeline-element .line', line);
+
+        
+    }
 
     /**
      * Check the background color/gradient according to the section that is in the viewport
@@ -115,7 +311,7 @@ $(function() {
             $('#' + $(this).data('item')).parent().css('display', 'flex');
             $('body').addClass('modal-open');
             $('#' + $(this).data('item')).css('display', 'flex').animateCss('fadeIn', function() {
-                
+
             });
 
             // Force the click event to reset the slider

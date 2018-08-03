@@ -27,6 +27,7 @@
             position: absolute;
             right: calc(100% - .6rem);
             margin-top: .15rem;
+            visibility: hidden;
 
             background: white;
             border-radius: 50%;
@@ -42,6 +43,7 @@
                 @include raleway-semi-bold;
                 font-size: 1.55rem;
                 letter-spacing: .025rem;
+                visibility: hidden;
             }
 
             .date {
@@ -50,6 +52,7 @@
                 position: absolute;
                 top: 0;
                 left: calc(-100% - 1.5rem);
+                visibility: hidden;
                 //right: 0;
     
                 text-align: right;
@@ -62,6 +65,7 @@
             .company {
                 margin: .2rem 0;
                 opacity: .8;
+                visibility: hidden;
 
                 @include raleway-medium;
                 font-size: .9rem;
@@ -70,6 +74,7 @@
 
             .job-description {
                 margin: .5rem 0;
+                visibility: hidden;
 
                 font-size: .95rem;
                 letter-spacing: .025rem;

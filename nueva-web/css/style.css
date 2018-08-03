@@ -202,6 +202,13 @@ body.modal-open {
     padding: 0;
     text-align: center;
   }
+  .section.blog .content .button {
+    margin-right: 0;
+  }
+}
+
+.section.timeline {
+  overflow: hidden;
 }
 
 .section.timeline .content {
@@ -289,6 +296,12 @@ body.modal-open {
   opacity: .6;
 }
 
+@media (max-width: 960px) {
+  .section .title p {
+    text-align: center;
+  }
+}
+
 .section .title, .section .content {
   z-index: 5;
 }
@@ -296,6 +309,13 @@ body.modal-open {
 .section .content {
   padding: 1.5rem;
   max-width: 800px;
+}
+
+.section.header {
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 }
 
 .section.header h1, .section.header .scroll {
@@ -465,7 +485,7 @@ body.modal-open {
 }
 
 .section.about-me .illustration-bg {
-  opacity: .1;
+  opacity: .07;
   margin-top: -25vh;
   background: url(../img/illustrations/hands.png);
   background-size: contain;
@@ -505,6 +525,7 @@ body.modal-open {
 }
 
 .section.timeline .illustration-bg {
+  width: 100%;
   opacity: .2;
   background: url(../img/illustrations/architecture.png);
   background-size: contain;
@@ -535,6 +556,7 @@ body.modal-open {
     width: 100vw;
     background-size: 170vw;
     background-position: top left;
+    opacity: .1;
   }
 }
 
@@ -817,6 +839,7 @@ a.link:hover:after {
   position: absolute;
   right: calc(100% - .6rem);
   margin-top: .15rem;
+  visibility: hidden;
   background: white;
   border-radius: 50%;
 }
@@ -832,6 +855,7 @@ a.link:hover:after {
   font-weight: 600;
   font-size: 1.55rem;
   letter-spacing: .025rem;
+  visibility: hidden;
 }
 
 .timeline-element .element .job-content .date {
@@ -840,6 +864,7 @@ a.link:hover:after {
   position: absolute;
   top: 0;
   left: calc(-100% - 1.5rem);
+  visibility: hidden;
   text-align: right;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
@@ -850,6 +875,7 @@ a.link:hover:after {
 .timeline-element .element .job-content .company {
   margin: .2rem 0;
   opacity: .8;
+  visibility: hidden;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: .9rem;
@@ -858,6 +884,7 @@ a.link:hover:after {
 
 .timeline-element .element .job-content .job-description {
   margin: .5rem 0;
+  visibility: hidden;
   font-size: .95rem;
   letter-spacing: .025rem;
   line-height: 1.3rem;

@@ -71,15 +71,23 @@ body.modal-open {
                 padding: 0;
 
                 text-align: center;
+
+                .button {
+                    margin-right: 0;
+                }
             }
         }
 
     }
 
-    &.timeline .content {
-        max-width: 900px;
-    }
+    &.timeline {
+        overflow: hidden;
 
+        .content {
+            max-width: 900px;
+        }
+    }
+    
     &.contact {
         .credits {
             img, svg {
@@ -125,6 +133,12 @@ body.modal-open {
             &.number {
                 opacity: .6;
             }
+
+            @media (max-width: 960px) {
+                & {
+                    text-align: center;
+                }
+            }
         }
     }
 
@@ -138,6 +152,11 @@ body.modal-open {
     }
 
     &.header {
+        // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+        overflow: hidden;
+        
         h1, .scroll {
             z-index: 5;
         }
