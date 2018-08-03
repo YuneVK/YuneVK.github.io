@@ -123,6 +123,20 @@ h2 {
   font-size: 3rem;
 }
 
+/* Ensure elements load hidden before ScrollReveal runs */
+.sr .circle,
+.sr .job-title,
+.sr .date,
+.sr .company,
+.sr .csslider,
+.sr .modal .client,
+.sr .modal h3,
+.sr .modal .tags,
+.sr .modal .close-button,
+.sr .modal .description {
+  visibility: hidden;
+}
+
 body.modal-open {
   overflow: hidden;
 }
@@ -554,9 +568,10 @@ body.modal-open {
   .section.portfolio .illustration-bg {
     margin-right: 0;
     width: 100vw;
-    background-size: 170vw;
-    background-position: top left;
+    max-height: 100%;
     opacity: .1;
+    background-size: contain;
+    background-position: top left;
   }
 }
 
@@ -569,19 +584,16 @@ body.modal-open {
 .section.yunemy .illustration-bg {
   opacity: .2;
   max-width: 800px;
-  margin-top: -30%;
   background: url(../img/illustrations/moon-phases.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top center;
 }
 
 @media (max-width: 600px) {
   .section.yunemy .illustration-bg {
-    margin-top: -55vh;
     width: 100vw;
     background-size: 170vw;
-    background-position: center;
   }
 }
 
@@ -621,6 +633,7 @@ body.modal-open {
 @media (max-width: 600px) {
   .section.contact .illustration-bg {
     width: 100vw;
+    width: calc(100vw - (100vw - 100%));
     background-size: 200vw;
     background-position: center;
   }
@@ -839,7 +852,6 @@ a.link:hover:after {
   position: absolute;
   right: calc(100% - .6rem);
   margin-top: .15rem;
-  visibility: hidden;
   background: white;
   border-radius: 50%;
 }
@@ -855,7 +867,6 @@ a.link:hover:after {
   font-weight: 600;
   font-size: 1.55rem;
   letter-spacing: .025rem;
-  visibility: hidden;
 }
 
 .timeline-element .element .job-content .date {
@@ -864,7 +875,6 @@ a.link:hover:after {
   position: absolute;
   top: 0;
   left: calc(-100% - 1.5rem);
-  visibility: hidden;
   text-align: right;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
@@ -875,7 +885,6 @@ a.link:hover:after {
 .timeline-element .element .job-content .company {
   margin: .2rem 0;
   opacity: .8;
-  visibility: hidden;
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
   font-size: .9rem;

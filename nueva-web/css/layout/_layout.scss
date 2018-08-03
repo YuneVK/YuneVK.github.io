@@ -1,3 +1,19 @@
+/* Ensure elements load hidden before ScrollReveal runs */
+.sr {
+    & .circle,
+    & .job-title,
+    & .date, 
+    & .company, 
+    & .csslider, 
+    & .modal .client, 
+    & .modal h3,
+    & .modal .tags, 
+    & .modal .close-button, 
+    & .modal .description {
+        visibility: hidden
+    }
+}
+
 body.modal-open {
     overflow: hidden;
 }

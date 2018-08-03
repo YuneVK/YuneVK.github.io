@@ -37,7 +37,7 @@ $(function() {
     initPortfolio();
 
     function initScrollReveal() {
-        var hi = {
+        let hi = {
             origin   : "top",
             distance : "24px",
             duration : 700,
@@ -45,7 +45,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        var myName = {
+        let myName = {
             origin   : "bottom",
             distance : "24px",
             duration : 700,
@@ -53,7 +53,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        var name = {
+        let name = {
             origin   : "top",
             distance : "5px",
             duration : 1500,
@@ -61,7 +61,7 @@ $(function() {
             scale    : 1.2,
         };
 
-        var and = {
+        let and = {
             origin   : "bottom",
             distance : "35px",
             duration : 700,
@@ -69,7 +69,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        var job = {
+        let job = {
             origin   : "top",
             distance : "35px",
             duration : 1500,
@@ -77,7 +77,7 @@ $(function() {
             scale    : 1.1,
         };
 
-        var scroll = {
+        let scroll = {
             origin   : "bottom",
             distance : "35px",
             duration : 700,
@@ -85,7 +85,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        var general = {
+        let general = {
             origin   : "bottom",
             distance : "1px",
             duration : 700,
@@ -94,7 +94,7 @@ $(function() {
             useDelay: 'once'
         };
 
-        var items = {
+        let items = {
             origin   : "bottom",
             distance : "5px",
             duration : 800,
@@ -103,20 +103,20 @@ $(function() {
         };
 
         // Titles section
-        var number = {
+        let number = {
             origin   : "left",
             distance : "30px",
             duration : 600,
             scale    : .9,
         };
-        var subtitule = {
+        let subtitule = {
             origin   : "left",
             distance : "35px",
             delay    : 100,
             duration : 600,
             scale    : .9,
         };
-        var title = {
+        let title = {
             origin   : "bottom",
             distance : "40px",
             delay    : 500,
@@ -125,7 +125,7 @@ $(function() {
         };
 
         // Buttons
-        var yunemyButton = {
+        let yunemyButton = {
             origin   : "bottom",
             distance : "40px",
             delay    : 900,
@@ -133,7 +133,7 @@ $(function() {
             scale    : 1,
         };
 
-        var blogButton = {
+        let blogButton = {
             origin   : "right",
             distance : "40px",
             delay    : 900,
@@ -142,7 +142,7 @@ $(function() {
         };
 
         // Timeline
-        var line = {
+        let line = {
             origin   : "top",
             distance : "1px",
             delay    : 600,
@@ -156,8 +156,9 @@ $(function() {
                 sr.reveal('.timeline-element .job-description', jobInfo);
             }
         };
+        
 
-        var circle = {
+        let circle = {
             origin   : "bottom",
             distance : "5px",
             delay    : 50,
@@ -165,7 +166,7 @@ $(function() {
             scale    : 1
         };
 
-        var jobTitle = {
+        let jobTitle = {
             origin   : "right",
             distance : "40px",
             delay    : 200,
@@ -173,7 +174,7 @@ $(function() {
             scale    : 1
         };
 
-        var date = {
+        let date = {
             origin   : "left",
             distance : "35px",
             delay    : 500,
@@ -181,7 +182,7 @@ $(function() {
             scale    : 1
         };
 
-        var company = {
+        let company = {
             origin   : "bottom",
             distance : "5px",
             delay    : 800,
@@ -189,7 +190,7 @@ $(function() {
             scale    : 1
         };
 
-        var jobInfo = {
+        let jobInfo = {
             origin   : "bottom",
             distance : "5px",
             delay    : 1000,
@@ -202,6 +203,10 @@ $(function() {
 
 
         window.sr = ScrollReveal();
+
+        if (sr.isSupported()) {
+            document.documentElement.classList.add('sr');
+        }
 
         sr.reveal('#header .hi', hi);
         sr.reveal('#header .my-name-is', myName);
@@ -227,7 +232,20 @@ $(function() {
         // Timeline
         sr.reveal('.timeline-element .line', line);
 
-        
+        //sr.reveal('h3', { container: '.main-content' });
+
+
+        /*var slider = {
+            origin   : "left",
+            distance : "35px",
+            delay    : 500,
+            duration : 500,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            scale    : 1
+        };
+        // Modals
+        sr.reveal('.title', slider);*/
     }
 
     /**
@@ -311,7 +329,8 @@ $(function() {
             $('#' + $(this).data('item')).parent().css('display', 'flex');
             $('body').addClass('modal-open');
             $('#' + $(this).data('item')).css('display', 'flex').animateCss('fadeIn', function() {
-
+                revealModal();
+                
             });
 
             // Force the click event to reset the slider
@@ -336,6 +355,64 @@ $(function() {
         }, function() {
             $('.portfolio-item', container).css('opacity', '1');
         });*/
+    }
+
+    function revealModal() {
+        let slider = {
+            origin   : "left",
+            distance : "40px",
+            duration : 600,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            scale    : 1
+        };
+
+        let client = {
+            origin   : "right",
+            distance : "20px",
+            duration : 1000,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            scale    : 1
+        };
+
+        let title = {
+            origin   : "right",
+            distance : "35px",
+            duration : 600,
+            delay    : 300,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            scale    : 1
+        };
+
+        let general = {
+            origin   : "top",
+            distance : "10px",
+            duration : 600,
+            delay    : 600,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            scale    : 1
+        };
+
+        let text = {
+            origin   : "bottom",
+            distance : "30px",
+            duration : 600,
+            delay    : 900,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            scale    : 1
+        };
+
+        // Modals
+        sr.reveal('.csslider', slider);
+        sr.reveal('.client', client);
+        sr.reveal('h3', title);
+        sr.reveal('.tags, .close-button', general);
+        sr.reveal('.description', text);
+        
     }
 
     function checkIllustrationPosition() {

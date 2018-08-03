@@ -102,9 +102,11 @@
             & {
                 margin-right: 0;
                 width: 100vw;
-                background-size: 170vw;
-                background-position: top left;
+                max-height: 100%;
                 opacity: .1;
+
+                background-size: contain;
+                background-position: top left;
             }
         }
 
@@ -118,19 +120,19 @@
     &.yunemy .illustration-bg {
         opacity: .2;
         max-width: 800px;
-        margin-top: -30%;
+        //margin-top: -30%;
 
         background: url(../img/illustrations/moon-phases.png);
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: top center;
 
         @media (max-width: 600px) {
             & {
-                margin-top: -55vh;
+                //margin-top: -55vh;
                 width: 100vw;
                 background-size: 170vw;
-                background-position: center;
+                //background-position: center;
             }
         }
     }
@@ -172,6 +174,7 @@
         @media (max-width: 600px) {
             & {
                 width: 100vw;
+                width: calc(100vw - (100vw - 100%));
                 background-size: 200vw;
                 background-position: center;
             }

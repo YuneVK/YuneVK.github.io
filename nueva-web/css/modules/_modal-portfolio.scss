@@ -55,6 +55,7 @@
             align-items: center;
             justify-content: center;
 
+
             img.portfolio-image {
                 max-width: 100%;
                 max-height: calc(100vh - 22px);
@@ -96,7 +97,6 @@
                 }
 
                 h3 {
-
                     @include raleway-medium;
                     color: $t-portfolio;
                     font-size: 2.5rem;
@@ -189,6 +189,7 @@
 
                 .csslider {
                     height: 100%;
+                    
 
                     & > ul {
                         height: 100%;
