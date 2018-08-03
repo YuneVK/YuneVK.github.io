@@ -232,6 +232,10 @@ $(function() {
         // Timeline
         sr.reveal('.timeline-element .line', line);
 
+
+
+
+
         //sr.reveal('h3', { container: '.main-content' });
 
 
@@ -403,7 +407,7 @@ $(function() {
             delay    : 900,
             container: '.portfolio-modal-container',
             reset    : true,
-            viewFactor: 0,
+            viewFactor: 0.001,
             scale    : 1
         };
 
@@ -411,8 +415,8 @@ $(function() {
         sr.reveal('.csslider', slider);
         sr.reveal('.client', client);
         sr.reveal('h3', title);
-        sr.reveal('.tags, .close-button', general);
-        sr.reveal('.description', text);
+        sr.reveal('.close-button', general);
+        sr.reveal('.main-info', text);
         
     }
 

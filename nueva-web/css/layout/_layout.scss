@@ -7,9 +7,11 @@
     & .csslider, 
     & .modal .client, 
     & .modal h3,
-    & .modal .tags, 
+    & .main-info,
+    //& .modal .tags, 
     & .modal .close-button, 
-    & .modal .description {
+    //& .modal .description
+    {
         visibility: hidden
     }
 }

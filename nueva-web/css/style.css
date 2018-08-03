@@ -131,9 +131,8 @@ h2 {
 .sr .csslider,
 .sr .modal .client,
 .sr .modal h3,
-.sr .modal .tags,
-.sr .modal .close-button,
-.sr .modal .description {
+.sr .main-info,
+.sr .modal .close-button {
   visibility: hidden;
 }
 
