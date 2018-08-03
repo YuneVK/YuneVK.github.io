@@ -27,6 +27,12 @@ $(function() {
     // TODO: Window resize event
     // TODO: Create the nav code. For the scroll events, the first answer on this link might be useful: https://stackoverflow.com/questions/18564187/using-jquery-find-the-div-class-that-the-top-of-the-viewport-is-inside
 
+    // Source: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
     $(window).scroll(function() {
         checkBackground();
         checkIllustrationPosition();
@@ -198,7 +204,7 @@ $(function() {
             duration : 500,
             scale    : 1
         };
-        
+
         window.sr = ScrollReveal();
 
         if (sr.isSupported()) {
