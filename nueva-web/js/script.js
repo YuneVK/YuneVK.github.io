@@ -198,11 +198,7 @@ $(function() {
             duration : 500,
             scale    : 1
         };
-
         
-
-
-
         window.sr = ScrollReveal();
 
         if (sr.isSupported()) {
@@ -232,25 +228,6 @@ $(function() {
 
         // Timeline
         sr.reveal('.timeline-element .line', line);
-
-
-
-
-
-        //sr.reveal('h3', { container: '.main-content' });
-
-
-        /*var slider = {
-            origin   : "left",
-            distance : "35px",
-            delay    : 500,
-            duration : 500,
-            container: '.portfolio-modal-container',
-            reset    : true,
-            scale    : 1
-        };
-        // Modals
-        sr.reveal('.title', slider);*/
     }
 
     /**
@@ -350,16 +327,6 @@ $(function() {
                 $('.portfolio-modal-container').css('display', 'none');
             });
         });
-
-        
-
-        //var mixer = mixitup($('.portfolio-gallery .elements'));
-
-        /*$('.portfolio-item', container).hover(function() {
-            $('.portfolio-item', container).not(this).css('opacity', '.7');
-        }, function() {
-            $('.portfolio-item', container).css('opacity', '1');
-        });*/
     }
 
     function revealModal() {
@@ -367,6 +334,16 @@ $(function() {
             origin   : "left",
             distance : "40px",
             duration : 600,
+            container: '.portfolio-modal-container',
+            reset    : true,
+            viewFactor: 0.001,
+            scale    : 1
+        };
+
+        let navigation = {
+            origin   : "bottom",
+            distance : "10px",
+            duration : 200,
             container: '.portfolio-modal-container',
             reset    : true,
             viewFactor: 0.001,
@@ -415,11 +392,11 @@ $(function() {
 
         // Modals
         sr.reveal('.csslider', slider);
+        sr.reveal('.navigation', navigation);
         sr.reveal('.client', client);
         sr.reveal('h3', title);
         sr.reveal('.close-button', general);
         sr.reveal('.main-info', text);
-        
     }
 
     function checkIllustrationPosition() {
