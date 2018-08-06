@@ -99,7 +99,7 @@ $(function() {
             origin   : "bottom",
             distance : "1px",
             duration : 700,
-            delay    : 200,
+            delay    : 500,
             scale    : 1.01,
             viewFactor: 0.001,
             useDelay: 'once'
