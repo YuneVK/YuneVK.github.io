@@ -77,36 +77,3 @@ $t-blog: #1b5e20;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
 }
-
-// NOTE: How to import mixins
-//      @include mixin-name;
-
-
-
-/*
-NOTE: How to organice the styles
-
-    // Element-Base
-    .element {
-        margin: 10px;
-        padding: 10px;
-
-        border: 1px solid red;
-        background: blue;
-
-        color: white;
-        font-size: 16px;
-
-        -webkit-transform: translate3d(0,0,0);
-    }
-
-    1 box
-        margin, padding, display, etc.
-    2 Bordes y Fondos (backgrounds)
-        border, border-radius, background-color, etc.
-    3 Textos
-        color, font-size, text-transform, etc.
-    4 Otras cosas
-        animations, transforms, etc.
-
-*/

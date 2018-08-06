@@ -171,8 +171,8 @@ body.modal-open {
 
     &.header {
         // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-        height: calc(var(--vh, 1vh) * 100);
+        min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        //min-height: calc(var(--vh, 1vh) * 100);
         overflow: hidden;
         
         h1, .scroll {

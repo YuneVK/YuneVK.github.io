@@ -1,31 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans:300;400,700|Raleway:500,600");
-/*
-NOTE: How to organice the styles
-
-    // Element-Base
-    .element {
-        margin: 10px;
-        padding: 10px;
-
-        border: 1px solid red;
-        background: blue;
-
-        color: white;
-        font-size: 16px;
-
-        -webkit-transform: translate3d(0,0,0);
-    }
-
-    1 box
-        margin, padding, display, etc.
-    2 Bordes y Fondos (backgrounds)
-        border, border-radius, background-color, etc.
-    3 Textos
-        color, font-size, text-transform, etc.
-    4 Otras cosas
-        animations, transforms, etc.
-
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -325,9 +298,8 @@ body.modal-open {
 }
 
 .section.header {
-  height: 100vh;
+  min-height: 100vh;
   /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
 

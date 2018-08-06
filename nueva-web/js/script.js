@@ -1,5 +1,7 @@
 $(function() {
     "use strict";
+    document.getElementById("loading").classList.add("loaded");
+
 
     // Background colors of the diferent sections
     let backgroundColors = {
@@ -37,6 +39,8 @@ $(function() {
         checkBackground();
         checkIllustrationPosition();
     });
+
+    
 
     initScrollReveal();
 
@@ -211,6 +215,7 @@ $(function() {
             document.documentElement.classList.add('sr');
         }
 
+        
         sr.reveal('#header .hi', hi);
         sr.reveal('#header .my-name-is', myName);
         sr.reveal('#header .name', name);
