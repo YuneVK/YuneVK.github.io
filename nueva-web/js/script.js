@@ -99,7 +99,7 @@ $(function() {
             origin   : "bottom",
             distance : "1px",
             duration : 700,
-            delay    : 800,
+            delay    : 500,
             scale    : 1.01,
             viewFactor: 0.001,
             useDelay: 'once'
@@ -132,14 +132,30 @@ $(function() {
             distance : "40px",
             delay    : 500,
             duration : 800,
-            scale    : 1,
+            scale    : 1, 
+            afterReveal: function (domEl) {
+                sr.reveal('.section > .content > p, .section > .content > img, .navigation', general); // class="scroll-general"
+                sr.reveal('.portfolio-item', items, 200);
+                sr.reveal('.icon-contact', items, 200); 
+                sr.reveal('.skill-container', items, 150);
+
+                // Titles section
+                
+
+                // Buttons
+                sr.reveal('#yunemy .button', yunemyButton);
+                sr.reveal('#blog .button', blogButton, 100);
+
+                // Timeline
+                sr.reveal('.timeline-element .line', line);
+            }
         };
 
         // Buttons
         let yunemyButton = {
             origin   : "bottom",
             distance : "40px",
-            delay    : 900,
+            //delay    : 200,
             duration : 800,
             scale    : 1,
         };
@@ -147,7 +163,7 @@ $(function() {
         let blogButton = {
             origin   : "right",
             distance : "40px",
-            delay    : 900,
+            delay    : 500,
             duration : 800,
             scale    : 1,
         };
@@ -156,7 +172,7 @@ $(function() {
         let line = {
             origin   : "top",
             distance : "1px",
-            delay    : 600,
+            delay    : 400,
             duration : 400,
             scale    : 1,
             afterReveal: function (domEl) {
@@ -223,22 +239,11 @@ $(function() {
         sr.reveal('#header .job', job);
         sr.reveal('#header .scroll', scroll);
 
-        sr.reveal('.section > .content > p, .section > .content > img, .navigation', general); // class="scroll-general"
-        sr.reveal('.portfolio-item', items, 200);
-        sr.reveal('.icon-contact', items, 200); 
-        sr.reveal('.skill-container', items, 150);
-
-        // Titles section
         sr.reveal('.section .number', number);
         sr.reveal('.section .subtitule', subtitule);
         sr.reveal('.section h2', title);
 
-        // Buttons
-        sr.reveal('#yunemy .button', yunemyButton);
-        sr.reveal('#blog .button', blogButton, 100);
-
-        // Timeline
-        sr.reveal('.timeline-element .line', line);
+        
     }
 
     /**

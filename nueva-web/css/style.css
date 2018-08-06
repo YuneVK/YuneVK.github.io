@@ -105,7 +105,8 @@ h2 {
 .sr .modal .client,
 .sr .modal h3,
 .sr .main-info,
-.sr .modal .close-button {
+.sr .modal .close-button,
+.sr .section > .content > p {
   visibility: hidden;
 }
 
