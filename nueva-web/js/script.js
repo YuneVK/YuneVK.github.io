@@ -99,7 +99,7 @@ $(function() {
             origin   : "bottom",
             distance : "1px",
             duration : 700,
-            delay    : 500,
+            delay    : 200,
             scale    : 1.01,
             viewFactor: 0.001,
             useDelay: 'once'
@@ -109,7 +109,7 @@ $(function() {
             origin   : "bottom",
             distance : "5px",
             duration : 800,
-            delay    : 900,
+            delay    : 500,
             scale    : .9,
         };
 
@@ -172,7 +172,7 @@ $(function() {
         let line = {
             origin   : "top",
             distance : "1px",
-            delay    : 400,
+            delay    : 200,
             duration : 400,
             scale    : 1,
             afterReveal: function (domEl) {
