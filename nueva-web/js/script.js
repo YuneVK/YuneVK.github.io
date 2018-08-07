@@ -1,21 +1,21 @@
 $(function() {
     "use strict";
     document.getElementById("loading").classList.add("loaded");
-
+    $('.main-nav, .nav-button').addClass("is-not-visible");
 
     // Background colors of the diferent sections
-    let backgroundColors = {
-        header: {background: "#EBEBEB", particles: "#FAFAFA"}, 
-        aboutme: {background: "#EBEBEB", particles: "#90A4AE"}, 
-        skills: {background: "#FC6600", particles: "#FFE0B2"}, 
-        timeline: {background: "#003D5B", particles: "#C5CAE9"}, 
-        portfolio: {background: "#EBEBEB", particles: "#E57373"}, 
-        yunemy: {background: "#007A6B", particles: "#B2DFDB"}, 
-        blog: {background: "#EBEBEB", particles: "#81C784"}, 
-        contact: {background: "#2B454E", particles: "#CFD8DC"}
+    var backgroundColors = {
+        header: {background: "#EBEBEB", particles: "#FAFAFA", theme: "light"}, 
+        aboutme: {background: "#EBEBEB", particles: "#90A4AE", theme: "dark"}, 
+        skills: {background: "#FC6600", particles: "#FFE0B2", theme: "light"}, 
+        timeline: {background: "#003D5B", particles: "#C5CAE9", theme: "light"}, 
+        portfolio: {background: "#EBEBEB", particles: "#E57373", theme: "dark"}, 
+        yunemy: {background: "#007A6B", particles: "#B2DFDB", theme: "light"}, 
+        blog: {background: "#EBEBEB", particles: "#81C784", theme: "dark"}, 
+        contact: {background: "#2B454E", particles: "#CFD8DC", theme: "light"}
     };
 
-    let lastElement;
+    var lastElement;
 
     // Init Particles.js
     particlesJS.load('particles', 'assets/particlesjs-config.json', function() {
@@ -29,11 +29,6 @@ $(function() {
     // TODO: Window resize event
     // TODO: Create the nav code. For the scroll events, the first answer on this link might be useful: https://stackoverflow.com/questions/18564187/using-jquery-find-the-div-class-that-the-top-of-the-viewport-is-inside
 
-    // Source: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     $(window).scroll(function() {
         checkBackground();
@@ -46,8 +41,26 @@ $(function() {
 
     initPortfolio();
 
+    
+
+    $(".nav-link").click(function() {
+        var target = $(this).data("item");
+        var $target = $("#" + target);
+        $('.burguer-nav').removeClass('open');
+                    
+        $('html, body').animate({
+            'scrollTop': $target.offset().top
+        }, 1000, 'swing');
+    });
+
+    $(".nav-button").click(function(){
+        $(".burguer-nav").toggleClass("open");
+        $('body').toggleClass('modal-open');
+    });
+
+
     function initScrollReveal() {
-        let hi = {
+        var hi = {
             origin   : "top",
             distance : "24px",
             duration : 700,
@@ -55,7 +68,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        let myName = {
+        var myName = {
             origin   : "bottom",
             distance : "24px",
             duration : 700,
@@ -63,7 +76,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        let name = {
+        var name = {
             origin   : "top",
             distance : "5px",
             duration : 1500,
@@ -71,7 +84,7 @@ $(function() {
             scale    : 1.2,
         };
 
-        let and = {
+        var and = {
             origin   : "bottom",
             distance : "35px",
             duration : 700,
@@ -79,7 +92,7 @@ $(function() {
             scale    : 1.05,
         };
 
-        let job = {
+        var job = {
             origin   : "top",
             distance : "35px",
             duration : 1500,
@@ -87,7 +100,7 @@ $(function() {
             scale    : 1.1,
         };
 
-        let scroll = {
+        var scroll = {
             origin   : "bottom",
             distance : "35px",
             duration : 700,
@@ -95,17 +108,17 @@ $(function() {
             scale    : 1.05,
         };
 
-        let general = {
+        var general = {
             origin   : "bottom",
             distance : "1px",
             duration : 700,
-            delay    : 500,
+            delay    : 650,
             scale    : 1.01,
             viewFactor: 0.001,
             useDelay: 'once'
         };
 
-        let items = {
+        var items = {
             origin   : "bottom",
             distance : "5px",
             duration : 800,
@@ -114,33 +127,16 @@ $(function() {
         };
 
         // Titles section
-        let number = {
+        var number = {
             origin   : "left",
             distance : "30px",
             duration : 600,
-            scale    : .9,
-        };
-        let subtitule = {
-            origin   : "left",
-            distance : "35px",
-            delay    : 100,
-            duration : 600,
-            scale    : .9,
-        };
-        let title = {
-            origin   : "bottom",
-            distance : "40px",
-            delay    : 500,
-            duration : 800,
-            scale    : 1, 
+            scale    : .9, 
             afterReveal: function (domEl) {
                 sr.reveal('.section > .content > p, .section > .content > img, .navigation', general); // class="scroll-general"
                 sr.reveal('.portfolio-item', items, 200);
                 sr.reveal('.icon-contact', items, 200); 
                 sr.reveal('.skill-container', items, 150);
-
-                // Titles section
-                
 
                 // Buttons
                 sr.reveal('#yunemy .button', yunemyButton);
@@ -150,9 +146,23 @@ $(function() {
                 sr.reveal('.timeline-element .line', line);
             }
         };
+        var subtitule = {
+            origin   : "left",
+            distance : "35px",
+            delay    : 100,
+            duration : 600,
+            scale    : .9,
+        };
+        var title = {
+            origin   : "bottom",
+            distance : "40px",
+            delay    : 500,
+            duration : 800,
+            scale    : 1
+        };
 
         // Buttons
-        let yunemyButton = {
+        var yunemyButton = {
             origin   : "bottom",
             distance : "40px",
             //delay    : 200,
@@ -160,7 +170,7 @@ $(function() {
             scale    : 1,
         };
 
-        let blogButton = {
+        var blogButton = {
             origin   : "right",
             distance : "40px",
             delay    : 500,
@@ -169,10 +179,10 @@ $(function() {
         };
 
         // Timeline
-        let line = {
+        var line = {
             origin   : "top",
             distance : "1px",
-            delay    : 200,
+            delay    : 50,
             duration : 400,
             scale    : 1,
             afterReveal: function (domEl) {
@@ -185,7 +195,7 @@ $(function() {
         };
         
 
-        let circle = {
+        var circle = {
             origin   : "bottom",
             distance : "5px",
             delay    : 50,
@@ -193,7 +203,7 @@ $(function() {
             scale    : 1
         };
 
-        let jobTitle = {
+        var jobTitle = {
             origin   : "right",
             distance : "40px",
             delay    : 200,
@@ -201,7 +211,7 @@ $(function() {
             scale    : 1
         };
 
-        let date = {
+        var date = {
             origin   : "left",
             distance : "35px",
             delay    : 500,
@@ -209,7 +219,7 @@ $(function() {
             scale    : 1
         };
 
-        let company = {
+        var company = {
             origin   : "bottom",
             distance : "5px",
             delay    : 800,
@@ -217,7 +227,7 @@ $(function() {
             scale    : 1
         };
 
-        let jobInfo = {
+        var jobInfo = {
             origin   : "bottom",
             distance : "5px",
             delay    : 1000,
@@ -250,10 +260,10 @@ $(function() {
      * Check the background color/gradient according to the section that is in the viewport
      */
     function checkBackground() {
-        let windowTop = Math.max($('body').scrollTop(), $('html').scrollTop());
+        var windowTop = Math.max($('body').scrollTop(), $('html').scrollTop());
 
         // If there are more than one element in the viewport, all of them are saved
-        let visibleElements = [];
+        var visibleElements = [];
 
         // For each section we will check if they are in the viewport to save or not save it in the array
         $('.section').each(function (index) {
@@ -263,7 +273,7 @@ $(function() {
         });
 
         // Get the last element visible in the viewport. This element will define the body's background
-        let currentElement = visibleElements.pop();
+        var currentElement = visibleElements.pop();
 
         // Is the current element is different that the last element
         if (lastElement != currentElement) {
@@ -271,6 +281,13 @@ $(function() {
 
             // Change the background color of the body according to the section
             $('body').css('background', backgroundColors[currentElement.id].background);
+            $('.main-nav, .button-content').removeClass('dark');
+            $('.nav-link').removeClass('active');
+            if (backgroundColors[currentElement.id].theme === 'dark') {
+                $('.main-nav, .button-content').addClass('dark');
+                
+            }
+            $(".nav-link[data-item='" + currentElement.id +"']").addClass("active");
 
             // Change the color of the particles
             if (typeof pJSDom[0] != 'undefined') {
@@ -283,19 +300,21 @@ $(function() {
                 if ($('.background').hasClass('is-not-visible')) {
                     $('.background').removeClass('is-not-visible');
                     $('.background').addClass('is-visible');
+                    $('.main-nav, .nav-button').addClass("is-not-visible");
                 }
             } else {
                 // Is the current element is other, and the gradient is visible, it will be not visible
                 if (!$('.background').hasClass('is-not-visible')) {
                     $('.background').removeClass('is-visible');
                     $('.background').addClass('is-not-visible');
+                    $('.main-nav, .nav-button').removeClass("is-not-visible");
                 }
             }
         }
     }
 
     function initPortfolio() {
-        let container = $('.portfolio-gallery');
+        var container = $('.portfolio-gallery');
 
         $('.navigation li').click(function() {
             $(this).addClass('active');
@@ -346,7 +365,7 @@ $(function() {
     }
 
     function revealModal() {
-        let slider = {
+        var slider = {
             origin   : "left",
             distance : "40px",
             duration : 600,
@@ -356,7 +375,7 @@ $(function() {
             scale    : 1
         };
 
-        let navigation = {
+        var navigation = {
             origin   : "bottom",
             distance : "10px",
             duration : 200,
@@ -366,7 +385,7 @@ $(function() {
             scale    : 1
         };
 
-        let client = {
+        var client = {
             origin   : "right",
             distance : "20px",
             duration : 1000,
@@ -375,7 +394,7 @@ $(function() {
             scale    : 1
         };
 
-        let title = {
+        var title = {
             origin   : "right",
             distance : "35px",
             duration : 600,
@@ -385,17 +404,17 @@ $(function() {
             scale    : 1
         };
 
-        let general = {
+        var general = {
             origin   : "top",
             distance : "10px",
             duration : 600,
-            delay    : 600,
+            delay    : 200,
             container: '.portfolio-modal-container',
             reset    : true,
             scale    : 1
         };
 
-        let text = {
+        var text = {
             origin   : "bottom",
             distance : "30px",
             duration : 600,
@@ -416,14 +435,14 @@ $(function() {
     }
 
     function checkIllustrationPosition() {
-        let sections = $('section.section .illustration-bg');
-        let pageY = $(window).scrollTop();
+        var sections = $('section.section .illustration-bg');
+        var pageY = $(window).scrollTop();
 
-        for (let i = 0; i < sections.length; i++) {
-            let element = $(sections[i]);
-            let speed = element.data('speed');
-            let parentSection = element.data('parent-section');
-            let newY = (pageY - $('#' + parentSection).offset().top) * speed / 120;
+        for (var i = 0; i < sections.length; i++) {
+            var element = $(sections[i]);
+            var speed = element.data('speed');
+            var parentSection = element.data('parent-section');
+            var newY = (pageY - $('#' + parentSection).offset().top) * speed / 120;
 
             element.css('transform', "translate3d(0px, " + newY + "px, 0px)");
         }
