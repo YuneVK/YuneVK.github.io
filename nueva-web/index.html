@@ -538,7 +538,7 @@
                     <a href="https://twitter.com/Yune__vk" target="_blank" class="icon-contact twitter"><img class="svg" src="img/rrss/twitter.svg" alt="Icono de Twitter"></a>
                 </div>
 
-                <p class="credits">Diseñado y desarrollado con <img src="img/rrss/heart.svg" class="svg"> por Sonia Ruiz</p>
+                <p class="credits">Diseñado y desarrollado con <img src="img/rrss/heart.svg" alt="Icono de corazón" class="svg"> por Sonia Ruiz</p>
             </div>
         </footer>
     </div>
@@ -1155,9 +1155,9 @@
                     <input type="radio" name="slides" id="slides_vivacopier_2" />
                     <input type="radio" name="slides" id="slides_vivacopier_3" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/vivacopier.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-1.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-2.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier-1.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier-2.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_vivacopier_1"></label>
@@ -1197,12 +1197,21 @@
             </div>
         </div>
     </div>
-    <link rel="stylesheet" href="css/vendor/animate.css">
-    <link rel="stylesheet" href="css/vendor/slider.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        !function(a){"use strict";var b=function(b,c,d){function j(a){if(e.body)return a();setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(a){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+    </script>
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/slider.min.css">
+    <!--<link rel="stylesheet" href="css/style.min.css">-->
     
     <script src="js/vendor/scrollreveal.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
     <script src="js/vendor/particles.min.js"></script>
     <script src="js/vendor/mixitup.min.js"></script>
 </body>

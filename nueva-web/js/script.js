@@ -5,6 +5,8 @@ $(function() {
     document.getElementById("loading").classList.add("loaded");
     $('.main-nav, .nav-button').addClass("is-not-visible");
 
+    
+
     // Background colors of the diferent sections
     var backgroundColors = {
         header: {background: "#EBEBEB", particles: "#FAFAFA", theme: "light"}, 
