@@ -1,0 +1,13 @@
+/* TEAM */
+    AUTHOR: Sonia Ruiz Cayuela
+    SITE: https://yunevk.github.io/
+    TWITTER: @Yune__vk
+    LOCATION: Spain
+                            
+/* SITE */                         
+    Last update: 2018/08/07                          
+    HTML5, CSS3, JavaScript
+    SASS
+    jQuery, Particles.js, ScrollReveal.js
+    GitHub Pages                      
+    Visual Studio Code
