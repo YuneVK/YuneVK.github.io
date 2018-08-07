@@ -47,6 +47,7 @@ $(function() {
         var target = $(this).data("item");
         var $target = $("#" + target);
         $('.burguer-nav').removeClass('open');
+        $('body').removeClass('modal-open');
                     
         $('html, body').animate({
             'scrollTop': $target.offset().top
