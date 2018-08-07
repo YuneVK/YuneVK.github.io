@@ -1,13 +1,20 @@
-<!--
-    TODO: 
-    - [ ] Optimize images
-    - [ ] IE styles (for example, the background in the section 'Skills' -> height: 50vw; width: auto;)
-    - [ ] Check line height (make it bigger)
-    - [ ] Create loader
--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- 
+        Hi there!
+
+        Wow! I thought nobody would enter here. Welcome!
+
+        Thanks for watching the page (and the code!). I hope you enjoy and like it.
+
+        If you have any question or suggestion, feel free to let me know sending me
+        an email to yune.vk@gmail.com
+
+        Have a nice day!
+
+        \ (•◡•) /
+    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,7 +23,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    
 </head>
 <body>
     <style>
@@ -72,6 +78,8 @@
             }
         }
     </style>
+
+    <!-- Loader -->
     <div id="loading">
         <div class="points">
             <span></span>
@@ -79,6 +87,8 @@
             <span></span>
         </div>
     </div>
+
+    <!-- Mobile nav -->
     <nav class="burguer-nav">
         <a class="nav-button">
             <div class="button-content"></div>
@@ -120,8 +130,9 @@
                 </a>
             </div>
         </div>
-        
     </nav>
+
+    <!-- Desktop nav -->
     <nav class="main-nav">
         <a href="javascript:;" class="nav-link" data-item="header">
             <span class="nav-text">INICIO</span>
@@ -161,9 +172,9 @@
     <div class="background"></div>
     <div class="particles" id="particles"></div>
 
-    <!-- MAIN CONTENT -->
+    <!-- Main Content -->
     <div class="main-content">
-        <!--HEADER SECTION -->
+        <!-- Header Section -->
         <header class="section header light" id="header">
             <div class="illustration-bg"></div>
             <h1>
@@ -180,7 +191,7 @@
             </div>
         </header>
 
-        <!--ABOUT ME SECTION -->
+        <!-- About Me -->
         <section class="section about-me" id="aboutme">
             <div class="illustration-bg" data-speed="20" data-parent-section="header"></div>
             <div class="title">
@@ -190,11 +201,11 @@
             </div>
 
             <div class="content">
-                <p>Como habrás podido leer, me llamo <strong>Sonia Ruiz</strong>, tengo 24 años y nací en Motril, una pequeña ciudad en la costa de Granada.</p>
+                <p>Me llamo <strong>Sonia Ruiz</strong>, tengo 24 años y nací en Motril, una pequeña ciudad en la costa de Granada.</p>
 
-                <p>Soy <strong>diseñadora</strong> y <strong>desarrolladora web frontend</strong> desde 2016, y técnica superior en <strong>Desarrollo de Aplicaciones Web</strong> y <strong>Desarrollo de Aplicaciones Multiplataforma</strong>.</p>
+                <p>Soy <strong>diseñadora</strong> y <strong>desarrolladora web frontend</strong> desde 2016, y técnica superior en Desarrollo de Aplicaciones Web y Desarrollo de Aplicaciones Multiplataforma.</p>
                 
-                <p>Además, soy una <strong>apasionada</strong> de todo lo que tenga relación con la <strong>tecnología</strong> y el <strong>diseño</strong> (¡además de los <strong>videojuegos</strong> y la <strong>fotografía</strong>!), lo que me hace transmitir esta <strong>pasión</strong> y <strong>dedidación</strong> en todos mis trabajos. Desde diseño y desarrollo de páginas web, diseño de logotipos, imagen corporativa, hasta cursos de formación. <strong>Me encanta mi trabajo</strong>, y para mí cada proyecto es un nuevo <strong>reto</strong> que afronto con gran entusiasmo, implicándome al máximo para darte el <strong>mejor servicio</strong> adaptado a lo que <strong>necesitas</strong>.</p>
+                <p>Tengo verdadera <strong>pasión</strong> por todo lo que tiene relación con la <strong>tecnología</strong> y el <strong>diseño</strong> (¡además de los <strong>videojuegos</strong> y la <strong>fotografía</strong>!), lo que hace que <strong>disfrute</strong> de cada trabajo. Desde diseño y desarrollo de páginas web, diseño de logotipos, imagen corporativa, hasta cursos de formación. <strong>Me encanta este sector</strong>, y para mí cada proyecto es un nuevo <strong>reto</strong> que afronto con gran <strong>entusiasmo</strong>, implicándome al máximo para dar lo mejor de mí, en base a mi experiencia y con una visión más transversal, sin perder de vista al usuario final y buscando la solución más <strong>innovadora</strong>.</p>
             </div>
         </section>
 
@@ -208,7 +219,7 @@
             </div>
 
             <div class="content">
-                <p>Estoy <strong>especializada</strong> en <strong>diseño y desarrollo web</strong> con HTML5, CSS3 y JavaScript, y poseo conocimientos en PHP, Java, MySQL, XML, Git, SASS, SEO y WordPress. También tengo experiencia en <strong>diseño gráfico</strong> (logotipos, tarjetas de visita, carteles, etc).</p>
+                <p>Estoy <strong>especializada</strong> en <strong>diseño y desarrollo web</strong> con HTML5, CSS3 y JavaScript, y poseo conocimientos en PHP, Java, MySQL, XML, Git, SASS, SEO y WordPress. También tengo experiencia en <strong>diseño gráfico</strong> (logotipos, tarjetas de visita, carteles, etc). Como ves, he tocado un poco de todo, pero ha sido el <strong>Frontend</strong> lo que más me ha gustado, y donde he asentado mi camino.</p>
 
                 <div class="skills-icons">
                     <div class="skill-container">
@@ -346,8 +357,6 @@
 
             <div class="content">
                 <div class="portfolio-gallery">
-                    <!-- TODO: Add portfolio gallery -->
-                    <!-- TODO: Add modals -->
                     <div class="navigation">
                         <ul>
                             <li class="todo active" data-filter="all"><a href="javascript:;">TODO</a></li>
@@ -359,7 +368,7 @@
                     </div>
                     <div class="elements">
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="valmar">
-                            <img src="img/portfolio/valmar-thumb.png" alt="Web Valmar">
+                            <img src="img/portfolio/valmar-thumb.png" alt="Mockup de la Web de Valmar">
                             <div class="label">
                                 <p class="title">Web Corporativa con WordPress</p>
                                 <!--<div class="tags">
@@ -371,67 +380,67 @@
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-design" data-item="valverde">
-                            <img src="img/portfolio/flyer-valverde-thumb.png" alt="Flyer Valverde">
+                            <img src="img/portfolio/flyer-valverde-thumb.png" alt="Mockup del diseño de un cartel realizado a Centros de Estudio Valverde">
                             <div class="label">
                                 <p class="title">Carteles</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="vicenteortiz">
-                            <img src="img/portfolio/vicente-ortiz-thumb.png" alt="Web Vicente Ortiz">
+                            <img src="img/portfolio/vicente-ortiz-thumb.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress, realizado a Vicente Ortiz Abogados">
                             <div class="label">
                                 <p class="title">Web Corporativa con WordPress</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-design" data-item="webappdesign">
-                            <img src="img/portfolio/flyer-web-app-design-thumb.png" alt="Flyer Web App Design">
+                            <img src="img/portfolio/flyer-web-app-design-thumb.png" alt="Mockup de un flyer publicitario diseñado para Web App Design">
                             <div class="label">
                                 <p class="title">Flyer Publicitario</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="dungeon">
-                            <img src="img/portfolio/dungeon-thumb.png" alt="Flyer Web App Design">
+                            <img src="img/portfolio/dungeon-thumb.png" alt="Mockup de la interfaz de un videojuego para Android y Web">
                             <div class="label">
                                 <p class="title">Videojuego para Android y Web</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="iwata">
-                            <img src="img/portfolio/iwata-thumb.png" alt="Web Iwata">
+                            <img src="img/portfolio/iwata-thumb.png" alt="Mockup de una web diseñada y desarrollada en homenaje a Iwata">
                             <div class="label">
                                 <p class="title">Web de Tributo a Iwata</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="antiguaweb">
-                            <img src="img/portfolio/nueva-web-thumb.png" alt="Antigua Web">
+                            <img src="img/portfolio/nueva-web-thumb.png" alt="Mockup de mi antigua web">
                             <div class="label">
                                 <p class="title">Mi Antigua Web</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-design" data-item="servimatica">
-                            <img src="img/portfolio/flyer-servimatica-thumb.png" alt="Flyer Web App Design">
+                            <img src="img/portfolio/flyer-servimatica-thumb.png" alt="Mockup de un flyer publicitario diseñado para Servimática Low Cost">
                             <div class="label">
                                 <p class="title">Flyer Publicitario</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="designquotes">
-                            <img src="img/portfolio/design-quotes-thumb.png" alt="Design Quotes">
+                            <img src="img/portfolio/design-quotes-thumb.png" alt="Mockup de una pequeña aplicación web llamada Design Quotes">
                             <div class="label">
                                 <p class="title">Diseño y Desarrollo Web</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="simonsays">
-                            <img src="img/portfolio/simon-says-thumb.png" alt="Juego Simon Says">
+                            <img src="img/portfolio/simon-says-thumb.png" alt="Mockup de una recreación del juego Simon Says">
                             <div class="label">
                                 <p class="title">Recreación del Juego Simon Says</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-design" data-item="yunemy-logo">
-                            <img src="img/portfolio/yunemy-thumb.png" alt="Logotipo Yunemy">
+                            <img src="img/portfolio/yunemy-thumb.png" alt="Mockup de un logotipo">
                             <div class="label">
                                 <p class="title">Logotipo</p>
                             </div>
                         </a>
                         <a href="javascript:;" class="portfolio-item mix category-web" data-item="vivacopier">
-                            <img src="img/portfolio/vivacopier-thumb.png" alt="Plataforma VivaCopier">
+                            <img src="img/portfolio/vivacopier-thumb.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado a VivaCopier">
                             <div class="label">
                                 <p class="title">Prototipo de Sistema de Gestión de Incidencias</p>
                             </div>
@@ -452,12 +461,12 @@
             </div>
 
             <div class="content">
-                <p>Siempre he pensado que la mejor forma para <strong>crecer profesionalmente</strong> es <strong>conocer</strong> a compañeros de tu sector, <strong>enseñar</strong> lo que sabes hacer y <strong>aprender</strong> de otros. Por este motivo, en 2017 fundé <strong>Yunemy</strong>, una <strong>comunidad tecnológica</strong>, en <strong>Málaga</strong>, cuyo principal objetivo esa este: disponer de un medio para que los <strong>desarrolladores</strong> podamos <strong>mejorar</strong> nuestras <strong>competencias profesionales</strong> y hacer <strong>sinergias</strong>.</p>
+                <p>Siempre he pensado que la mejor forma para <strong>crecer profesionalmente</strong> es <strong>conocer</strong> a compañeros de tu sector, <strong>enseñar</strong> lo que sabes hacer y <strong>aprender</strong> de otros. Por este motivo, en 2017 fundé <strong>Yunemy</strong>, una <strong>comunidad tecnológica</strong>, en <strong>Málaga</strong> (a más de 100km de donde vivía), cuyo principal objetivo esa este: disponer de un medio para que los <strong>desarrolladores</strong> podamos <strong>mejorar</strong> nuestras <strong>competencias profesionales</strong> y hacer <strong>sinergias</strong>.</p>
                 <p>Es un proyecto <strong>muy personal</strong>, al que le he dedicado mucho tiempo y esfuerzo, y, como <strong>resultado</strong>, hasta la fecha somos <strong>más de 500 miembros</strong> y hemos organizado <strong>6 encuentros y talleres</strong>, todos con muy buena acogida, y gracias a los cuales he conocido a grandes profesionales y mejores personas.</p>
 
                 <img src="img/logo-yunemy.svg" alt="Logotipo de Yunemy">
 
-                <a href="javascript:;" class="button">QUIERO MÁS INFORMACIÓN</a>
+                <a href="https://www.meetup.com/es-ES/yunemy/" class="button" target="_blank">MIRA TODO LO QUE HEMOS HECHO</a>
             </div>
         </section>
 
@@ -471,11 +480,11 @@
             </div>
 
             <div class="content">
-                <p>Sí, <strong>me gusta escribir</strong>: contar experiencias, enseñar algo, hacer tutoriales, etc. Es una buena forma de <strong>comunicarme</strong> con el resto del mundo y aportar mi granito de arena. Te invito a que <strong>leas</strong> cualquiera de mis <strong>artículos</strong> (o bien los de <strong>Medium</strong> o los del blog de <strong>Web App Design</strong>). ¡Si tienes alguna o sugerencia no dudes en hacérmela saber!</p>
+                <p>Sí, <strong>me gusta escribir</strong>: contar experiencias, compartir algo que sé o he aprendido, etc. Es una buena forma de <strong>comunicarme</strong> con el resto del mundo y aportar mi granito de arena. Te invito a que <strong>leas</strong> cualquiera de mis <strong>artículos</strong> (o bien los de <strong>Medium</strong> o los del blog de <strong>Web App Design</strong>). ¡Si tienes alguna o sugerencia no dudes en hacérmela saber!</p>
 
-                <a href="javascript:;" class="button">VISITA MI BLOG EN MEDIUM</a>
+                <a href="https://medium.com/@yune.vk" class="button">VISITA MI BLOG EN MEDIUM</a>
 
-                <a href="javascript:;" class="button">VISITA MI BLOG EN WEB APP DESIGN</a>
+                <a href="https://webappdesign.es/author/soniarcayuela/" class="button">VISITA MI BLOG EN WEB APP DESIGN</a>
             </div>
         </section>
 
@@ -489,14 +498,14 @@
             </div>
 
             <div class="content">
-                <p>¿Quieres ver cómo trabajo? Si estás buscando un frontend, un diseñador, o simplemente quieres conocerme más, dime qué necesitas y estaré <strong>encantada de hablar contido</strong>.</p>
+                <p>¿Quieres ver cómo trabajo? Si estás buscando un frontend, un diseñador, o simplemente quieres conocerme más, contáctame y estaré <strong>encantada de hablar contigo</strong>.</p>
 
                 <div class="social-icons">
-                    <a href="javascript:;" target="_blank" class="icon-contact email"><img class="svg" src="img/rrss/email.svg" alt="Icono de email"></a>
-                    <a href="javascript:;" target="_blank" class="icon-contact linkedin"><img class="svg" src="img/rrss/linkedin.svg" alt="Icono de LinkedIn"></a>
-                    <a href="javascript:;" target="_blank" class="icon-contact codepen"><img class="svg" src="img/rrss/codepen.svg" alt="Icono de codepen"></a>
-                    <a href="javascript:;" target="_blank" class="icon-contact github"><img class="svg" src="img/rrss/github.svg" alt="Icono de GitHub"></a>
-                    <a href="javascript:;" target="_blank" class="icon-contact twitter"><img class="svg" src="img/rrss/twitter.svg" alt="Icono de Twitter"></a>
+                    <a href="mailto:yune.vk@gmail.com" target="_blank" class="icon-contact email"><img class="svg" src="img/rrss/email.svg" alt="Icono de email"></a>
+                    <a href="https://www.linkedin.com/in/sonia-ruiz/" target="_blank" class="icon-contact linkedin"><img class="svg" src="img/rrss/linkedin.svg" alt="Icono de LinkedIn"></a>
+                    <a href="https://codepen.io/yune/" target="_blank" class="icon-contact codepen"><img class="svg" src="img/rrss/codepen.svg" alt="Icono de codepen"></a>
+                    <a href="https://github.com/YuneVK" target="_blank" class="icon-contact github"><img class="svg" src="img/rrss/github.svg" alt="Icono de GitHub"></a>
+                    <a href="https://twitter.com/Yune__vk" target="_blank" class="icon-contact twitter"><img class="svg" src="img/rrss/twitter.svg" alt="Icono de Twitter"></a>
                 </div>
 
                 <p class="credits">Diseñado y desarrollado con <img src="img/rrss/heart.svg" class="svg"> por Sonia Ruiz</p>
@@ -517,10 +526,10 @@
                     <input type="radio" name="slides" id="slides_valmar_3" />
                     <input type="radio" name="slides" id="slides_valmar_4" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/valmar.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/valmar-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/valmar-2.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/valmar-3.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar-1.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar-2.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/valmar-3.png" alt="Mockup de un sitio web diseñado y desarrollado con WordPress"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_valmar_1"></label>
@@ -579,11 +588,11 @@
                     <input type="radio" name="slides" id="slides_valverde_4" />
                     <input type="radio" name="slides" id="slides_valverde_5" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-2.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-3.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-4.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde.png" alt="Mockup del diseño de un cartel publicitario"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-1.png" alt="Mockup del diseño de un cartel publicitario"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-2.png" alt="Mockup del diseño de un cartel publicitario"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-3.png" alt="Mockup del diseño de un cartel publicitario"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-valverde-4.png" alt="Mockup del diseño de un cartel publicitario"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_valverde_1"></label>
@@ -637,11 +646,11 @@
                     <input type="radio" name="slides" id="slides_vicenteortiz_4" />
                     <input type="radio" name="slides" id="slides_vicenteortiz_5" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-2.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-3.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-4.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-1.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-2.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-3.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vicente-ortiz-4.png" alt="Mockup de una web corporativa diseñada y desarrollada con WordPress"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_vicenteortiz_1"></label>
@@ -695,8 +704,8 @@
                     <input type="radio" name="slides" id="slides_webappdesign_1" checked />
                     <input type="radio" name="slides" id="slides_webappdesign_2" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-web-app-design.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-web-app-design-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-web-app-design.png" alt="Mockup del disñeo de un flyer publicitario, en el que se anuncian cursos de WordPress"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-web-app-design-2.png" alt="Mockup del disñeo de un flyer publicitario, en el que se anuncian cursos de WordPress"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_webappdesign_1"></label>
@@ -741,8 +750,8 @@
                     <input type="radio" name="slides" id="slides_dungeon_1" checked />
                     <input type="radio" name="slides" id="slides_dungeon_2" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/dungeon.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/dungeon-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/dungeon.png" alt="Mockup de un videojuego realizado para Android, con una versión web"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/dungeon-1.png" alt="Mockup de un videojuego realizado para Android, con una versión web"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_dungeon_1"></label>
@@ -779,7 +788,7 @@
                         <div class="description">
                             <p>Fue mi <strong>proyecto de fin de curso</strong> para los ciclos Desarrollo de Aplicaciones Web y Desarrollo de Aplicaciones Multiplataforma: un juego del género <strong>rogelike</strong> (exploración de mazmorras) desarrollado para Android, con una versión web realizada en HTML, CSS y JavaScript. Un proyecto complejo con el que disfruté muchísimo y aprendí bastante sobre mecánicas de videojuegos.</p>
     
-                            <a href="javascript:;" target="_blank" class="link"><img src="img/youtube.svg" alt="Icono de YouTube" class="svg icon"> Mira el vídeo de la presentación</a>
+                            <a href="https://www.youtube.com/watch?v=ee4urI7VyFA" target="_blank" class="link"><img src="img/youtube.svg" alt="Icono de YouTube" class="svg icon"> Mira el vídeo de la presentación</a>
                         </div>
                     </div>
                 </div>
@@ -796,8 +805,8 @@
                     <input type="radio" name="slides" id="slides_servimatica_1" checked />
                     <input type="radio" name="slides" id="slides_servimatica_2" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-servimatica.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/flyer-servimatica-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-servimatica.png" alt="Mockup del diseño de un flyer publicitario"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/flyer-servimatica-1.png" alt="Mockup del diseño de un flyer publicitario"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_servimatica_1"></label>
@@ -843,9 +852,9 @@
                     <input type="radio" name="slides" id="slides_iwata_2" />
                     <input type="radio" name="slides" id="slides_iwata_3" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/iwata.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/iwata-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/iwata-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/iwata.png" alt="Mockup de una web en homenaje a Iwata"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/iwata-1.png" alt="Mockup de una web en homenaje a Iwata"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/iwata-2.png" alt="Mockup de una web en homenaje a Iwata"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_iwata_1"></label>
@@ -880,7 +889,7 @@
                         <div class="description">
                             <p>Proyecto personal, realizado en 2016, para <strong>FreeCodeCamp</strong> (una plataforma de formación). Esta página web es un tributo a <strong>Satoru Iwata</strong>, antiguo presidente de <strong>Nintendo</strong>, que falleción en 2015.</p>
     
-                            <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web</a>
+                            <a href="https://yunevk.github.io/iwata/index.html" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web</a>
                         </div>
                     </div>
                     
@@ -900,9 +909,9 @@
                     <input type="radio" name="slides" id="slides_oldweb_2" />
                     <input type="radio" name="slides" id="slides_oldweb_3" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/nueva-web.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/nueva-web-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/nueva-web-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/nueva-web.png" alt="Mockup de mi antigua web"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/nueva-web-1.png" alt="Mockup de mi antigua web"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/nueva-web-2.png" alt="Mockup de mi antigua web"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_oldweb_1"></label>
@@ -937,7 +946,7 @@
                         <div class="description">
                             <p>En 2016, y gracias a la plataforma de formación <strong>FreeCodeCamp</strong>, me animé a hacer <strong>mi primera página web personal</strong>, que es la versión anterior a la que estás viendo ahora. Me sirvió para <strong>poner en práctica</strong> todo lo que había aprendido hasta la fecha sobre diseño y desarrollo web. Aunque ya han pasado uno años, sigo <strong>apreciando</strong> mucho este proyecto por todo lo que <strong>aprendí</strong> y por ser la primera vez que "salí al mundo" profesionalmente.</p>
     
-                            <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita mi antigua web (¡Todavía está disponible!)</a>
+                            <a href="https://yunevk.github.io/old-web/index.html" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita mi antigua web (¡Todavía está disponible!)</a>
                         </div>
                     </div>
                 </div>
@@ -956,10 +965,10 @@
                     <input type="radio" name="slides" id="slides_designquotes_3" />
                     <input type="radio" name="slides" id="slides_designquotes_4" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/design-quotes.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-2.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-3.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes.png" alt="Mockup de una pequeña aplicación web en la que se muestran citas célebres"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-1.png" alt="Mockup de una pequeña aplicación web en la que se muestran citas célebres"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-2.png" alt="Mockup de una pequeña aplicación web en la que se muestran citas célebres"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/design-quotes-3.png" alt="Mockup de una pequeña aplicación web en la que se muestran citas célebres"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_designquotes_1"></label>
@@ -996,7 +1005,7 @@
                         <div class="description">
                             <p>Otro <strong>proyecto personal</strong> realizando a través de la plataforma de educación <strong>FreeCodeCamp</strong>, en 2016. Es un pequeño generador de citas relacionadas con el diseño, mediante la <strong>API Quotes On Design</strong>, y con opciones para generar nuevas frases y compartirlas por Twitter.</p>
     
-                            <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web</a>
+                            <a href="https://yunevk.github.io/quotes/index.html" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web</a>
                         </div>
                     </div>
                 </div>
@@ -1014,8 +1023,8 @@
                     <input type="radio" name="slides" id="slides_simonsays_1" checked />
                     <input type="radio" name="slides" id="slides_simonsays_2" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/simon-says.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/simon-says-1.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/simon-says.png" alt="Mockup de la recreación del videojuego Simon Says"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/simon-says-1.png" alt="Mockup de la recreación del videojuego Simon Says"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_simonsays_1"></label>
@@ -1048,7 +1057,7 @@
                         <div class="description">
                             <p>Esta es una recreación del clásico juego <strong>Simon Says</strong>, en el que tienes que repetir la secuencia de colores que reproduce la máquina en su turno. Lo realicé como trabajo para la asignatura <strong>Desarrollo Web en Entorno Cliente</strong>, cuando estudiaba el <strong>Ciclo Formativo de Desarrollo de Aplicaciones Web</strong>. Fue la primera vez que trabajé más a fondo con <strong>JavaScript</strong>, lo que me sirvió para darme cuenta que realmente sentía pasión por lo que hacía, y quería seguir este camino. Ha sido uno de los proyectos que más he disfrutado.</p>
     
-                            <a href="javascript:;" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web y juega un rato ;)</a>
+                            <a href="https://yunevk.github.io/simon/index.html" target="_blank" class="link"><img src="img/link.svg" alt="Icono de Enlace" class="svg icon"> Visita la web y juega un rato ;)</a>
                         </div>
                     </div>
                 </div>
@@ -1066,9 +1075,9 @@
                     <input type="radio" name="slides" id="slides_yunemy_2" />
                     <input type="radio" name="slides" id="slides_yunemy_3" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/yunemy.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/yunemy-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/yunemy-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/yunemy.png" alt="Mockup del diseño del logotipo de Yunemy"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/yunemy-1.png" alt="Mockup del diseño del logotipo de Yunemy"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/yunemy-2.png" alt="Mockup del diseño del logotipo de Yunemy"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_yunemy_1"></label>
@@ -1116,9 +1125,9 @@
                     <input type="radio" name="slides" id="slides_vivacopier_2" />
                     <input type="radio" name="slides" id="slides_vivacopier_3" />
                     <ul>
-                        <li><img class="portfolio-image" src="img/portfolio/vivacopier.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-1.png" alt="Mockup Web Valmar"></li>
-                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-2.png" alt="Mockup Web Valmar"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vivacopier.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-1.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image" src="img/portfolio/vivacopier-2.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_vivacopier_1"></label>

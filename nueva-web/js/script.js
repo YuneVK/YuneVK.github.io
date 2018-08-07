@@ -1,5 +1,7 @@
 $(function() {
     "use strict";
+
+    // When the page is loaded, then hide the loader
     document.getElementById("loading").classList.add("loaded");
     $('.main-nav, .nav-button').addClass("is-not-visible");
 
@@ -15,33 +17,31 @@ $(function() {
         contact: {background: "#2B454E", particles: "#CFD8DC", theme: "light"}
     };
 
+    // Store the last element than was visible, to know when the background can be changed (because the section
+    // has changed)
     var lastElement;
 
     // Init Particles.js
     particlesJS.load('particles', 'assets/particlesjs-config.json', function() {
-        console.log('callback - particles.js config loaded');
-        checkBackground();
+        //console.log('callback - particles.js config loaded');
+        checkBackground(); // Check which section is active to set the background color
     });
 
+    // Replace IMG tag to SVG code in the HTML
     replaceSVG();
-
-
-    // TODO: Window resize event
-    // TODO: Create the nav code. For the scroll events, the first answer on this link might be useful: https://stackoverflow.com/questions/18564187/using-jquery-find-the-div-class-that-the-top-of-the-viewport-is-inside
-
 
     $(window).scroll(function() {
         checkBackground();
         checkIllustrationPosition();
     });
 
-    
+    $(window).resize(function() {
+        checkBackground();
+        checkIllustrationPosition();
+    });
 
     initScrollReveal();
-
     initPortfolio();
-
-    
 
     $(".nav-link").click(function() {
         var target = $(this).data("item");
@@ -59,8 +59,8 @@ $(function() {
         $('body').toggleClass('modal-open');
     });
 
-
     function initScrollReveal() {
+        // Set the properties of each element
         var hi = {
             origin   : "top",
             distance : "24px",
@@ -194,7 +194,6 @@ $(function() {
                 sr.reveal('.timeline-element .job-description', jobInfo);
             }
         };
-        
 
         var circle = {
             origin   : "bottom",
@@ -236,13 +235,13 @@ $(function() {
             scale    : 1
         };
 
+        // Init ScrollReveal
         window.sr = ScrollReveal();
 
         if (sr.isSupported()) {
             document.documentElement.classList.add('sr');
         }
 
-        
         sr.reveal('#header .hi', hi);
         sr.reveal('#header .my-name-is', myName);
         sr.reveal('#header .name', name);
@@ -252,9 +251,7 @@ $(function() {
 
         sr.reveal('.section .number', number);
         sr.reveal('.section .subtitule', subtitule);
-        sr.reveal('.section h2', title);
-
-        
+        sr.reveal('.section h2', title); 
     }
 
     /**
@@ -282,12 +279,15 @@ $(function() {
 
             // Change the background color of the body according to the section
             $('body').css('background', backgroundColors[currentElement.id].background);
+
+            // Determine if the theme menu must be light or dark, and change it
             $('.main-nav, .button-content').removeClass('dark');
-            $('.nav-link').removeClass('active');
             if (backgroundColors[currentElement.id].theme === 'dark') {
                 $('.main-nav, .button-content').addClass('dark');
-                
             }
+
+            // Turn off all the menu elements, and turn on the current element
+            $('.nav-link').removeClass('active');
             $(".nav-link[data-item='" + currentElement.id +"']").addClass("active");
 
             // Change the color of the particles
@@ -304,7 +304,7 @@ $(function() {
                     $('.main-nav, .nav-button').addClass("is-not-visible");
                 }
             } else {
-                // Is the current element is other, and the gradient is visible, it will be not visible
+                // If the current element is another, and the gradient is visible, it will be not visible
                 if (!$('.background').hasClass('is-not-visible')) {
                     $('.background').removeClass('is-visible');
                     $('.background').addClass('is-not-visible');
@@ -314,6 +314,9 @@ $(function() {
         }
     }
 
+    /**
+     * Init the portfolio animations using ScrollReveal, and init the click event
+     */
     function initPortfolio() {
         var container = $('.portfolio-gallery');
 
@@ -322,33 +325,20 @@ $(function() {
             $('.navigation li').not($(this)).removeClass('active');
         });
 
-        console.log("InitPortfolio");
-
         var mixed = mixitup($('.portfolio-gallery .elements'), {
             animation: {
                 duration: 400,
                 //feffects: 'fade translateZ(-360px) stagger(34ms)',
                 easing: 'ease'
-            },
-            callbacks: {
-                onMixStart: function(state, futureState){
-                    console.log('Animation starting');
-                },onMixEnd: function(state){
-                    console.log('Operation ended');
-                },onMixFail: function(state){
-                    console.log('No elements found matching '+state.activeFilter);
-                },onMixBusy: function(state){
-                    console.log('MixItUp busy');
-                }
             }
         });
 
+        // When a Portfolio Item is clicked, then the equivalent modal is open
         $('.portfolio-item', container).click(function() {
             $('#' + $(this).data('item')).parent().css('display', 'flex');
-            $('body').addClass('modal-open');
+            $('body').addClass('modal-open'); // Turn off the scroll page
             $('#' + $(this).data('item')).css('display', 'flex').animateCss('fadeIn', function() {
                 revealModal();
-                
             });
 
             // Force the click event to reset the slider
@@ -356,6 +346,7 @@ $(function() {
             
         });
 
+        // When the close button is clicked, then close the modal and turn on the page scroll
         $('.close-button a').click(function() {
             $('body').removeClass('modal-open');
             $(this).parent().parent().animateCss('fadeOut', function() {
@@ -365,6 +356,9 @@ $(function() {
         });
     }
 
+    /**
+     * Show the modals content using the ScrollReveal library
+     */
     function revealModal() {
         var slider = {
             origin   : "left",
@@ -435,6 +429,9 @@ $(function() {
         sr.reveal('.main-info', text);
     }
 
+    /**
+     * Check the position of the different sections to set the backgrounds
+     */
     function checkIllustrationPosition() {
         var sections = $('section.section .illustration-bg');
         var pageY = $(window).scrollTop();
