@@ -343,13 +343,13 @@ body.modal-open {
 .section.header .scroll img {
   height: 2rem;
   width: 2rem;
-  -webkit-animation: bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
-          animation: bounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
+  -webkit-animation: scrollbounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
+          animation: scrollbounce 1s cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes scrollbounce {
   from {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -360,7 +360,7 @@ body.modal-open {
   }
 }
 
-@keyframes bounce {
+@keyframes scrollbounce {
   from {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);

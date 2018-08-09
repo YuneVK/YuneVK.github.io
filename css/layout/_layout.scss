@@ -216,11 +216,11 @@ body.modal-open {
                 height: 2rem;
                 width: 2rem;
 
-                animation: bounce 1s cubic-bezier(.5,0.05,1,.5) infinite;
+                animation: scrollbounce 1s cubic-bezier(.5,0.05,1,.5) infinite;
                 animation-direction: alternate;
             }
 
-            @keyframes bounce {
+            @keyframes scrollbounce {
                 from { transform: translate3d(0, 0, 0);     }
                 to   { transform: translate3d(0, 1rem, 0); }
             } 
