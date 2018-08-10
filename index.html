@@ -1155,9 +1155,12 @@
                     <input type="radio" name="slides" id="slides_vivacopier_2" />
                     <input type="radio" name="slides" id="slides_vivacopier_3" />
                     <ul>
-                        <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <!--<li><img class="portfolio-image lazy" src="img/portfolio/vivacopier.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
                         <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier-1.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
-                        <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier-2.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image lazy" src="img/portfolio/vivacopier-2.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>-->
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/vivacopier.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier" data-sizes="max-width: 100%; max-height: calc(100vh - 22px); width: auto;"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/vivacopier-1.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
+                        <li><img class="portfolio-image lazy" data-src="img/portfolio/vivacopier-2.png" alt="Mockup del prototipo de sistema de gestión de incidencias realizado para VivaCopier"></li>
                     </ul>
                     <div class="arrows">
                         <label for="slides_vivacopier_1"></label>
@@ -1209,6 +1212,17 @@
     <link rel="stylesheet" href="css/vendor/animate.min.css">
     <link rel="stylesheet" href="css/vendor/slider.min.css">
     <!--<link rel="stylesheet" href="css/style.min.css">-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"></script>
+
+    <script>
+        window.onload = function() {
+            var myLazyLoad = new LazyLoad({
+                elements_selector: ".lazy"
+            });
+        };
+    </script>
+    
     
     <script src="js/vendor/scrollreveal.min.js"></script>
     <script src="js/script.min.js"></script>
